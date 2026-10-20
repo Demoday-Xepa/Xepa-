@@ -1,11 +1,13 @@
-import React from 'react';
-import { Home } from './pages/homeU/Home';
+
 import './App.css';
+import Crumb from './components/login/Crumb';
+import Header from './components/login/Header';
 
 export default function App() {
   return (
     <div>
-      <Home />
+      <Header/>
+      <Crumb />
     </div>
   );
 }
