@@ -1,0 +1,52 @@
+.mapaMain{
+width: 100%;
+height:auto;
+    margin:0px;
+    position: relative;
+    clear: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+iframe{
+    position:absolute;
+    z-index: 1;
+
+}
+.cardLateral{
+width: 30%;
+    position: absolute;
+    z-index: 3;
+    top: 40px;
+    background-color: rgb(191, 247, 208);
+}
+.cardTitle{
+    background-color: #18522c;
+    color: azure;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+}
+.cardsection img{
+    width:110px;
+    height: 110px;
+    align-items: center;
+    margin-left: 10px;
+
+}
+.cardsection .textTitle{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    margin-left:50px;
+}
+.cardsection{
+    background-color: #EEEEEE;
+}
+.titleIn{
+    display:flex;
+        flex-direction: row;
+        align-items: center;
+        
+        
+}
