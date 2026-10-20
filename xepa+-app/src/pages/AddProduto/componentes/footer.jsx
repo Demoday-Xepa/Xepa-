@@ -1,3 +1,5 @@
+import logo from "../../../imgs/logo.png";
+
 function Footer({ styles }) {
   const iconeProps = {
     width: 12,
@@ -14,7 +16,10 @@ function Footer({ styles }) {
     <footer className={styles.footer}>
       <div className={styles.footerTopo}>
         <div className={styles.footerMarca}>
-          <h3>♧ Xepa+</h3>
+          <div className={styles.footerLogo}>
+            <img src={logo} alt="Logo Xepa+" className={styles.footerLogoImg} />
+          </div>
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

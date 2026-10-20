@@ -268,9 +268,19 @@
   max-width: 360px;
 }
 
-.footerMarca h3 {
-  margin: 0 0 14px;
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
   font-size: 26px;
+  font-weight: 600;
+}
+
+.footerLogoImg {
+  height: 56px;
+  width: auto;
+  display: block;
 }
 
 .footerMarca p {
