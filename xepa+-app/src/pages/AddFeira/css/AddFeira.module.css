@@ -1,4 +1,6 @@
-.pagina, .pagina * { box-sizing: border-box; }
+.pagina, .pagina * { 
+  box-sizing: border-box; 
+}
 
 .pagina {
   width: 100%;
@@ -9,7 +11,9 @@
   overflow-x: hidden;
 }
 
-.conteudo { padding: 64px 5% 80px; }
+.conteudo { 
+  padding: 64px 5% 80px; 
+}
 
 .conteudo h1 {
   margin: 0 0 14px;
@@ -19,7 +23,11 @@
   line-height: 1.05;
 }
 
-.subtitulo { margin: 0 0 32px; font-weight: 600; color: #111; }
+.subtitulo { 
+  margin: 0 0 32px; 
+  font-weight: 600; 
+  color: #111; 
+}
 
 /* BUSCA */
 .busca {
@@ -30,8 +38,18 @@
   margin-bottom: 32px;
 }
 
-.campoBusca { display: flex; align-items: center; gap: 18px; flex: 1; min-width: 0; }
-.campoBusca label { font-size: 17px; font-weight: 600; }
+.campoBusca { 
+  display: flex; 
+  align-items: center; 
+  gap: 18px; 
+  flex: 1; 
+  min-width: 0; 
+}
+
+.campoBusca label { 
+  font-size: 17px; 
+  font-weight: 600; 
+}
 
 .campoBusca input {
   width: 100%;
@@ -43,7 +61,11 @@
   font: inherit;
   color: #333;
 }
-.campoBusca input:focus { outline: 3px solid #8fb30d; border-color: #18552f; }
+
+.campoBusca input:focus { 
+  outline: 3px solid #8fb30d; 
+  border-color: #18552f; 
+}
 
 .botaoAdd {
   width: 56px;
@@ -58,11 +80,19 @@
   cursor: pointer;
   flex-shrink: 0;
 }
-.botaoAdd:hover { background: #287447; }
+
+.botaoAdd:hover { 
+  background: #287447; 
+}
 
 /* TABELA */
-.tabelaScroll { overflow-x: auto; }
-.tabela { min-width: 700px; }
+.tabelaScroll { 
+  overflow-x: auto; 
+}
+
+.tabela { 
+  min-width: 700px; 
+}
 
 .cabecalho, .linha {
   display: grid;
@@ -79,7 +109,8 @@
   padding-bottom: 18px;
   border-radius: 14px;
   background: #18552f;
-  color: #a9c4b2;
+  color: white;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -89,10 +120,18 @@
   border-bottom: 2px solid #111;
   font-weight: 700;
 }
-.linha:first-of-type { margin-top: 24px; }
+
+.linha:first-of-type { 
+  margin-top: 24px; 
+}
 
 /* MOBILE */
 @media (max-width: 700px) {
-  .conteudo { padding: 40px 5% 56px; }
-  .busca, .campoBusca { gap: 10px; }
+  .conteudo { 
+    padding: 40px 5% 56px; 
+  }
+
+  .busca, .campoBusca { 
+    gap: 10px; 
+  }
 }

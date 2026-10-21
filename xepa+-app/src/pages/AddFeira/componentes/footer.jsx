@@ -32,14 +32,12 @@ function Footer() {
       <div className={styles.topo}>
         <div className={styles.marca}>
           <div className={styles.logo}>
-            <img src="" alt="Logo Xepa+" className={styles.logoImg} />
-            <span>Xepa+</span>
-          </div>
+            <img src={logo} alt="Xepa+" className={styles.logoImg} />
+      </div>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam.
+            Conectando feirantes e consumidores para combater o desperdício de alimentos. 
+            Alimentos frescos, sustentabilidade e economia para a sua rotina.
           </p>
 
           <div className={styles.redes}>
