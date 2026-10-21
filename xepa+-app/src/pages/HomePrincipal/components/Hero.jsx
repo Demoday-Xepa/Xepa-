@@ -1,11 +1,11 @@
-import './Hero.css'
 
-import mamao from '../../imgs/Mamão home.png'
-import abacaxi from '../../imgs/Abacaxi-home.png'
-import melancia from '../../imgs/Melancia-home.png'
-import kiwi from '../../imgs/Kiwi-home.png'
-import goiaba from '../../imgs/Goiaba-home.png'
-import uva from '../../imgs/Uva-home.png'
+import '../css/Hero.css';
+import mamao from '../imgs/Mamão home.png';
+import abacaxi from '../imgs/Abacaxi-home.png';
+import melancia from '../imgs/Melancia-home.png';
+import kiwi from '../imgs/Kiwi-home.png';
+import goiaba from '../imgs/Goiaba-home.png';
+import uva from '../imgs/Uva-home.png';
 
 const frutas = [
   { classe: 'fruta-inicio--mamao', imagem: mamao },
@@ -14,7 +14,7 @@ const frutas = [
   { classe: 'fruta-inicio--kiwi', imagem: kiwi },
   { classe: 'fruta-inicio--goiaba', imagem: goiaba },
   { classe: 'fruta-inicio--uva', imagem: uva },
-]
+];
 
 export default function Hero() {
   return (
@@ -52,5 +52,5 @@ export default function Hero() {
         ))}
       </div>
     </>
-  )
+  );
 }

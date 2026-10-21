@@ -1,11 +1,12 @@
-import { useEffect, useRef, useState } from 'react'
-import './HowItWorks.css'
 
-import estrela1 from '../../imgs/Estrela-1.png'
-import estrela2 from '../../imgs/Estrela-2.png'
-import estrela3 from '../../imgs/Estrela-3.png'
-import mamao from '../../imgs/Mamão-funciona.png'
-import pessego from '../../imgs/Pessego-funciona.png'
+import { useEffect, useRef, useState } from 'react';
+import '../css/HowItWorks.css';
+
+import estrela1 from '../imgs/Estrela-1.png';
+import estrela2 from '../imgs/Estrela-2.png';
+import estrela3 from '../imgs/Estrela-3.png';
+import mamao from '../imgs/Mamão-funciona.png';
+import pessego from '../imgs/Pessego-funciona.png';
 
 const etapas = [
   {
@@ -29,29 +30,31 @@ const etapas = [
     descricao:
       'Escolha seus produtos e retire sua compra na feira.',
   },
-]
+];
 
 export default function HowItWorks() {
-  const secaoRef = useRef(null)
-  const [visivel, setVisivel] = useState(false)
+  const secaoRef = useRef(null);
+  const [visivel, setVisivel] = useState(false);
 
   useEffect(() => {
-    const secao = secaoRef.current
-    if (!secao) return
+    const secao = secaoRef.current;
+
+    if (!secao) return;
 
     const observer = new IntersectionObserver(
       ([entrada]) => {
         if (entrada.isIntersecting) {
-          setVisivel(true)
-          observer.disconnect()
+          setVisivel(true);
+          observer.disconnect();
         }
       },
       { threshold: 0.3 }
-    )
+    );
 
-    observer.observe(secao)
-    return () => observer.disconnect()
-  }, [])
+    observer.observe(secao);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -80,10 +83,12 @@ export default function HowItWorks() {
 
         <div className="lista-etapas">
           {etapas.map((etapa) => (
-            <article className="etapa-funcionamento" key={etapa.numero}>
+            <article
+              className="etapa-funcionamento"
+              key={etapa.numero}
+            >
               <div className="icone-etapa">
                 <img src={etapa.imagem} alt="" />
-
                 <span>{etapa.numero}</span>
               </div>
 
@@ -96,5 +101,5 @@ export default function HowItWorks() {
         </div>
       </div>
     </section>
-  )
+  );
 }

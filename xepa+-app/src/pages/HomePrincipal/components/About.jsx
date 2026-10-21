@@ -1,8 +1,7 @@
 
-import './About.css'
-
-import imagemFeira from '../../imgs/Group 14.png'
-import imagemAlimentos from '../../imgs/Group 15.png'
+import '../css/About.css';
+import imagemFeira from '../imgs/Group 14.png';
+import imagemAlimentos from '../imgs/Group 15.png';
 
 export default function About() {
   return (
@@ -40,5 +39,5 @@ export default function About() {
         />
       </div>
     </section>
-  )
+  );
 }

@@ -1,5 +1,5 @@
 
-import './Header.css'
+import '../css/Header.css';
 
 const links = [
   { texto: 'Home', destino: '#inicio' },
@@ -7,14 +7,16 @@ const links = [
   { texto: 'Mapa', destino: '#mapa' },
   { texto: 'Xepas', destino: '#xepas' },
   { texto: 'Receitas', destino: '#receitas' },
-]
+];
 
 export default function Header() {
   return (
     <header className="cabecalho-xepa">
       <a href="#inicio" className="marca-xepa">
         <span className="icone-marca">✿</span>
-        <span>Xepa<span className="marca-mais">+</span></span>
+        <span>
+          Xepa<span className="marca-mais">+</span>
+        </span>
       </a>
 
       <nav className="menu-principal">
@@ -29,5 +31,5 @@ export default function Header() {
         Login
       </a>
     </header>
-  )
+  );
 }

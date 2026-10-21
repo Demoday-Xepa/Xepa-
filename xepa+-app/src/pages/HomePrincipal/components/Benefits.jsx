@@ -1,9 +1,8 @@
 
-import './Benefits.css'
-
-import cestaXepa from '../../imgs/Xepa.png'
-import seta1 from '../../imgs/Seta1.png'
-import seta2 from '../../imgs/Seta2.png'
+import '../css/Benefits.css';
+import cestaXepa from '../imgs/Xepa.png';
+import seta1 from '../imgs/Seta1.png';
+import seta2 from '../imgs/Seta2.png';
 
 const categorias = [
   {
@@ -26,7 +25,7 @@ const categorias = [
     classe: 'categoria-beneficio--temperos',
     imagem: seta1,
   },
-]
+];
 
 export default function Benefits() {
   return (
@@ -68,5 +67,5 @@ export default function Benefits() {
         ))}
       </div>
     </section>
-  )
+  );
 }
