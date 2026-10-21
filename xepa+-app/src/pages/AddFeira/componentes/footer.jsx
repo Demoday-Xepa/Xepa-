@@ -34,6 +34,7 @@ function Footer() {
           <div className={styles.logo}>
             <img src={logo} alt="Xepa+" className={styles.logoImg} />
           </div>
+      </div>
 
           <p>
             Conectando feirantes e consumidores para combater o desperdício de alimentos. 
