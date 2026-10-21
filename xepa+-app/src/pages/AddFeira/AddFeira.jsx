@@ -15,9 +15,9 @@ function AddFeira() {
 
   return (
     <div className={styles.pagina}>
-      <Header styles={styles} />
+      <Header />
 
-      <main className={styles.conteudoFeira}>
+      <main className={styles.conteudo}>
         <h1>Onde você trabalha?</h1>
         <p className={styles.subtitulo}>
           Disponibilidades e locais da sua feira favorita.
@@ -60,7 +60,7 @@ function AddFeira() {
         </div>
       </main>
 
-      <Footer styles={styles} />
+      <Footer />
 
       <PopUpAddFeira aberto={aberto} onFechar={() => setAberto(false)} />
     </div>
