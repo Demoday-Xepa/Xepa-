@@ -1,0 +1,360 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.pagina {
+  --verde: #19552f;
+  --verde-escuro: #124527;
+  --lima: #a5c400;
+
+  min-height: 100vh;
+  padding: 16px 17px;
+  background: #292929;
+  color: var(--verde);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.identificacao {
+  display: block;
+  margin-bottom: 5px;
+  color: #bdbdbd;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.header {
+  width: 100%;
+  height: 47px;
+  padding: 0 15px 0 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--verde);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.logoIcone {
+  width: 48px;
+  height: 39px;
+}
+
+.btnVoltar {
+  min-width: 91px;
+  height: 30px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 4px;
+  background: var(--lima);
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnVoltar:hover {
+  background: #8fa900;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
+  min-height: 585px;
+  padding: 17px 19px 19px;
+  background: #fff;
+}
+
+.ladoImagem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 548px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(18, 69, 39, 0.98) 0%,
+      rgba(18, 69, 39, 0.85) 10%,
+      rgba(18, 69, 39, 0.25) 30%,
+      transparent 52%
+    ),
+    url('/images/feira.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.marcaImagem {
+  width: 48px;
+  height: 42px;
+  margin: 18px 0 0 20px;
+}
+
+.marcaImagem svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.conteudoImagem {
+  padding: 0 36px 29px;
+  color: #fff;
+}
+
+.fraseLabel {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.conteudoImagem h2 {
+  max-width: 360px;
+  margin: 0;
+  font-size: clamp(20px, 2vw, 22px);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+}
+
+.ladoForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 20px clamp(30px, 5vw, 74px);
+}
+
+.form {
+  width: 100%;
+  max-width: 420px;
+}
+
+.form h1 {
+  margin: 0 0 18px -7px;
+  color: var(--verde);
+  font-size: clamp(27px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: -1.3px;
+}
+
+.campo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  margin-bottom: 14px;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  color: var(--verde);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.campo input {
+  width: 100%;
+  height: 31px;
+  padding: 0 9px;
+  border: 1.2px solid var(--verde);
+  border-radius: 6px;
+  outline: none;
+  background: #fffdfd;
+  color: #222;
+  font-family: inherit;
+  font-size: 12px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.campo input:focus {
+  border-color: var(--lima);
+  box-shadow: 0 0 0 2px rgba(165, 196, 0, 0.15);
+}
+
+.linha {
+  display: flex;
+  gap: 12px;
+}
+
+.btnEntrar {
+  width: 100%;
+  height: 34px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  background: var(--verde);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnEntrar:hover {
+  background: var(--verde-escuro);
+}
+
+.cadastro {
+  margin: 12px 0 0;
+  color: #111;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.cadastro a {
+  color: var(--lima);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cadastro a:hover {
+  text-decoration: underline;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .pagina {
+    padding: 14px;
+  }
+
+  .container {
+    grid-template-columns: 0.95fr 1.05fr;
+    padding: 14px;
+  }
+
+  .ladoImagem {
+    min-height: 500px;
+  }
+
+  .conteudoImagem {
+    padding: 0 22px 25px;
+  }
+
+  .ladoForm {
+    padding: 20px 25px;
+  }
+
+  .form h1 {
+    margin-left: 0;
+    font-size: 28px;
+  }
+
+  .campo label {
+    font-size: 12px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 650px) {
+  .pagina {
+    padding: 10px;
+  }
+
+  .header {
+    height: 48px;
+    padding: 0 12px;
+  }
+
+  .logo {
+    gap: 6px;
+    font-size: 20px;
+  }
+
+  .logoIcone {
+    width: 40px;
+    height: 34px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 12px;
+  }
+
+  .ladoImagem {
+    min-height: 250px;
+    border-radius: 14px;
+  }
+
+  .marcaImagem {
+    margin: 12px 0 0 15px;
+  }
+
+  .conteudoImagem {
+    padding: 0 20px 20px;
+  }
+
+  .fraseLabel {
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+
+  .conteudoImagem h2 {
+    max-width: 340px;
+    font-size: 21px;
+  }
+
+  .ladoForm {
+    padding: 28px 8px 20px;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+  .form h1 {
+    margin: 0 0 22px;
+    font-size: 29px;
+  }
+
+  .campo {
+    margin-bottom: 14px;
+  }
+
+  .campo label {
+    font-size: 13px;
+  }
+
+  .campo input {
+    height: 38px;
+  }
+
+  .linha {
+    gap: 10px;
+  }
+
+  .btnEntrar {
+    height: 39px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 360px) {
+  .linha {
+    flex-direction: column;
+    gap: 0;
+  }
+}

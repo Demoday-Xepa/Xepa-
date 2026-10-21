@@ -1,0 +1,118 @@
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  position: fixed;
+}
+
+.ladoImagem {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+
+  padding: clamp(20px, 3vw, 48px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: #fff;
+  overflow: hidden;
+
+  background-image: url('../../../Assets/img/feira.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.ladoImagem::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.80) 0%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+
+.ladoForm {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.form {
+  width: 100%;
+  max-width: 560px;
+}
+
+.form h1 {
+  margin-bottom: 30px;
+  color: #18522c;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.opcao {
+  width: 100%;
+  min-height: 76px;
+  margin-bottom: 12px;
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  color: #18522c;
+  background: #fffaf9;
+  border: 1px solid #76945e;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.opcao:hover {
+  background: #f0f5eb;
+}
+
+.icone {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .ladoImagem {
+    flex: none;
+    min-height: 150px;
+  }
+
+  .ladoForm {
+    flex: 1;
+    padding: 30px 20px;
+  }
+
+  .form h1 {
+    font-size: 1.5rem;
+  }
+}
