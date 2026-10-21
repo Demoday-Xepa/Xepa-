@@ -1,0 +1,123 @@
+/* Container da Seção de Boas-Vindas */
+.secaoBoasVindas {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+.topoCabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.textoBoasVindas h1 {
+  font-size: 70px;
+  font-weight: bold;
+  color: #111111;
+  margin: 0;
+  font-family: sans-serif;
+    margin-left:85px;
+    margin-top: 40px;
+}
+
+.textoBoasVindas h2 {
+  font-size: 80px;
+  font-weight: bold;
+  color: #111111;
+  margin: 4px 0 0 0;
+  font-family: sans-serif;
+    margin-left:85px;
+     margin-top: 40px;
+}
+
+
+.containerFotoPerfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 85px;
+}
+
+.fotoPerfil {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #84cc16;
+}
+
+.perfill {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: #84cc16;
+}
+
+
+.barraPesquisa {
+  width: 90%;
+  height: 54px; 
+  padding: 0 24px;
+  border: 2px solid #113822;
+  border-radius: 12px;
+  font-size: 18px; 
+  outline: none;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  align-self: center; 
+}
+
+.barraPesquisa::placeholder {
+  color: #888888;
+}
+
+
+.categorias {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left:85px;
+}
+
+
+.botaoCategoria {
+  background-color: #113822;
+  height: 50px;
+  width: 200px;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: bold;
+  
+}
+
+.botaoCategoriaV {
+  background-color: #113822;
+  height: 50px;
+  width: 300px;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: bold;
+  
+}
+.botaoCategoria:hover {
+  background-color: #1b5233;
+}
