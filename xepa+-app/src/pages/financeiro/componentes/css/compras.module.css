@@ -1,0 +1,98 @@
+.compras {
+    padding: 16px;
+    border: 1.5px solid var(--verde);
+    border-radius: 16px;
+    color: var(--verde);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+.compras h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.verMais {
+    width: auto !important;
+    padding: 5px 10px !important;
+    background: transparent !important;
+    color: var(--verde) !important;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.lista {
+    min-height: 120px;
+}
+
+.vazio {
+    padding: 18px 0;
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.item div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item span {
+    color: var(--cinza);
+    font-size: 12px;
+}
+
+.item strong {
+    font-size: 17px;
+}
+
+.item time {
+    color: var(--cinza);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px 0;
+    border-top: 2px solid var(--cinza-claro);
+}
+
+.total span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.total strong {
+    font-size: 22px;
+}
+
+.compras button {
+    width: 100%;
+    padding: 9px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--verde);
+    color: var(--branco);
+    font-weight: bold;
+    cursor: pointer;
+}
