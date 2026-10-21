@@ -1,60 +1,66 @@
+import { Link, useNavigate } from 'react-router-dom'
 import Styles from './Css/CriarContaF.module.css'
 
-function CriarContaFeirante() {
+function CriarContaF() {
+  const navigate = useNavigate()
+
+  function proximaEtapa(event) {
+    event.preventDefault()
+    const dados = Object.fromEntries(new FormData(event.target))
+    navigate('/CriarContaF2', { state: dados }) //
+  }
 
   return (
     <main className={Styles.container}>
-
       <section className={Styles.ladoImagem}>
-        <div className={Styles.logo}>Logo</div>
 
-        <div className={Styles.textoImagem}>
-          <h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod
-          </h2>
-        </div>
       </section>
 
       <section className={Styles.ladoForm}>
         <form className={Styles.form} onSubmit={proximaEtapa}>
-          <h1>Crie sua conta</h1>
+          <h1>Cadastre sua conta</h1>
 
           <div className={Styles.linha}>
             <div className={Styles.campo}>
               <label htmlFor="matricula">Matrícula</label>
-              <input type="text" id="matricula" name="matricula" />
+              <input type="text" id="matricula" name="matricula" required />
             </div>
             <div className={Styles.campo}>
               <label htmlFor="validade">Validade</label>
-              <input type="text" id="validade" name="validade" />
+              <input type="text" id="validade" name="validade" required />
             </div>
           </div>
 
           <div className={Styles.linha}>
             <div className={Styles.campo}>
               <label htmlFor="cnpj">CNPJ</label>
-              <input type="text" id="cnpj" name="cnpj" inputMode="numeric" />
+              <input
+                type="text"
+                id="cnpj"
+                name="cnpj"
+                inputMode="numeric"
+                required
+              />
             </div>
             <div className={Styles.campo}>
               <label htmlFor="ccm">CCM</label>
-              <input type="text" id="ccm" name="ccm" />
+              <input type="text" id="ccm" name="ccm" required />
             </div>
           </div>
 
           <div className={Styles.campo}>
             <label htmlFor="titular">Titular</label>
-            <input type="text" id="titular" name="titular" />
+            <input type="text" id="titular" name="titular" required />
           </div>
 
           <div className={Styles.campo}>
-            <label htmlFor="nomeFantasia">Nome Fantasia</label>
-            <input type="text" id="nomeFantasia" name="nomeFantasia" />
+            <label htmlFor="fantasia">Nome Fantasia</label>
+            <input type="text" id="fantasia" name="fantasia" required />
           </div>
 
           <div className={Styles.campo}>
             <label htmlFor="grupo">Grupo de Comércio</label>
-            <input type="text" id="grupo" name="grupo" />
+            <input type="text" id="grupo" name="grupo" required />
           </div>
 
           <button type="submit" className={Styles.btnEntrar}>
@@ -62,7 +68,7 @@ function CriarContaFeirante() {
           </button>
 
           <p className={Styles.cadastro}>
-            Ainda não tem conta? <a href="#">Cadastre-se</a>
+            Já tem conta? <Link to="/Crumb">Entrar</Link>
           </p>
         </form>
       </section>
@@ -70,4 +76,4 @@ function CriarContaFeirante() {
   )
 }
 
-export default CriarContaFeirante
+export default CriarContaF

@@ -1,17 +1,24 @@
+import { useNavigate } from 'react-router-dom'
 import Styles from './Css/Header.module.css'
-import Image from '../../Assets/img/logo.png'
+import Logo from '../../Assets/img/logo.png'
 
 function Header() {
+  console.log('HEADER NOVO CARREGADO')
+
   return (
-    
-    <div className={Styles.cabeçalho}>
-        <div className={Styles.logo_cabeçalho}>
-            <img src={Image} alt="Logo da empresa Xepa mais" />
-        </div>
-         <div className={Styles.button_cabecalho}>
-            <button className={Styles.button_cabecalho1}>Voltar</button>
-         </div>
-    </div>
+    <header className={Styles.cabecalho}>
+      <div className={Styles.logo}>
+        <img src={Logo} alt="Logo da empresa Xepa mais" />
+      </div>
+
+      <button
+        type="button"
+        className={Styles.btnVoltar}
+        onClick={() => navigate(-1)}
+      >
+        Voltar
+      </button>
+    </header>
   )
 }
 
