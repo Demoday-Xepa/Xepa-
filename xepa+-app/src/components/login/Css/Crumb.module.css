@@ -143,7 +143,7 @@ body {
 
 .form h1 {
   margin: 0 0 clamp(12px, 2vh, 24px);
-  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  font-size: 50px;
   line-height: 1.25;
   font-weight: 700;
   color: #18522c;
@@ -228,6 +228,31 @@ body {
 }
 
 .btnEntrar:active {
+  transform: scale(0.98);
+}
+
+
+.btndemo {
+  margin-top: 4px;
+  padding: clamp(10px, 1.5vh, 13px);
+  width: 100%;
+  margin-top: 20px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--verde-link);
+  border: 1.5px solid var(--azul);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btndemo:hover {
+  background: var(--azul-escuro);
+}
+
+.btndemo:active {
   transform: scale(0.98);
 }
 

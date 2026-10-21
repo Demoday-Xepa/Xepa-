@@ -1,13 +1,12 @@
 
 import './App.css';
-import Crumb from './components/login/Crumb';
-import Header from './components/login/Header';
+import CriarConta from './components/login/CriarConta' ;
+
 
 export default function App() {
   return (
     <div>
-      <Header/>
-      <Crumb />
+        <CriarConta />
     </div>
   );
 }
