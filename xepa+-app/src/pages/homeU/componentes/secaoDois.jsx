@@ -1,13 +1,38 @@
 import React, { useState } from 'react';
+
 import styles from '../css/Home.module.css';
 
-export function SecaoUm() {
-  const [nomeUsuario, setNomeUsuario] = useState("Diego Moreira");
-  const [fotoPerfil, setFotoPerfil] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR87vcRDaSDk6Z7vR5jmCT6D6MjnmwnSlErxCnIM9UTiohPBEba2PLbtaMC&s=10");
-
+export function SecaoDois() {
+     const [ImagemFeira, setImagemFeira] = useState("https://conteudo.solutudo.com.br/wp-content/uploads/2022/04/feiratatuape.jpg");
   return (
-    <section className={styles.secaoVerde}>
-     
+    <section className={styles.secaoContainer}>
+      <div className={styles.cardBanner}>
+        
+        <div className={styles.conteudoEsquerda}>
+          <h1 className={styles.titulo}>
+            Confira as feiras <br /> perto da sua casa !
+          </h1>
+          <p className={styles.subtitulo}>
+            xepas fresquinhas dos feirantes perto de você, antes da feira fechar !
+          </p>
+          
+          <div className={styles.buscaContainer}>
+            <input 
+              type="text" 
+              placeholder="Pesquisar feira..." 
+              className={styles.inputBusca}
+            />
+            <button className={styles.botaoVer}>
+              Ver xepas perto
+            </button>
+          </div>
+        </div>
+
+        <div className={styles.conteudoDireita}>
+            <img src={ImagemFeira} alt="Imagem da feira" className={styles.imagemFeira} />
+        </div>
+
+      </div>
     </section>
   );
 }

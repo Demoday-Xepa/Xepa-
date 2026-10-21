@@ -1,0 +1,97 @@
+
+.mapa-feiras {
+  padding: 36px 24px;
+  background: #a5c900;
+  color: #fff;
+}
+
+.mapa-conteudo {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.mapa-etiqueta {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.mapa-texto h2 {
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.mapa-texto p {
+  max-width: 520px;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.mapa-busca {
+  display: flex;
+  gap: 8px;
+  max-width: 460px;
+  margin: 0 0 16px auto;
+  padding: 5px;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.mapa-busca input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  padding: 9px;
+  border: 0;
+  outline: none;
+  color: #174f32;
+}
+
+.mapa-busca button {
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #ff531e;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mapa-visual {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.mapa-visual iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.mapa-observacao {
+  margin: 10px 0 0;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .mapa-feiras {
+    padding: 30px 16px;
+  }
+
+  .mapa-texto h2 {
+    font-size: 27px;
+  }
+
+  .mapa-busca {
+    max-width: none;
+  }
+
+  .mapa-visual {
+    height: 280px;
+  }
+}
