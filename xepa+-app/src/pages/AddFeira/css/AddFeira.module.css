@@ -1,0 +1,137 @@
+.pagina, .pagina * { 
+  box-sizing: border-box; 
+}
+
+.pagina {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  color: #18552f;
+  font: 16px 'Outfit', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.conteudo { 
+  padding: 64px 5% 80px; 
+}
+
+.conteudo h1 {
+  margin: 0 0 14px;
+  font-size: clamp(40px, 6vw, 76px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+.subtitulo { 
+  margin: 0 0 32px; 
+  font-weight: 600; 
+  color: #111; 
+}
+
+/* BUSCA */
+.busca {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.campoBusca { 
+  display: flex; 
+  align-items: center; 
+  gap: 18px; 
+  flex: 1; 
+  min-width: 0; 
+}
+
+.campoBusca label { 
+  font-size: 17px; 
+  font-weight: 600; 
+}
+
+.campoBusca input {
+  width: 100%;
+  max-width: 420px;
+  height: 52px;
+  padding: 0 18px;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  font: inherit;
+  color: #333;
+}
+
+.campoBusca input:focus { 
+  outline: 3px solid #8fb30d; 
+  border-color: #18552f; 
+}
+
+.botaoAdd {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: #18552f;
+  color: white;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.botaoAdd:hover { 
+  background: #287447; 
+}
+
+/* TABELA */
+.tabelaScroll { 
+  overflow-x: auto; 
+}
+
+.tabela { 
+  min-width: 700px; 
+}
+
+.cabecalho, .linha {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 17px;
+}
+
+.cabecalho {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-radius: 14px;
+  background: #18552f;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.linha {
+  padding-top: 36px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #111;
+  font-weight: 700;
+}
+
+.linha:first-of-type { 
+  margin-top: 24px; 
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .conteudo { 
+    padding: 40px 5% 56px; 
+  }
+
+  .busca, .campoBusca { 
+    gap: 10px; 
+  }
+}

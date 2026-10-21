@@ -1,0 +1,125 @@
+.fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.modal {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 20px;
+  background: white;
+  color: #18552f;
+  font-family: 'Outfit', Arial, sans-serif;
+  overflow: hidden;
+}
+.modal, .modal * { 
+  box-sizing: border-box; 
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: #18552f;
+  color: white;
+}
+.topo h2 { 
+  margin: 0; 
+  font-size: 30px; 
+  font-weight: 600; 
+}
+
+.topo button {
+  border: 0;
+  background: none;
+  color: white;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+  padding: 24px 28px 28px; 
+}
+
+.linha { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 16px; 
+}
+
+.campo { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6px; 
+  min-width: 0; 
+}
+
+.campo label {
+  font-size: 18px; 
+  font-weight: 600; 
+}
+
+.campo input {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border: 2px solid #18552f;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 16px;
+}
+
+.campo input:focus { 
+  outline: 3px solid #8fb30d; 
+}
+
+.secundario, .principal {
+  height: 50px;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secundario { 
+  border: 2px solid #18552f; 
+  background: #cfdf84; 
+  color: #18552f; 
+}
+
+.secundario:hover { 
+  background: #c2d56c; 
+}
+
+.principal { 
+  border: 0; 
+  background: #18552f; 
+  color: white; 
+}
+
+.principal:hover { 
+  background: #287447; 
+}
+
+@media (max-width: 700px) {
+  .linha { 
+    grid-template-columns: 1fr; 
+  }
+
+  .topo h2 { 
+    font-size: 24px; 
+  }
+}
