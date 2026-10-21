@@ -17,7 +17,7 @@ function Chat2() {
           alt="Foto de perfil" 
           className={Styles.profileAvatar} 
         />
-        <h2 className={Styles.profileName}>Henrique Rodrigues</h2>
+        <h2 className={Styles.profileName}>Xepinha</h2>
       </div>
 
       <div className={Styles.chatMessages}>
