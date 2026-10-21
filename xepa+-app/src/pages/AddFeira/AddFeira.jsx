@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
+import PopUpAddFeira from "./componentes/popUpAddFeira";
 import styles from "./css/AddFeira.module.css";
 
 const feiras = [
@@ -9,6 +11,8 @@ const feiras = [
 ];
 
 function AddFeira() {
+  const [aberto, setAberto] = useState(false);
+
   return (
     <div className={styles.pagina}>
       <Header styles={styles} />
@@ -25,7 +29,12 @@ function AddFeira() {
             <input id="busca" type="text" placeholder="Ex: Rua joão de campos" />
           </div>
 
-          <button type="button" className={styles.botaoAdd} aria-label="Adicionar feira">
+          <button
+            type="button"
+            className={styles.botaoAdd}
+            aria-label="Adicionar feira"
+            onClick={() => setAberto(true)}
+          >
             +
           </button>
         </div>
@@ -52,6 +61,8 @@ function AddFeira() {
       </main>
 
       <Footer styles={styles} />
+
+      <PopUpAddFeira aberto={aberto} onFechar={() => setAberto(false)} />
     </div>
   );
 }
