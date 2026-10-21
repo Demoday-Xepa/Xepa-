@@ -1,5 +1,5 @@
 import { Navbar } from "../../components/navbarCliente/navbarC";
-import Chat from '../ChatIA/components/chat';
+import Chat from './components/chat';
 
 function ChatIA() {
   return (
