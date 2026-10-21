@@ -1,0 +1,43 @@
+.resumo {
+    padding: 16px;
+    border: 1.5px solid var(--verde);
+    border-radius: 15px;
+    color: var(--verde);
+}
+
+.resumo h2 {
+    margin: 0 0 14px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--cinza-claro);
+    font-size: 22px;
+}
+
+.linha {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.linha span, .total span {
+    color: var(--cinza);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.linha strong, .total strong {
+    font-size: 17px;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 14px;
+    border-top: 2px solid var(--cinza-claro);
+}
+
+.total span {
+    font-size: 18px;
+    color: var(--cinza);
+}
