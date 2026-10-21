@@ -1,0 +1,98 @@
+.mapaMain{
+    position: fixed;
+    top: -60px; /* Altura aproximada da barra de perfil do Google Maps (ajuste se precisar) */
+    left: 0;
+    width: 100%;
+    height: calc(100vh + 60px); /* Aumenta a altura para compensar o topo cortado */
+    z-index: 0;
+    overflow: hidden;
+}
+
+.mapaMain iframe{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.search{
+    margin-bottom: 10px;
+width: 100%;
+height: 50px;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.fundoSection .conteudo {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    padding: 16px;
+    color: #222;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.conteudotwo{
+   margin-top: 10px;
+     box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+
+}
+.conteudothree{
+    margin-top: 10px;
+     box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+
+.cardLateral{
+width: 27%;
+    position: absolute;
+    z-index: 2;
+    top: 40px;
+margin: 40px;
+    
+}
+.cardTitle{
+    background-color: #18522c;
+    color: azure;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.fundoSection{
+    padding: 10px;
+    background-color: #37d36d;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 500px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius: 15px;
+    
+}
+
+.titleIn{
+    display:flex;
+        flex-direction: row;
+        align-items: center;
+        
+        
+}
