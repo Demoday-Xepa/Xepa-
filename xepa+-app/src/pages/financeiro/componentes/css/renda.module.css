@@ -1,0 +1,42 @@
+.rendas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 12px;
+    border: 1.5px solid var(--verde);
+    border-radius: 15px;
+    color: var(--verde);
+}
+
+.card h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.card p {
+    margin: 0 0 5px;
+    color: var(--cinza);
+    font-size: 12px;
+}
+
+.card strong {
+    font-size: 30px;
+}
+
+.destaque {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+.destaque h2 {
+    color: var(--limao);
+}
+
+.destaque p {
+    color: var(--branco);
+}
+

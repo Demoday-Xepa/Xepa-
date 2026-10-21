@@ -1,0 +1,76 @@
+:root {
+    --preto: #161414;
+    --verde: #18552f;
+    --limao: #9bc000;
+    --amarelo: #ffc927;
+    --laranja: #f76019;
+    --cinza: #716d6d;
+    --cinza-claro: #d6e1d9;
+    --branco: #ffffff;
+}
+
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--branco);
+    color: var(--verde);
+    font-family: Arial, sans-serif;
+}
+
+.conteudo {
+    padding: 30px 5%;
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.titulo p {
+    margin: 12px 0 0;
+    color: var(--cinza);
+    font-size: 20px;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes button {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--verde);
+    color: var(--branco);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.painel {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 30px;
+    padding: 22px;
+    border: 1.5px solid var(--verde);
+    border-radius: 15px;
+}
+
+.inferior {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 30px;
+    margin-bottom: 38px;
+}
+
