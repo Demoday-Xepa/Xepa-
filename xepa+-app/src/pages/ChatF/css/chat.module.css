@@ -1,0 +1,122 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.btnSair {
+  background-color: #1b432a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chatPerfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.profileAvatar {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.profileName {
+  color: #1b432a;
+  font-size: 42px;
+  font-weight: 1200;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-bottom: 100px;
+}
+
+.chatMessages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.messageReceived {
+  align-self: flex-start;
+  background-color: #3b7e06;
+  color: #ffffff;
+  max-width: 80%;
+  padding: 16px 20px;
+  border-radius: 12px 12px 12px 0px;
+  font-size: 20px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.messageSent {
+  align-self: flex-end;
+  background-color: #f15a24;
+  color: #ffffff;
+  max-width: 80%;
+  padding: 16px 20px;
+  border-radius: 12px 12px 0px 12px;
+  font-size: 20px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.messageReceived p,
+.messageSent p {
+  margin: 0;
+}
+
+.chatInputForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.chatInput {
+  width: 100%;
+  padding: 16px 50px 16px 20px;
+  border: 1.5px solid #1b432a;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.btnEnviar {
+  position: absolute;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  background-color: #f15a24;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
