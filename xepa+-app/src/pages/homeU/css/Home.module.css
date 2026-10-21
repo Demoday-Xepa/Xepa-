@@ -21,7 +21,7 @@
   font-weight: bold;
   color: #111111;
   margin: 0;
-  font-family: sans-serif;
+  font-family: poppins;
     margin-left:85px;
     margin-top: 40px;
 }
@@ -31,7 +31,7 @@
   font-weight: bold;
   color: #111111;
   margin: 4px 0 0 0;
-  font-family: sans-serif;
+  font-family: poppins;
     margin-left:85px;
      margin-top: 40px;
 }
@@ -120,4 +120,96 @@
 }
 .botaoCategoria:hover {
   background-color: #1b5233;
+}
+
+/*PARTE DE VERDE */
+.secaoContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.cardBanner {
+  display: flex;
+  flex-direction: row;
+  background-color: #9ac214; 
+  border-radius: 24px;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.conteudoEsquerda {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo {
+  color: #111827;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.subtitulo {
+  color: #1f2937;
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+
+.buscaContainer {
+  display: flex;
+  background: white;
+  border-radius: 50px;
+  padding: 6px;
+  max-width: 450px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.inputBusca {
+  flex: 1;
+  border: none;
+  padding: 0 16px;
+  font-size: 0.95rem;
+  outline: none;
+  background: transparent;
+}
+
+.botaoVer {
+  background-color: #1b4d3e; 
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 34px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botaoVer:hover {
+  background-color: #12382c;
+}
+
+.conteudoDireita {
+  flex: 1;
+  display: flex;
+}
+
+.imagemFeira {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
