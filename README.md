@@ -1,8 +1,11 @@
 O XEPA+ é um projeto acadêmico que busca reduzir o desperdício de alimentos nas feiras livres e na CEAGESP, na cidade de São Paulo, e aproximar essas sobras de quem tem dificuldade para se alimentar. O nome vem da "xepa", a prática em que os feirantes baixam os preços no fim da feira para vender o que sobrou.
 
 
-🍉 Nossa Missão: dar um destino à xepa, reduzindo o desperdício de alimentos e aproximando as sobras de quem mais precisa.
+🍉 Missão: Reduzir o desperdício de alimentos, dando um novo destino às frutas, verduras e legumes que sobram após as feiras livres, conectando feirantes a consumidores e tornando esses alimentos mais acessíveis.
 
-🍍 Visão: ser referência no aproveitamento de alimentos em São Paulo. Para nossos usuários e parceiros: uma relação com foco na sustentabilidade, escalabilidade e eficiência, sempre visando o crescimento.
+🍍 Visão: Ser referência no aproveitamento de alimentos pós-feira, promovendo um modelo de negócio sustentável, acessível e eficiente, que gere valor para consumidores, feirantes e parceiros.
 
-🍒 Valores: solidariedade, praticidade, acessibilidade, transparência e sustentabilidade ambiental e social.
+🍒 Valores: Sustentabilidade; 
+Acessibilidade;
+Transparência;
+Compromisso social. 
