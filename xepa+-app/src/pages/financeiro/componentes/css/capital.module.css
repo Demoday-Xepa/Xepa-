@@ -1,0 +1,55 @@
+.capital {
+    padding: 16px;
+    border: 1.5px solid var(--limao);
+    border-radius: 15px;
+    color: var(--verde);
+
+}
+
+.capital h2 {
+    border-bottom: 2px solid var(--cinza-claro);
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    font-size: 32px;
+}
+
+.aviso {
+    margin: 0 0 18px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cinza);
+}
+
+.linha {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 18px 0;
+}
+
+.linha span, .reserva span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.linha strong {
+    font-size: 20px;
+}
+
+.reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 18px;
+}
+
+.reserva strong {
+    font-size: 36px;
+}
+
+.rodape {
+    margin: 20px 0 0;
+    padding-top: 14px;
+    border-top: 2px solid var(--cinza-claro);
+    font-size: 11px;
+}

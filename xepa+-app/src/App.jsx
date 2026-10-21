@@ -1,12 +1,9 @@
 
 import './App.css';
-import CriarConta from './components/login/CriarConta' ;
+import HomePrincipal from './pages/HomePrincipal/HomePrincipal';
 
-
-export default function App() {
-  return (
-    <div>
-        <CriarConta />
-    </div>
-  );
+function App() {
+  return <HomePrincipal />;
 }
+
+export default App;
