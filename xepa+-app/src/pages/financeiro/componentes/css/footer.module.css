@@ -1,0 +1,97 @@
+.footer {
+    padding: 36px 5% 22px;
+    background: #18552f;
+    color: white;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 35px;
+    padding-bottom: 24px;
+}
+
+.marca h2 {
+    margin: 0 0 18px;
+    font-size: 22px;
+}
+
+.marca p {
+    max-width: 230px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.redes {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.redes a {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    color: #18552f;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.coluna h3 {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.coluna a,
+.base a {
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.coluna a:hover,
+.base a:hover {
+    text-decoration: underline;
+}
+
+.base {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 18px;
+    border-top: 2px solid white;
+    font-size: 11px;
+}
+
+.base div {
+    display: flex;
+    gap: 24px;
+}
+
+@media (max-width: 700px) {
+    .conteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .base {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+}
