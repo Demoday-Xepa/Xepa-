@@ -33,6 +33,7 @@ function Footer() {
         <div className={styles.marca}>
           <div className={styles.logo}>
             <img src={logo} alt="Xepa+" className={styles.logoImg} />
+          </div>
       </div>
 
           <p>
