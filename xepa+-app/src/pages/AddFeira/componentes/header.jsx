@@ -6,7 +6,6 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.logo}>
         <img src={logo} alt="Logo Xepa+" className={styles.logoImg} />
-        <span>Xepa+</span>
       </div>
 
       <div className={styles.usuario}>
@@ -19,7 +18,7 @@ function Header() {
         </button>
 
         <div className={styles.avatar}>
-          <img src="" alt="Foto do usuário" />
+          <img src={logo} alt="Foto do usuário" />
         </div>
 
         <span className={styles.nomeUsuario}>Henrique</span>

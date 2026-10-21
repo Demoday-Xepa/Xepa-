@@ -61,6 +61,7 @@
   font: inherit;
   color: #333;
 }
+
 .campoBusca input:focus { 
   outline: 3px solid #8fb30d; 
   border-color: #18552f; 
@@ -108,7 +109,8 @@
   padding-bottom: 18px;
   border-radius: 14px;
   background: #18552f;
-  color: #a9c4b2;
+  color: white;
+  font-size: 20px;
   font-weight: 600;
 }
 
