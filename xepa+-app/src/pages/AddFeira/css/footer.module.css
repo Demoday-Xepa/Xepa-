@@ -93,6 +93,11 @@
 }
 
 @media (max-width: 700px) {
-  .links { gap: 32px; }
-  .legal { gap: 20px; }
+  .links { 
+    gap: 32px; 
+  }
+
+  .legal { 
+    gap: 20px; 
+  }
 }
