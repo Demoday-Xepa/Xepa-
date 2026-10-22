@@ -1,0 +1,161 @@
+.footer {
+  --verde: #17532c;
+  --branco: #ffffff;
+
+  background: var(--verde);
+  color: var(--branco);
+  padding: 40px clamp(24px, 5vw, 64px) 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.footer * {
+  box-sizing: border-box;
+}
+
+.rodapeTopo {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.marca {
+  flex: 0 1 300px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.logo img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.descricao {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 18px;
+}
+
+.redes {
+  display: flex;
+  gap: 10px;
+}
+
+.redes a {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--branco);
+  display: grid;
+  place-items: center;
+  transition: transform 0.2s;
+}
+
+.redes a:hover {
+  transform: scale(1.12);
+}
+
+.redes svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--verde);
+}
+
+.colunas {
+  display: flex;
+  gap: clamp(32px, 6vw, 80px);
+  flex-wrap: wrap;
+}
+
+.coluna h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.coluna ul {
+  list-style: none;
+}
+
+.coluna li {
+  margin-bottom: 8px;
+}
+
+.coluna a {
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.coluna a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.espaco {
+  margin-top: 22px;
+}
+
+.base {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 2px solid var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+}
+
+.legal {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.legal a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .rodapeTopo {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .marca {
+    flex-basis: auto;
+    max-width: 100%;
+  }
+
+  .colunas {
+    gap: 28px;
+  }
+
+  .base {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .legal {
+    gap: 16px;
+  }
+}
