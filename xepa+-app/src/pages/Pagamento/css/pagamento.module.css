@@ -7,7 +7,7 @@
 
 body {
   background-color: #f4f6f8;
-  color: #333;
+  color: #18522C;
 }
 
 .pagamentoContainer {
@@ -18,7 +18,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: green;
+  background-color: #18522C;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@ body {
   gap: 0.5rem;
   font-size: 1.25rem;
   font-weight: bold;
-  color: #2e7d32;
+  color: #18522C;
 }
 
 .userMenu {
@@ -46,7 +46,7 @@ body {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #666;
+  color: #18522C;
 }
 
 .userProfile {
@@ -67,19 +67,22 @@ body {
 }
 
 .userName {
+  color: #fff;
   font-weight: 500;
   font-size: 0.95rem;
+  font-family: bold;
 }
 
 .btnVoltar {
   text-decoration: none;
-  color: #666;
+  color: #ffffff;
   font-weight: 500;
   font-size: 0.95rem;
+  font-family: bold;
 }
 
 .btnVoltar:hover {
-  color: #2e7d32;
+  color: #18522C;
 }
 
 /* Conteúdo Principal */
@@ -97,7 +100,7 @@ body {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #1a1a1a;
+  color: #18522C;
 }
 
 .contentGrid {
@@ -123,7 +126,7 @@ body {
 .sectionTitle, .summaryTitle {
   font-size: 1rem;
   font-weight: bold;
-  color: #666;
+  color: #18522C;
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
 }
@@ -133,7 +136,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #2e7d32;
+  border: 2px solid #18522C;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -145,7 +148,7 @@ body {
   align-items: center;
   gap: 0.75rem;
   font-weight: bold;
-  color: #2e7d32;
+  color: #18522C;
 }
 
 .pixIcon {
@@ -156,7 +159,7 @@ body {
 .radioIndicator {
   width: 20px;
   height: 20px;
-  border: 2px solid #2e7d32;
+  border: 2px solid #18522C;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -166,7 +169,7 @@ body {
 .radioInner {
   width: 10px;
   height: 10px;
-  background-color: #2e7d32;
+  background-color: #18522C;
   border-radius: 50%;
 }
 
@@ -185,6 +188,7 @@ body {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 1.5rem;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 .qrCodeBox {
@@ -199,8 +203,8 @@ body {
 .btnCopyPix {
   width: 100%;
   background-color: transparent;
-  border: 2px solid #2e7d32;
-  color: #2e7d32;
+  border: 2px solid #18522C;
+  color: #18522C;
   padding: 0.75rem;
   font-weight: bold;
   border-radius: 8px;
@@ -209,7 +213,7 @@ body {
 }
 
 .btnCopyPix:hover {
-  background-color: #2e7d32;
+  background-color: #18522C;
   color: #fff;
 }
 
@@ -227,21 +231,25 @@ body {
 }
 
 .itemName {
-  color: #555;
+  color: #18522C;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .itemPrice {
-  font-weight: 500;
+  color: #666;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .freeTag {
-  color: #2e7d32;
+  color: #18522C;
   font-weight: bold;
 }
 
 .summaryDivider {
-  height: 1px;
-  background-color: #eee;
+  height: 2px;
+  background-color: #666;
   margin-bottom: 1.5rem;
 }
 
@@ -251,12 +259,12 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #1a1a1a;
+  color: #18522C;
 }
 
 .btnConfirmPayment {
   width: 100%;
-  background-color: #2e7d32;
+  background-color: #18522C;
   border: none;
   color: white;
   padding: 1rem;
@@ -266,10 +274,11 @@ body {
   cursor: pointer;
   margin-bottom: 1rem;
   transition: background-color 0.2s;
+  
 }
 
 .btnConfirmPayment:hover {
-  background-color: #235d27;
+  background-color: #18522C;
 }
 
 .secureBadge {
