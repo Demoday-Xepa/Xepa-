@@ -14,11 +14,23 @@ import ChatIA from './pages/ChatIA/chatIA'
 import { Impacto } from './pages/impactoU/impactoU'
 import Cozy from './pages/cozinha/Cozy'
 
+// Login e cadastro
+import Crumb from './components/login/Crumb'
+import OpcaoLogin from './components/login/OpcaoLogin'
+import CriarContaF from './components/login/CriarContaF'
+import CriarConta from './components/login/CriarConta'
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePrincipal />} />
+
+        {/* Login e cadastro */}
+        <Route path="/Crumb" element={<Crumb />} />
+        <Route path="/OpcaoLogin" element={<OpcaoLogin />} />
+        <Route path="/CriarUsuarioF" element={<CriarContaF />} />
+        <Route path="/CriarConta" element={<CriarConta />} />
 
         <Route path="/homeF" element={<HomeFeirante />} />
         <Route path="/homeU" element={<HomeUsuario />} />
