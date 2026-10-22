@@ -3,6 +3,7 @@ import './App.css'
 
 // Páginas principais
 import HomePrincipal from './pages/HomePrincipal/HomePrincipal'
+import SobreNos from './pages/sobreNos/Sobrenos'
 import HomeFeirante from './pages/HomeF/Home'
 import HomeUsuario from './pages/homeU/Home'
 import Financeiro from './pages/financeiro/financeiro'
@@ -44,6 +45,7 @@ function App() {
         {/* Funcionalidades */}
         <Route path="/financeiro" element={<Financeiro />} />
         <Route path="/mapa" element={<Mapa />} />
+        <Route path="/sobrenos" element={<SobreNos />} />
 
         <Route path="/adicionar-produto" element={<AddProduto />} />
         <Route path="/adicionar-feira" element={<AddFeira />} />

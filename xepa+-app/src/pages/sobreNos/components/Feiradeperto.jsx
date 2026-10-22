@@ -1,25 +1,33 @@
-import { useState } from "react";
-import LOREM from "./lorem";
-import "./FeiraDePerto.css";
+import { useRef, useState } from "react";
+import "../css/FeiraDePerto.css";
+import videoFeira from "../imgs/Feiramadru.mp4";
 
 function FeiraDePerto() {
   const [tocando, setTocando] = useState(false);
+  const videoRef = useRef(null);
+
+  const reproduzir = () => {
+    setTocando(true);
+    videoRef.current.play();
+  };
 
   return (
     <section className="secao">
       <h2>Conheça a feira de perto</h2>
-      <p>{LOREM}</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident.</p>
 
       <div className="video">
-        {tocando ? (
-          <video src="/videos/feira.mp4" controls autoPlay />
-        ) : (
-          <>
-            <img src="/images/sobre/feira-video.jpg" alt="Movimento em uma feira de rua" />
-            <button type="button" className="video__play" aria-label="Reproduzir vídeo" onClick={() => setTocando(true)}>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-            </button>
-          </>
+        <video
+          ref={videoRef}
+          src={`${videoFeira}#t=0.1`}
+          preload="metadata"
+          controls={tocando}
+          playsInline
+        />
+        {!tocando && (
+          <button type="button" className="video__play" aria-label="Reproduzir vídeo" onClick={reproduzir}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+          </button>
         )}
       </div>
     </section>

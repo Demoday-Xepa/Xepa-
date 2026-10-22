@@ -1,19 +1,15 @@
-.secao-sobre {
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  height: clamp(245px, 59vw, 570px);
-  padding: 4.5vw 0 4.5vw 5.5vw;
 
 .secao-sobre {
   display: grid;
-  grid-template-columns: minmax(0, 46%) minmax(0, 54%);
+  grid-template-columns: 42% 58%;
   align-items: center;
-  gap: 0;
 
-  height: clamp(245px, 56vw, 570px);
-  padding: 4% 0 2% 6%;
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 48vw, 570px);
+  box-sizing: border-box;
+  padding: 30px 0 30px 6%;
+
   overflow: hidden;
 
   background: #fff3ec;
@@ -21,9 +17,9 @@
 
 .conteudo-sobre {
   position: relative;
-  z-index: 2;
-  min-width: 0;
-  padding-right: 12px;
+  z-index: 3;
+  width: 100%;
+  max-width: 390px;
 }
 
 .conteudo-sobre h2 {
@@ -31,131 +27,109 @@
 
   color: #195132;
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(22px, 5.8vw, 48px);
+  font-size: clamp(30px, 3.4vw, 40px);
   font-weight: 700;
-  line-height: 1.33;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: -0.8px;
 }
 
 .conteudo-sobre p {
-  margin: clamp(12px, 4.5vw, 24px) 0 0;
-
+  max-width: 350px;
+  margin: 28px 0 0;
   color: #d45a32;
-  font-size: clamp(7px, 1.7vw, 13px);
-  line-height: 1.42;
-  margin: clamp(12px, 2vw, 20px) 0 0;
-
-  color: #d45a32;
-  font-size: clamp(8px, 1.9vw, 13px);
-  line-height: 1.45;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .botao-sobre {
   display: inline-block;
-  margin-top: clamp(12px, 4.6vw, 24px);
-  padding: 0.65em 1.5em;
-
-  border-radius: 3px;
-  background: #f15a24;
-  color: #fff;
-
-  font-size: clamp(8px, 1.8vw, 12px);
-  margin-top: clamp(12px, 2.5vw, 22px);
-  padding: 8px 13px;
-
+  margin-top: 26px;
+  padding: 9px 14px;
+  border: 0;
   border-radius: 4px;
   background: #f15a24;
   color: white;
-
-  font-size: clamp(8px, 1.5vw, 11px);
+  font-size: 11px;
   font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .botao-sobre:hover {
   background: #d94b19;
 }
 
+.colagem-sobre {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
 .foto-sobre {
   position: absolute;
   display: block;
   height: auto;
-.colagem-sobre {
-  position: relative;
-  align-self: stretch;
-
-  width: 115%;
-  min-width: 0;
-  height: 100%;
-  margin-left: -4%;
-
-  overflow: visible;
-}
-
-.foto-sobre {
-  position: absolute;
-  display: block;
-
-  width: 108%;
-  height: 60%;
-
+  max-width: none;
   object-fit: contain;
 }
 
+/* Imagem superior, inclinada para a direita */
 .foto-sobre--feira {
   z-index: 2;
-  top: 0.2%;
-  left: 53%;
-  width: 50%;
-  top: 1%;
-  right: -1%;
-  transform: rotate(-7deg);
+  top: 2%;
+  right: -13%;
+  width: 115%;
+  transform: rotate(-8deg);
 }
 
+/* Imagem inferior, sobreposta à primeira */
 .foto-sobre--alimentos {
   z-index: 1;
-  top: 35%;
-  left: 45%;
-  width: 50%;
-  right: 0;
-  bottom: 1%;
-  transform: rotate(3deg);
+  right: -15%;
+  bottom: 2%;
+  width: 120%;
+  transform: rotate(4deg);
 }
 
 @media (max-width: 600px) {
   .secao-sobre {
-    grid-template-columns: minmax(0, 46%) minmax(0, 54%);
-    height: clamp(245px, 56vw, 340px);
-    padding: 5% 0 2% 6%;
+    grid-template-columns: 42% 58%;
+    height: 330px;
+    padding: 24px 0 24px 5%;
   }
 
   .conteudo-sobre {
-    padding-right: 7px;
+    padding-right: 8px;
   }
 
   .conteudo-sobre h2 {
-    font-size: clamp(21px, 5.8vw, 29px);
+    font-size: clamp(22px, 5.5vw, 29px);
+    line-height: 1.2;
   }
 
   .conteudo-sobre p {
-    margin-top: 12px;
-    font-size: clamp(8px, 1.9vw, 10px);
+    margin-top: 16px;
+    font-size: 10px;
     line-height: 1.45;
   }
 
   .botao-sobre {
-    margin-top: 12px;
+    margin-top: 16px;
     padding: 7px 10px;
-    font-size: 8px;
+    font-size: 9px;
   }
 
-  .colagem-sobre {
-    width: 116%;
-    margin-left: -4%;
+  .foto-sobre--feira {
+    top: 8%;
+    right: -22%;
+    width: 140%;
   }
 
-  .foto-sobre {
-    width: 108%;
-    height: 58%;
+  .foto-sobre--alimentos {
+    right: -25%;
+    bottom: 5%;
+    width: 145%;
   }
 }

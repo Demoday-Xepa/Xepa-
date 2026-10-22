@@ -1,18 +1,24 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import LOREM from "./lorem";
-import "./Time.css";
+import "../css/Time.css";
+import fotoMatheus from "../imgs/Matheus.jpeg";
+import fotoFernanda from "../imgs/Fernanda.jpeg";
+import fotoHenrique from "../imgs/Henrique.jpeg";
+import fotoIgor from "../imgs/Igor.jpeg";
+import fotoJamilly from "../imgs/Jamilly.jpeg";
+import fotoGabriel from "../imgs/Gabriel.jpeg";
+import fotoHadson from "../imgs/Hadson.jpeg";
 
 const CORES = ["verde", "laranja", "amarelo"];
 
 const TIME = [
-  { nome: "Matheus Barros", tags: ["Desenvolvedor", "Design"], foto: "/images/sobre/time/matheus.jpg", linkedin: "#", github: "#" },
-  { nome: "Murilo Veríssimo", tags: ["Desenvolvedor", "Marketing"], foto: "/images/sobre/time/murilo.jpg", linkedin: "#", github: "#" },
-  { nome: "Fernanda Ribeiro", tags: ["Documentarista", "Pesquisa"], foto: "/images/sobre/time/fernanda.jpg", linkedin: "#", github: "#" },
-  { nome: "Nome Sobrenome", tags: ["Função", "Função"], foto: "/images/sobre/time/membro4.jpg", linkedin: "#", github: "#" },
-  { nome: "Nome Sobrenome", tags: ["Função", "Função"], foto: "/images/sobre/time/membro5.jpg", linkedin: "#", github: "#" },
-  { nome: "Nome Sobrenome", tags: ["Função", "Função"], foto: "/images/sobre/time/membro6.jpg", linkedin: "#", github: "#" },
-  { nome: "Nome Sobrenome", tags: ["Função", "Função"], foto: "/images/sobre/time/membro7.jpg", linkedin: "#", github: "#" },
-  { nome: "Nome Sobrenome", tags: ["Função", "Função"], foto: "/images/sobre/time/membro8.jpg", linkedin: "#", github: "#" },
+  { nome: "Matheus Barros", tags: ["Desenvolvedor", "Dados"], foto: fotoMatheus, linkedin: "#", github: "#" },
+  { nome: "Murilo Veríssimo", tags: ["Desenvolvedor", "Marketing"], foto: null, linkedin: "#", github: "#" },
+  { nome: "Fernanda Ribeiro", tags: ["Documentarista", "Pesquisa"], foto: fotoFernanda, linkedin: "#", github: "#" },
+  { nome: "Henrique Mazza", tags: ["Desenvolvedor", "IA"], foto: fotoHenrique, linkedin: "#", github: "#" },
+  { nome: "Igor Aguiar", tags: ["Desenvolvedor", "Dados"], foto: fotoIgor, linkedin: "#", github: "#" },
+  { nome: "Jamilly Moreira", tags: ["SM", "Vendas"], foto: fotoJamilly, linkedin: "#", github: "#" },
+  { nome: "Gabriel Carneiro", tags: ["PO", "Marketing"], foto: fotoGabriel, linkedin: "#", github: "#" },
+  { nome: "Hadson Ferreira", tags: ["Desenvolvedor", "Vendas"], foto: fotoHadson, linkedin: "#", github: "#" },
 ];
 
 function Carrossel() {
@@ -51,7 +57,7 @@ function Carrossel() {
               <h3>{m.nome}</h3>
             </div>
             <div className="card-time__foto">
-              <img src={m.foto} alt={`Foto de ${m.nome}`} loading="lazy" />
+              {m.foto && <img src={m.foto} alt={`Foto de ${m.nome}`} loading="lazy" />}
               <div className="card-time__links">
                 <a className="btn-linkedin" href={m.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
                 <a className="btn-github" href={m.github} target="_blank" rel="noreferrer">GitHub</a>
@@ -81,7 +87,7 @@ export default function Time() {
   return (
     <section className="secao">
       <h2>Conheça nosso time !</h2>
-      <p>{LOREM}</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident.</p>
       <Carrossel />
     </section>
   );
