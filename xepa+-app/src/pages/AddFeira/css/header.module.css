@@ -1,0 +1,101 @@
+.header, .header * { 
+    box-sizing: border-box; 
+}
+
+.header {
+    min-height: 64px;
+    padding: 6px 5%;
+    background: #18552f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 28px; 
+    font-weight: 600; 
+}
+
+.logoImg { 
+    height: 44px; 
+    display: block; 
+}
+
+.usuario { 
+    display: flex; 
+    align-items: center; 
+    gap: 14px; 
+    font-size: 15px; 
+}
+
+.nomeUsuario { 
+    font-weight: 600; 
+}
+
+.sino, .avatar {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: white;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sino { 
+    color: #111; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+}
+
+.avatar img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+
+.botaoVoltar {
+    padding: 10px 36px;
+    border: 0;
+    border-radius: 6px;
+    background: #8fb30d;
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botaoVoltar:hover { 
+    background: #a0c618; 
+}
+
+@media (max-width: 700px) {
+  .logo { 
+    font-size: 22px; 
+  }
+
+  .logoImg { 
+    height: 34px; 
+  }
+
+  .usuario { 
+    gap: 8px; 
+    font-size: 13px; 
+  }
+  .nomeUsuario { 
+    display: none; 
+  }
+
+  .botaoVoltar { 
+    padding: 8px 16px; 
+  }
+}
