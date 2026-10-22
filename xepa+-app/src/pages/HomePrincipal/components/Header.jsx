@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="cabecalho-xepa">
       <a href="#inicio" className="marca-xepa">
-        <span className="icone-marca">✿</span>
+        <span className="icone-marca"></span>
         <span>
           Xepa<span className="marca-mais">+</span>
         </span>
@@ -33,7 +33,7 @@ export default function Header() {
       <button
         type="button"
         className="botao-entrar"
-        onClick={() => navigate('/login')}
+        onClick={() => navigate('/Crumb')}
       >
         Login
       </button>
