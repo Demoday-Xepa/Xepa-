@@ -1,8 +1,11 @@
+
 .compras {
     padding: 16px;
     border: 1.5px solid var(--verde);
     border-radius: 16px;
     color: var(--verde);
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .cabecalho {
@@ -52,6 +55,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    min-width: 0;
 }
 
 .item span {
@@ -61,6 +65,7 @@
 
 .item strong {
     font-size: 17px;
+    overflow-wrap: anywhere;
 }
 
 .item time {
@@ -84,6 +89,7 @@
 
 .total strong {
     font-size: 22px;
+    overflow-wrap: anywhere;
 }
 
 .compras button {
@@ -95,4 +101,69 @@
     color: var(--branco);
     font-weight: bold;
     cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .compras {
+        padding: 14px;
+    }
+
+    .compras h2 {
+        font-size: 26px;
+    }
+
+    .item strong {
+        font-size: 16px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .compras {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .cabecalho {
+        gap: 8px;
+    }
+
+    .compras h2 {
+        font-size: 22px;
+    }
+
+    .verMais {
+        font-size: 11px;
+        padding: 5px 7px !important;
+    }
+
+    .lista {
+        min-height: 80px;
+    }
+
+    .vazio {
+        font-size: 13px;
+    }
+
+    .item {
+        gap: 8px;
+    }
+
+    .item strong {
+        font-size: 15px;
+    }
+
+    .item time {
+        font-size: 11px;
+    }
+
+    .total strong {
+        font-size: 20px;
+    }
+
+    .compras button {
+        padding: 11px;
+    }
 }
