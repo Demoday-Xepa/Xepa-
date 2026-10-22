@@ -5,14 +5,6 @@ import './App.css'
 import HomePrincipal from './pages/HomePrincipal/HomePrincipal'
 import HomeFeirante from './pages/HomeF/Home'
 import HomeUsuario from './pages/homeU/Home'
-
-// Login e cadastro
-import Crumb from './components/login/Crumb'
-import OpcaoLogin from './components/login/OpcaoLogin'
-import CriarContaF from './components/login/CriarContaF'
-import CriarConta from './components/login/CriarConta'
-
-// Demais páginas
 import Financeiro from './pages/financeiro/financeiro'
 import Mapa from './pages/Mapa/mapaMain'
 import AddProduto from './pages/AddProduto/AddProduto'
@@ -28,21 +20,16 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePrincipal />} />
 
-        {/* Login e cadastro */}
-        <Route path="/Crumb" element={<Crumb />} />
-        <Route path="/OpcaoLogin" element={<OpcaoLogin />} />
-        <Route path="/CriarUsuarioF" element={<CriarContaF />} />
-        <Route path="/CriarConta" element={<CriarConta />} />
-
-        {/* Áreas logadas */}
         <Route path="/homeF" element={<HomeFeirante />} />
         <Route path="/homeU" element={<HomeUsuario />} />
 
         {/* Funcionalidades */}
         <Route path="/financeiro" element={<Financeiro />} />
         <Route path="/mapa" element={<Mapa />} />
+
         <Route path="/adicionar-produto" element={<AddProduto />} />
         <Route path="/adicionar-feira" element={<AddFeira />} />
+
         <Route path="/chat-feirante" element={<ChatFeirante />} />
         <Route path="/chat-ia" element={<ChatIA />} />
         <Route path="/impacto" element={<Impacto />} />
