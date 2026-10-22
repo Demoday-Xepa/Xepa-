@@ -1,7 +1,6 @@
-import styles from "../css/header.module.css";
 import logo from "../../../imgs/logo.png";
 
-function Header() {
+function Header({ styles }) {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -9,10 +8,10 @@ function Header() {
       </div>
 
       <div className={styles.usuario}>
-        <button type="button" className={styles.sino} aria-label="Notificações">
+        <span className={styles.sino}>
           <svg
-            width="18"
-            height="18"
+            width="12"
+            height="12"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -23,12 +22,9 @@ function Header() {
             <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
             <path d="M13.7 21a2 2 0 0 1-3.4 0" />
           </svg>
-        </button>
+        </span>
 
-        <div className={styles.avatar}>
-          <img src={logo} alt="Foto do usuário" />
-        </div>
-
+        <span className={styles.avatar}></span>
         <span className={styles.nomeUsuario}>Henrique</span>
 
         <button

@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import '../css/Header.css'
-import logo from '../imgs/logo copy.png'
+
+import '../css/Header.css';
 
 const links = [
   { texto: 'Home', destino: '#inicio' },
@@ -9,16 +7,16 @@ const links = [
   { texto: 'Mapa', destino: '#mapa' },
   { texto: 'Xepas', destino: '#xepas' },
   { texto: 'Receitas', destino: '#receitas' },
-]
+];
 
 export default function Header() {
-  const navigate = useNavigate()
-  const [aberto, setAberto] = useState(false)
-
   return (
     <header className="cabecalho-xepa">
-      <a href="#inicio" className="marca-xepa" aria-label="Xepa+, ir para o início">
-        <img className="logo-xepa" src={logo} alt="Xepa+" />
+      <a href="#inicio" className="marca-xepa">
+        <span className="icone-marca">✿</span>
+        <span>
+          Xepa<span className="marca-mais">+</span>
+        </span>
       </a>
 
       <nav
@@ -33,28 +31,9 @@ export default function Header() {
         ))}
       </nav>
 
-      <div className="acoes-xepa">
-        <button
-          type="button"
-          className="botao-entrar"
-          onClick={() => navigate('/Crumb')}
-        >
-          Login
-        </button>
-
-        <button
-          type="button"
-          className="botao-menu"
-          aria-label={aberto ? 'Fechar menu' : 'Abrir menu'}
-          aria-expanded={aberto}
-          aria-controls="menu-principal"
-          onClick={() => setAberto(!aberto)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+      <a href="#login" className="botao-entrar">
+        Login
+      </a>
     </header>
-  )
+  );
 }
