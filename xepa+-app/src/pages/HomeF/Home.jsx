@@ -1,4 +1,4 @@
-import Dashboard from "./HomeFeirante";
+import Dashboard from "./components/HomeFeirante";
 
 function App() {
   return (

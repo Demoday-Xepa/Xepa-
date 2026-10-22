@@ -1,0 +1,25 @@
+.bloco {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: clamp(12px, 4vw, 64px);
+  margin-top: clamp(28px, 6vw, 72px);
+}
+.bloco--invertido { grid-template-columns: 1fr 1.1fr; }
+
+.bloco__midia {
+  background: #d9d9d9;
+  padding: 0 clamp(14px, 4vw, 56px) clamp(14px, 4vw, 56px) 0;
+}
+.bloco--invertido .bloco__midia {
+  padding: clamp(14px, 4vw, 56px) 0 0 clamp(14px, 4vw, 56px);
+}
+.bloco__midia img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.bloco__texto { padding: 0 var(--pad) 0 0; text-align: center; }
+.bloco--invertido .bloco__texto { padding: 0 0 0 var(--pad); }
+.bloco__texto p { margin-top: clamp(8px, 2vw, 20px); }

@@ -13,9 +13,7 @@ body,
   padding: 0;
 }
 
-body {
-  overflow: hidden;
-}
+
 
 .container {
   --azul: #18522c;
@@ -39,6 +37,12 @@ body {
   overflow: hidden;
 }
 
+.container *,
+.container *::before,
+.container *::after {
+  box-sizing: border-box;
+}
+
 /* ================= LADO IMAGEM ================= */
 .ladoImagem {
   position: relative;
@@ -54,7 +58,7 @@ body {
   justify-content: space-between;
 
   color: #fff;
-  overflow: hidden;
+
 
   background-image: url('../../../Assets/img/feira.jpg');
   background-size: cover;
