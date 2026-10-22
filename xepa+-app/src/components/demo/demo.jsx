@@ -8,11 +8,7 @@ function Demo() {
   return (
     <main className={Styles.container}>
       <section className={Styles.ladoImagem}>
-        <div>
-          <h2>Xepa+</h2>
-          <p>Conheça uma nova forma de aproveitar os alimentos.</p>
-        </div>
-        <p>Menos desperdício, mais oportunidades.</p>
+        
       </section>
 
       <section className={Styles.ladoForm}>
@@ -25,7 +21,6 @@ function Demo() {
             onClick={() => navigate('/demo/feirante')}
           >
             <span className={Styles.frente}>
-              <span className={Styles.icone}>♧</span>
               <span className={Styles.titulo}>Sou feirante</span>
             </span>
 
@@ -45,7 +40,6 @@ function Demo() {
             onClick={() => navigate('/demo/consumidor')}
           >
             <span className={Styles.frente}>
-              <span className={Styles.icone}>🛒</span>
               <span className={Styles.titulo}>Sou consumidor</span>
             </span>
 
