@@ -6,9 +6,9 @@ import logo from '../imgs/logo copy.png'
 const links = [
   { texto: 'Home', destino: '#inicio' },
   { texto: 'Sobre Nós', destino: '#sobre' },
-  { texto: 'Mapa', destino: '#mapa' },
-  { texto: 'Xepas', destino: '#xepas' },
-  { texto: 'Receitas', destino: '#receitas' },
+  { texto: 'Mapa', rota: '/mapa' },
+  { texto: 'Finanças', rota: '/financeiro' },
+  { texto: 'Receitas', destino: '/cozinha' },
 ]
 
 export default function Header() {
@@ -27,7 +27,17 @@ export default function Header() {
         aria-label="Principal"
       >
         {links.map((link) => (
-          <a key={link.texto} href={link.destino} onClick={() => setAberto(false)}>
+          <a
+            key={link.texto}
+            href={link.rota || link.destino}
+            onClick={(e) => {
+              setAberto(false)
+              if (link.rota) {
+                e.preventDefault()
+                navigate(link.rota)
+              }
+            }}
+          >
             {link.texto}
           </a>
         ))}
