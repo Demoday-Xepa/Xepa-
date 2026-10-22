@@ -1,0 +1,85 @@
+
+.cabecalho-xepa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  height: clamp(28px, 4.2vw, 58px);
+  padding: 0 2%;
+
+  background: #14532d;
+  color: white;
+}
+
+.marca-xepa {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(11px, 1.5vw, 19px);
+  font-weight: 700;
+}
+
+.icone-marca {
+  display: grid;
+  place-items: center;
+
+  width: clamp(17px, 2vw, 27px);
+  height: clamp(17px, 2vw, 27px);
+
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.marca-mais {
+  color: #c5df16;
+}
+
+.menu-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1.5vw, 22px);
+}
+
+.menu-principal a {
+  font-size: clamp(7px, 0.9vw, 12px);
+  white-space: nowrap;
+}
+
+.menu-principal a:hover {
+  color: #c5df16;
+}
+
+.botao-entrar {
+  display: grid;
+  place-items: center;
+
+  min-width: clamp(42px, 6vw, 82px);
+  padding: 5px 10px;
+
+  border-radius: 3px;
+  background: #c5df16;
+  color: #173b20;
+
+  font-size: clamp(7px, 0.9vw, 12px);
+  font-weight: 700;
+}
+
+@media (max-width: 370px) {
+  .cabecalho-xepa {
+    gap: 5px;
+    padding: 0 5px;
+  }
+
+  .menu-principal {
+    gap: 4px;
+  }
+
+  .menu-principal a {
+    font-size: 6px;
+  }
+}

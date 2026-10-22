@@ -1,0 +1,80 @@
+.fundo {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.771);
+
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--branco);
+    color: var(--verde);
+}
+
+.modal h2 {
+    margin: 0 30px 22px 0;
+    font-size: 26px;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: 0;
+    background: none;
+    color: var(--verde);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 6px;
+    background: var(--branco);
+    color: var(--verde);
+    box-sizing: border-box;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.acoes button {
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancelar {
+    background: var(--branco);
+    color: var(--verde);
+}
+
+.salvar {
+    background: var(--verde);
+    color: var(--branco);
+}

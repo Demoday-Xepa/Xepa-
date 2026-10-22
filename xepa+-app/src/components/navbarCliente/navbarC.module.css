@@ -1,14 +1,14 @@
 .navbar {
   background-color: #113822;
   width: 100%;
-  height: 70px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 40px;
   box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 .logo {
   display: flex;
@@ -17,56 +17,68 @@
 }
 
 .iconeLogo {
-  width: 150px;
+  width: 130px;
   height: auto;
 }
 
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
 
+.linkNav {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: sans-serif;
+  padding-bottom: 6px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.linkNav:hover {
+  color: #84cc16;
+}
+
+.linkAtivo {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #84cc16;
+  transition: all 0.2s ease;
+}
 
 .acoes {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
-
-.botaoNotificacao {
-  background-color: #ffffff;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.botaoNotificacao:hover {
-  background-color: #f0f0f0;
-}
-
 
 .perfil {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background-color: #ffffff;
   border-radius: 50%;
+  border: 2px solid #84cc16;
 }
 
 .nomeUsuario {
   color: #ffffff;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   font-family: sans-serif;
 }
-
 
 .botaoVoltar {
   background-color: #84cc16;
@@ -74,14 +86,16 @@
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .botaoVoltar:hover {
   background-color: #65a30d;
 }
+
 .paginaHome {
   width: 100%;
   min-height: 100vh;
@@ -90,11 +104,101 @@
   flex-direction: column;
 }
 
-
 .conteudo {
   padding: 40px 60px; 
   max-width: 1400px;  
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+}
+
+.secaoBoasVindas {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.topoCabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.textoBoasVindas h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #111111;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.textoBoasVindas h2 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #111111;
+  margin: 4px 0 0 0;
+  font-family: sans-serif;
+}
+
+.containerFotoPerfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fotoPerfil {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #84cc16;
+}
+
+.avatarPlaceholder {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: #84cc16;
+}
+
+.barraPesquisa {
+  width: 100%;
+  height: 54px;
+  padding: 0 24px;
+  border: 2px solid #113822;
+  border-radius: 12px;
+  font-size: 18px;
+  outline: none;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.barraPesquisa::placeholder {
+  color: #888888;
+}
+
+.categorias {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.botaoCategoria {
+  background-color: #113822;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botaoCategoria:hover {
+  background-color: #1b5233;
 }
