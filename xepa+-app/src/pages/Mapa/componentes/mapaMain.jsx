@@ -1,4 +1,4 @@
-import Styles from './css/Mapa.module.css';
+import Styles from '../css/Mapa.module.css';
 
 function MapaMain() {
   return (
