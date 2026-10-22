@@ -1,7 +1,9 @@
+
 import { Navbar } from "../../components/navbarCliente/navbarC";
-import { SecaoUm } from '../homeU/componentes/secaoUm';
-import { SecaoDois } from '../homeU/componentes/secaoDois';
-export function Home() {
+import { SecaoUm } from "./componentes/secaoUm";
+import { SecaoDois } from "./componentes/secaoDois";
+
+function HomeUsuario() {
   return (
     <div>
       <Navbar />
@@ -10,3 +12,5 @@ export function Home() {
     </div>
   );
 }
+
+export default HomeUsuario;
