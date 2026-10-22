@@ -1,3 +1,10 @@
+.secao-sobre {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  height: clamp(245px, 59vw, 570px);
+  padding: 4.5vw 0 4.5vw 5.5vw;
 
 .secao-sobre {
   display: grid;
@@ -13,6 +20,7 @@
 .conteudo-sobre {
   position: relative;
   z-index: 3;
+  width: 37vw;
   min-width: 0;
   padding-right: 12px;
 }
@@ -23,11 +31,17 @@
   font-family: 'Poppins', sans-serif;
   font-size: clamp(22px, 5.7vw, 48px);
   font-weight: 700;
+  line-height: 1.33;
   line-height: 1.25;
   letter-spacing: -0.8px;
 }
 
 .conteudo-sobre p {
+  margin: clamp(12px, 4.5vw, 24px) 0 0;
+
+  color: #d45a32;
+  font-size: clamp(7px, 1.7vw, 13px);
+  line-height: 1.42;
   margin: clamp(12px, 2vw, 20px) 0 0;
   color: #d45a32;
   font-size: clamp(8px, 1.9vw, 13px);
@@ -36,6 +50,14 @@
 
 .botao-sobre {
   display: inline-block;
+  margin-top: clamp(12px, 4.6vw, 24px);
+  padding: 0.65em 1.5em;
+
+  border-radius: 3px;
+  background: #f15a24;
+  color: #fff;
+
+  font-size: clamp(8px, 1.8vw, 12px);
   margin-top: clamp(12px, 2.5vw, 22px);
   padding: 8px 13px;
   border-radius: 4px;
@@ -51,6 +73,10 @@
   background: #d94b19;
 }
 
+.foto-sobre {
+  position: absolute;
+  display: block;
+  height: auto;
 .colagem-sobre {
   position: relative;
   align-self: stretch;
@@ -71,6 +97,9 @@
 
 .foto-sobre--feira {
   z-index: 2;
+  top: 0.2%;
+  left: 53%;
+  width: 50%;
   top: 1%;
   right: -1%;
   transform: rotate(-7deg);
@@ -78,6 +107,9 @@
 
 .foto-sobre--alimentos {
   z-index: 1;
+  top: 35%;
+  left: 45%;
+  width: 50%;
   right: 0;
   bottom: 1%;
   transform: rotate(3deg);
