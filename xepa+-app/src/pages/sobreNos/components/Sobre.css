@@ -1,0 +1,107 @@
+.sobre {
+  --verde: #1f4d12;
+  --pad: clamp(16px, 5vw, 80px);
+  background: #fffaf7;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: clamp(32px, 6vw, 80px);
+  overflow-x: hidden;
+}
+.sobre h1,
+.sobre h2 {
+  margin: 0;
+  color: var(--verde);
+  font-family: "Cal Sans", "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+.sobre h1 { font-size: clamp(28px, 6vw, 60px); }
+.sobre h2 { font-size: clamp(24px, 5vw, 48px); }
+.sobre p {
+  margin: 0;
+  font-size: clamp(10px, 1.8vw, 17px);
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* Quem somos */
+.quem {
+  padding: clamp(24px, 6vw, 64px) var(--pad) 0;
+  text-align: center;
+}
+.quem p { max-width: 960px; margin: clamp(10px, 2vw, 20px) auto 0; }
+
+/* Missão / Valores */
+.bloco {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: clamp(12px, 4vw, 64px);
+  margin-top: clamp(28px, 6vw, 72px);
+}
+.bloco--invertido { grid-template-columns: 1fr 1.1fr; }
+
+.bloco__midia {
+  background: #d9d9d9;
+  padding: 0 clamp(14px, 4vw, 56px) clamp(14px, 4vw, 56px) 0; /* cinza aparece à direita e embaixo */
+}
+.bloco--invertido .bloco__midia {
+  padding: clamp(14px, 4vw, 56px) 0 0 clamp(14px, 4vw, 56px); /* cinza aparece em cima e à esquerda */
+}
+.bloco__midia img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.bloco__texto { padding: 0 var(--pad) 0 0; text-align: center; }
+.bloco--invertido .bloco__texto { padding: 0 0 0 var(--pad); }
+.bloco__texto p { margin-top: clamp(8px, 2vw, 20px); }
+
+/* Seções centralizadas */
+.secao {
+  margin-top: clamp(32px, 7vw, 88px);
+  padding: 0 var(--pad);
+  text-align: center;
+}
+.secao > p { max-width: 960px; margin: clamp(8px, 2vw, 18px) auto clamp(14px, 3vw, 32px); }
+
+/* Vídeo */
+.video {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: clamp(10px, 2vw, 24px);
+  overflow: hidden;
+  background: #000;
+}
+.video img,
+.video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.video__play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: clamp(44px, 8vw, 84px);
+  height: clamp(44px, 8vw, 84px);
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.video__play svg { width: 45%; fill: #fff; margin-left: 6%; }
+.video__play:hover { background: rgba(255, 255, 255, 0.75); }
+.video__play:focus-visible { outline: 3px solid var(--verde); outline-offset: 3px; }
+
+/* Time e agradecimentos */
+.agradecimentos {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: clamp(10px, 2vw, 24px);
+}
