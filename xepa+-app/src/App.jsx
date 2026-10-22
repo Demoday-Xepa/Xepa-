@@ -30,8 +30,8 @@ function App() {
         {/* Login e cadastro */}
         <Route path="/Crumb" element={<Crumb />} />
         <Route path="/OpcaoLogin" element={<OpcaoLogin />} />
-        <Route path="/CriarUsuarioF" element={<CriarContaF />} />
-            <Route path="/CriarCUsuarioF" element={<CriarUsuarioF />} />
+        <Route path="/CriarContaF" element={<CriarContaF />} />
+            <Route path="/CriarUsuarioF" element={<CriarUsuarioF />} />
         <Route path="/CriarConta" element={<CriarConta />} />
 
         <Route path="/homeF" element={<HomeFeirante />} />
