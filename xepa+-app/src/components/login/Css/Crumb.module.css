@@ -13,9 +13,7 @@ body,
   padding: 0;
 }
 
-body {
-  overflow: hidden;
-}
+
 
 .container {
   --azul: #18522c;
@@ -39,6 +37,12 @@ body {
   overflow: hidden;
 }
 
+.container *,
+.container *::before,
+.container *::after {
+  box-sizing: border-box;
+}
+
 /* ================= LADO IMAGEM ================= */
 .ladoImagem {
   position: relative;
@@ -54,9 +58,9 @@ body {
   justify-content: space-between;
 
   color: #fff;
-  overflow: hidden;
 
-  background-image: url('../../../Assets/img/feira.png');
+
+  background-image: url('../../../Assets/img/feira.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,7 +75,7 @@ body {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.80) 0%,
     rgba(0, 0, 0, 0.1) 60%,
     rgba(0, 0, 0, 0.3) 100%
   );
@@ -233,11 +237,15 @@ body {
 
 
 .btndemo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 4px;
   padding: clamp(10px, 1.5vh, 13px);
   width: 100%;
   margin-top: 20px;
   font-family: inherit;
+  gap: 8px;
   font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
@@ -271,11 +279,13 @@ body {
   text-decoration: none;
 }
 
+
+
+
+
 .cadastro a:hover {
   text-decoration: underline;
 }
-
-
 
 /* Tablet e celular: imagem vira banner no topo */
 @media (max-width: 900px) {

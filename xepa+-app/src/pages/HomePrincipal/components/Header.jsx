@@ -1,5 +1,6 @@
 
-import '../css/Header.css';
+import { useNavigate } from 'react-router-dom'
+import '../css/Header.css'
 
 const links = [
   { texto: 'Home', destino: '#inicio' },
@@ -7,13 +8,15 @@ const links = [
   { texto: 'Mapa', destino: '#mapa' },
   { texto: 'Xepas', destino: '#xepas' },
   { texto: 'Receitas', destino: '#receitas' },
-];
+]
 
 export default function Header() {
+  const navigate = useNavigate()
+
   return (
     <header className="cabecalho-xepa">
       <a href="#inicio" className="marca-xepa">
-        <span className="icone-marca">✿</span>
+        <span className="icone-marca"></span>
         <span>
           Xepa<span className="marca-mais">+</span>
         </span>
@@ -27,9 +30,13 @@ export default function Header() {
         ))}
       </nav>
 
-      <a href="#login" className="botao-entrar">
+      <button
+        type="button"
+        className="botao-entrar"
+        onClick={() => navigate('/Crumb')}
+      >
         Login
-      </a>
+      </button>
     </header>
-  );
+  )
 }
