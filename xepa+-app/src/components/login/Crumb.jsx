@@ -1,9 +1,11 @@
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Styles from './Css/Crumb.module.css'
 
 function Crumb() {
+  const navigate = useNavigate()
   return (
+    
     <main className={Styles.container}>
 
       <section className={Styles.ladoImagem}>

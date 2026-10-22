@@ -3,6 +3,8 @@ import Styles from './Css/Header.module.css'
 import Logo from '../../Assets/img/logo.png'
 
 function Header() {
+    const navigate = useNavigate()
+
   console.log('HEADER NOVO CARREGADO')
 
   return (
