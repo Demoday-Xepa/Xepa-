@@ -1,7 +1,7 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 
+// Páginas principais
 import HomePrincipal from './pages/HomePrincipal/HomePrincipal'
 import HomeFeirante from './pages/HomeF/Home'
 import HomeUsuario from './pages/homeU/Home'
@@ -23,6 +23,7 @@ function App() {
         <Route path="/homeF" element={<HomeFeirante />} />
         <Route path="/homeU" element={<HomeUsuario />} />
 
+        {/* Funcionalidades */}
         <Route path="/financeiro" element={<Financeiro />} />
         <Route path="/mapa" element={<Mapa />} />
 
@@ -31,10 +32,10 @@ function App() {
 
         <Route path="/chat-feirante" element={<ChatFeirante />} />
         <Route path="/chat-ia" element={<ChatIA />} />
-
         <Route path="/impacto" element={<Impacto />} />
         <Route path="/cozinha" element={<Cozy />} />
 
+        {/* Qualquer rota inexistente */}
         <Route path="*" element={<HomePrincipal />} />
       </Routes>
     </BrowserRouter>
