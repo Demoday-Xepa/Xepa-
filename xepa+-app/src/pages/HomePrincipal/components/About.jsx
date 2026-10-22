@@ -1,9 +1,12 @@
 
 import '../css/About.css';
+import { Link, useNavigate } from "react-router-dom"
 import imagemFeira from '../imgs/Group 14.png';
 import imagemAlimentos from '../imgs/Group 15.png';
 
 export default function About() {
+  const navigate = useNavigate();
+
   return (
     <section className="secao-sobre" id="sobre">
       <div className="conteudo-sobre">
@@ -20,7 +23,7 @@ export default function About() {
           qui dolorem ipsum quia dolor sit amet.
         </p>
 
-        <a href="#historia" className="botao-sobre">
+        <a href="#historia" className="botao-sobre" onClick={() => navigate('/Sobrenos')}>
           Saiba mais
         </a>
       </div>

@@ -1,0 +1,51 @@
+
+section.quem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px 24px 40px;
+  background: #fffaf7;
+}
+
+section.quem h1 {
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+
+  color: #195132;
+  font-size: clamp(28px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+section.quem p {
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+
+  color: #111;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  section.quem {
+    gap: 14px;
+    padding: 28px 20px 32px;
+  }
+
+  section.quem h1 {
+    font-size: 28px;
+  }
+
+  section.quem p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}

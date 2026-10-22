@@ -4,8 +4,8 @@ import Missao from "./components/Missao";
 import Valores from "./components/Valores";
 import FeiraDePerto from "./components/FeiraDePerto";
 import Time from "./components/Time";
-import Agradecimentos from "./components/Agradecimentos";
-import "./SobreNos.css";
+import Agradecimento from "./components/Agradecimento";
+import "./css/SobreNos.css";
 
 function SobreNos() {
   return (
@@ -18,7 +18,7 @@ function SobreNos() {
         <Valores />
         <FeiraDePerto />
         <Time />
-        <Agradecimentos />
+        <Agradecimento />
       </main>
     </>
   );

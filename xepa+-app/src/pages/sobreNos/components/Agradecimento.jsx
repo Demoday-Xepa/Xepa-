@@ -1,12 +1,12 @@
-import LOREM from "./lorem";
-import "./Agradecimentos.css";
+import "../css/Agradecimento.css";
+import fotoPais from "../imgs/Pais.jpg";
 
 function Agradecimentos() {
   return (
     <section className="secao">
       <h2>Agradecimentos</h2>
-      <p>{LOREM}</p>
-      <img className="agradecimentos" src="/images/sobre/agradecimentos.jpg" alt="Família sorrindo ao ar livre" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Excepteur sint occaecat cupidatat non proident.</p>
+      <img className="agradecimentos" src={fotoPais} alt="Foto dos pais" />
     </section>
   );
 }
