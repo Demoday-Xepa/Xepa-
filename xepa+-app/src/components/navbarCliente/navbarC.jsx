@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 import styles from './navbarC.module.css'; 
 import logo from '../../imgs/logo.png'; 
 
@@ -11,16 +11,14 @@ export function Navbar() {
       </div>
 
       <nav className={styles.navLinks}>
-       <Link to='/HomePrincipal' className={styles.linkAtivo}>Home</Link>
-        <Link to='/Mapa' className={styles.linkNav}>Mapa</Link>
-        <Link to='/impactoU' className={styles.linkNav}>Seu Impacto</Link>
-        <Link to='/cozinha' className={styles.linkNav}>Receita</Link>
-        <Link to='/' className={styles.linkNav}>Carrinho</Link>
-        <Link to='/' className={styles.linkNav}>Perfil</Link>
-        <Link to='/ChatIA' className={styles.linkNav}>IA</Link>
-    
+        <a href="#home" className={styles.linkAtivo}>Home</a>
+        <a href="#mapa" className={styles.linkNav}>Mapa</a>
+        <a href="#impacto" className={styles.linkNav}>Seu Impacto</a>
+        <a href="#receita" className={styles.linkNav}>Receita</a>
+        <a href="#carrinho" className={styles.linkNav}>Carrinho</a>
+        <a href="#perfil" className={styles.linkNav}>Perfil</a>
+        <a href="#ia" className={styles.linkNav}>IA</a>
       </nav>
-
 
     
       <div className={styles.acoes}>

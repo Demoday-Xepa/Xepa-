@@ -1,3 +1,4 @@
+
 import styles from "../css/Footer.module.css";
 import logo from "../../../imgs/logo.png";
 
@@ -21,9 +22,24 @@ const redes = [
 ];
 
 const colunas = [
-  { titulo: "Tecnologias e IA", links: ["Assistente virtual", "Contato e suporte"] },
-  { titulo: "Para vender", links: ["Seja um feirante parceiro", "Cadastrar minha banca"] },
-  { titulo: "Home page", links: ["Quem somos", "Como funciona", "O que você vai receber", "Planos", "Mapa das feiras"] },
+  {
+    titulo: "Tecnologias e IA",
+    links: ["Assistente virtual", "Contato e suporte"],
+  },
+  {
+    titulo: "Para vender",
+    links: ["Seja um feirante parceiro", "Cadastrar minha banca"],
+  },
+  {
+    titulo: "Home page",
+    links: [
+      "Quem somos",
+      "Como funciona",
+      "O que você vai receber",
+      "Planos",
+      "Mapa das feiras",
+    ],
+  },
 ];
 
 function Footer() {
@@ -32,14 +48,13 @@ function Footer() {
       <div className={styles.topo}>
         <div className={styles.marca}>
           <div className={styles.logo}>
-            <img src="" alt="Logo Xepa+" className={styles.logoImg} />
-            <span>Xepa+</span>
+            <img src={logo} alt="Xepa+" className={styles.logoImg} />
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam.
+            Conectando feirantes e consumidores para combater o desperdício de
+            alimentos. Alimentos frescos, sustentabilidade e economia para a
+            sua rotina.
           </p>
 
           <div className={styles.redes}>
@@ -55,6 +70,7 @@ function Footer() {
           {colunas.map(({ titulo, links }) => (
             <div className={styles.coluna} key={titulo}>
               <h4>{titulo}</h4>
+
               {links.map((link) => (
                 <p key={link}>{link}</p>
               ))}
@@ -65,6 +81,7 @@ function Footer() {
 
       <div className={styles.rodape}>
         <span>© 2026 Xepa+ Todos os direitos reservados.</span>
+
         <div className={styles.legal}>
           <span>Termos de uso</span>
           <span>Diretrizes de Privacidade</span>
