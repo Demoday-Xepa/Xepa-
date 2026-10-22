@@ -19,9 +19,13 @@ export default function Header() {
         </span>
       </a>
 
-      <nav className="menu-principal">
+      <nav
+        id="menu-principal"
+        className={`menu-principal${aberto ? ' aberto' : ''}`}
+        aria-label="Principal"
+      >
         {links.map((link) => (
-          <a key={link.texto} href={link.destino}>
+          <a key={link.texto} href={link.destino} onClick={() => setAberto(false)}>
             {link.texto}
           </a>
         ))}

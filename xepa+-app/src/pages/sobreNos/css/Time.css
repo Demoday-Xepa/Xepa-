@@ -1,0 +1,120 @@
+.time {
+  --por-vista: 3;
+  --gap: clamp(8px, 2vw, 20px);
+}
+.time__trilho {
+  display: flex;
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.time__trilho::-webkit-scrollbar { display: none; }
+
+.card-time {
+  flex: 0 0 calc((100% - var(--gap) * (var(--por-vista) - 1)) / var(--por-vista));
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 1.5vw, 14px);
+  padding: clamp(6px, 1.6vw, 16px);
+  border-radius: clamp(10px, 2vw, 20px);
+  text-align: left;
+  color: #fff;
+}
+.card-time--verde { background: #9dc11e; }
+.card-time--laranja { background: #f26522; }
+.card-time--amarelo { background: #fbb82b; }
+
+.card-time::after {
+  content: "";
+  position: absolute;
+  top: 8%;
+  right: -6%;
+  width: 45%;
+  aspect-ratio: 1;
+  background: url("/images/sobre/card-logo.svg") center / contain no-repeat;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.card-time__tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.card-time__tags span {
+  background: #1f4d12;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(6px, 1.1vw, 11px);
+  padding: 2px 6px;
+  border-radius: 99px;
+}
+.card-time h3 {
+  margin: clamp(4px, 1vw, 10px) 0 0;
+  max-width: 70%;
+  font-family: "Cal Sans", "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 3.2vw, 30px);
+  line-height: 1.05;
+}
+
+.card-time__foto {
+  position: relative;
+  flex: 1;
+  border-radius: clamp(8px, 1.6vw, 16px);
+  overflow: hidden;
+  background: #222;
+  min-height: clamp(90px, 20vw, 240px);
+}
+.card-time__foto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-time__links {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  display: flex;
+  gap: 4px;
+}
+.card-time__links a {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(7px, 1.2vw, 13px);
+  padding: clamp(3px, 0.7vw, 8px) 0;
+  border-radius: 6px;
+}
+.btn-linkedin { background: #1a6bff; }
+.btn-github { background: #222; }
+.card-time__links a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+.time__pontos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.ponto {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 99px;
+  background: #f26522;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: width 0.25s, opacity 0.25s;
+}
+.ponto[aria-current="true"] { width: 32px; opacity: 1; }
+.ponto:focus-visible { outline: 2px solid #1f4d12; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .ponto { transition: none; } }
