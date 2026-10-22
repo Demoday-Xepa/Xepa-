@@ -7,6 +7,7 @@ import Benefits from "./components/Benefits";
 import PlanosFeirante from "./components/PlanosFeirante";
 import MapaFeiras from "./components/MapaFeiras";
 import PerguntasFrequentes from "./components/PerguntasFrequentes";
+import Propaganda from "./components/Propaganda";
 function HomePrincipal() {
   return (
     <>
@@ -17,6 +18,7 @@ function HomePrincipal() {
         <About />
         <HowItWorks />
         <Benefits />
+        <Propaganda />
         <PlanosFeirante />
         <MapaFeiras />
         <PerguntasFrequentes />
