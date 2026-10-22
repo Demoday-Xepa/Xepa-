@@ -7,7 +7,7 @@ const links = [
   { texto: 'Home', destino: '#inicio' },
   { texto: 'Sobre Nós', destino: '#sobre' },
   { texto: 'Mapa', rota: '/mapa' },
-  { texto: 'Mapa', rota: '/mapa' },
+  { texto: 'Finanças', rota: '/financeiro' },
   { texto: 'Receitas', destino: '/cozinha' },
 ]
 
