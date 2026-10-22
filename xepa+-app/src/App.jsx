@@ -1,11 +1,9 @@
-import React from 'react';
-import { Home } from './pages/homeU/Home';
-import './App.css';
 
-export default function App() {
-  return (
-    <div>
-      <Home />
-    </div>
-  );
+import Pagamento from "./pages/Pagamento/componentes/pagamento";
+
+function App() {
+  return (<Pagamento />
+  )
 }
+
+export default App;
