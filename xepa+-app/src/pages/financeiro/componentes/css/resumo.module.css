@@ -1,11 +1,8 @@
-
 .resumo {
     padding: 16px;
     border: 1.5px solid var(--verde);
     border-radius: 15px;
     color: var(--verde);
-    min-width: 0;
-    box-sizing: border-box;
 }
 
 .resumo h2 {
@@ -13,7 +10,6 @@
     padding-bottom: 12px;
     border-bottom: 2px solid var(--cinza-claro);
     font-size: 22px;
-    overflow-wrap: break-word;
 }
 
 .linha {
@@ -23,17 +19,14 @@
     margin-bottom: 16px;
 }
 
-.linha span,
-.total span {
+.linha span, .total span {
     color: var(--cinza);
     font-size: 18px;
     font-weight: bold;
 }
 
-.linha strong,
-.total strong {
+.linha strong, .total strong {
     font-size: 17px;
-    overflow-wrap: anywhere;
 }
 
 .total {
@@ -47,51 +40,4 @@
 .total span {
     font-size: 18px;
     color: var(--cinza);
-}
-
-/* Tablets */
-@media (max-width: 1024px) {
-    .resumo {
-        padding: 14px;
-    }
-
-    .resumo h2 {
-        font-size: 20px;
-    }
-
-    .linha span,
-    .total span {
-        font-size: 16px;
-    }
-}
-
-/* Celulares */
-@media (max-width: 600px) {
-    .resumo {
-        padding: 12px;
-        border-radius: 12px;
-    }
-
-    .resumo h2 {
-        font-size: 19px;
-        margin-bottom: 12px;
-    }
-
-    .linha {
-        margin-bottom: 14px;
-    }
-
-    .linha span,
-    .total span {
-        font-size: 14px;
-    }
-
-    .linha strong,
-    .total strong {
-        font-size: 16px;
-    }
-
-    .total {
-        padding-top: 12px;
-    }
 }

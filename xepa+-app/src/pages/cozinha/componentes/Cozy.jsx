@@ -1,10 +1,12 @@
-import Styles from './css/Cozy.module.css';
-import Caldo from '../../imgs/caldo-abobora.jpg';
+import Styles from '../css/Cozy.module.css';
+import Caldo from '../../../imgs/caldo-abobora.jpg';
+
 
 
 
 function Cozy() {
   return (
+  
     <section className={Styles.cozyMain}>
       <div>
         <h1>O que cozinhar com sua Xepa?</h1>

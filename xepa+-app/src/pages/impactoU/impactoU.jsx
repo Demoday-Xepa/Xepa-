@@ -14,3 +14,4 @@ export function Impacto() {
     </div>
   );
 }
+export default Impacto

@@ -16,7 +16,8 @@ function AddProduto() {
         <h1>Vamos adicionar seu produto!</h1>
 
         <p className={styles.introducao}>
-          Preencha os dados abaixo para cadastrar um novo produto na sua banca ou loja.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore
         </p>
 
         <form onSubmit={adicionarProduto}>
@@ -65,7 +66,8 @@ function AddProduto() {
           <section className={styles.secao}>
             <h2>Adicione a Imagem do Produto</h2>
             <p className={styles.descricaoSecao}>
-              Envie uma foto clara e de boa qualidade do produto para atrair mais clientes.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore
             </p>
 
             <div className={styles.upload}>
@@ -83,7 +85,8 @@ function AddProduto() {
           <section className={styles.secao}>
             <h2>Descrição do Produto</h2>
             <p className={styles.descricaoSecao}>
-              Descreva os detalhes do produto, como frescor, origem, peso ou quantidade disponível.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore
             </p>
 
             <textarea
