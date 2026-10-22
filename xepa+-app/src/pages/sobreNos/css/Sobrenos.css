@@ -1,0 +1,32 @@
+.sobre {
+  --verde: #1f4d12;
+  --pad: clamp(16px, 5vw, 80px);
+  background: #fffaf7;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: clamp(32px, 6vw, 80px);
+  overflow-x: hidden;
+}
+.sobre h1,
+.sobre h2 {
+  margin: 0;
+  color: var(--verde);
+  font-family: "Cal Sans", "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+.sobre h1 { font-size: clamp(28px, 6vw, 60px); }
+.sobre h2 { font-size: clamp(24px, 5vw, 48px); }
+.sobre p {
+  margin: 0;
+  font-size: clamp(10px, 1.8vw, 17px);
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.secao {
+  margin-top: clamp(32px, 7vw, 88px);
+  padding: 0 var(--pad);
+  text-align: center;
+}
+.secao > p { max-width: 960px; margin: clamp(8px, 2vw, 18px) auto clamp(14px, 3vw, 32px); }

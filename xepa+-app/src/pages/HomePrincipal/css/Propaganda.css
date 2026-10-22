@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:wght@400;500;600&display=swap");
+
+.propaganda {
+  --lima: #9cbb06;
+  --verde: #18522c;
+  --laranja: #f76019;
+
+  width: 100%;
+  background: var(--lima);
+  font-family: "Poppins", sans-serif;
+}
+
+.propaganda-container {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.propaganda-fundo {
+  --u: calc(100cqw / 498);
+  --f: 1;
+  --ft: 1;
+
+  display: grid;
+  grid-template-columns: calc(191 * var(--u)) minmax(0, 1fr);
+  align-items: stretch;
+  padding: calc(11 * var(--u)) calc(11 * var(--u)) calc(11 * var(--u)) 0;
+  overflow: hidden;
+}
+
+.propaganda-foto {
+  position: relative;
+  margin: calc(-11 * var(--u)) 0;
+}
+
+.propaganda-foto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+}
+
+.propaganda-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: calc(15 * var(--u)) calc(15 * var(--u)) calc(16 * var(--u));
+  border: calc(5 * var(--u)) solid #fff;
+  border-radius: calc(14 * var(--u));
+  background: var(--verde);
+  color: #fff;
+}
+
+.propaganda-card::before {
+  content: "";
+  position: absolute;
+  inset: calc(-1.6 * var(--u));
+  border: calc(1.6 * var(--u)) dotted var(--verde);
+  border-radius: calc(10.6 * var(--u));
+  pointer-events: none;
+}
+
+.propaganda-titulo {
+  margin: 0 0 calc(15 * var(--u)) calc(5 * var(--u));
+  font-family: "Cal Sans", "Poppins", sans-serif;
+  font-size: calc(24 * var(--u) * var(--ft));
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+.propaganda-titulo span {
+  display: block;
+}
+
+.propaganda-destaque {
+  margin: 0 0 calc(18 * var(--u));
+  padding: calc(8 * var(--u)) calc(9 * var(--u));
+  border-radius: calc(8 * var(--u));
+  background: #fff;
+  color: var(--verde);
+  font-size: calc(8.5 * var(--u) * var(--f));
+  line-height: 1.55;
+}
+
+.propaganda-lista {
+  display: grid;
+  gap: calc(11 * var(--u));
+  margin: 0 0 calc(14 * var(--u));
+  padding: 0 0 0 calc(2 * var(--u));
+  list-style: none;
+}
+
+.propaganda-lista li {
+  display: flex;
+  align-items: center;
+  gap: calc(9 * var(--u));
+  font-size: calc(8.4 * var(--u) * var(--f));
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.propaganda-icone {
+  flex: none;
+  width: 1.55em;
+  height: 1.55em;
+  color: #fff;
+}
+
+.propaganda-icone-furo {
+  fill: var(--verde);
+}
+
+.propaganda-botao {
+  width: 100%;
+  height: calc(24 * var(--u) * var(--f));
+  min-height: 36px;
+  margin-top: auto;
+  padding: 0 16px;
+  border: 0;
+  border-radius: calc(5 * var(--u));
+  background: var(--laranja);
+  color: #fff;
+  font-family: inherit;
+  font-size: calc(9.5 * var(--u) * var(--f));
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.propaganda-botao:hover {
+  filter: brightness(1.08);
+}
+
+.propaganda-botao:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@container (max-width: 720px) {
+  .propaganda-fundo {
+    --u: min(calc(100cqw / 319), 1.5px);
+    --f: 1.3;
+    --ft: 1.15;
+
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    padding: 0 calc(11 * var(--u)) calc(11 * var(--u));
+  }
+
+  .propaganda-foto {
+    width: calc(190 * var(--u));
+    height: calc(270 * var(--u));
+    margin: 0;
+  }
+
+  .propaganda-foto img {
+    object-position: center bottom;
+  }
+
+  .propaganda-card {
+    width: 100%;
+    max-width: calc(297 * var(--u));
+  }
+}
