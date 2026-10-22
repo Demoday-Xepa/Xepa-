@@ -17,6 +17,7 @@ import Cozy from './pages/cozinha/Cozy'
 // Login e cadastro
 import Crumb from './components/login/Crumb'
 import OpcaoLogin from './components/login/OpcaoLogin'
+import CriarUsuarioF from './components/login/CriarUsuarioF'
 import CriarContaF from './components/login/CriarContaF'
 import CriarConta from './components/login/CriarConta'
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/Crumb" element={<Crumb />} />
         <Route path="/OpcaoLogin" element={<OpcaoLogin />} />
         <Route path="/CriarUsuarioF" element={<CriarContaF />} />
+            <Route path="/CriarCUsuarioF" element={<CriarUsuarioF />} />
         <Route path="/CriarConta" element={<CriarConta />} />
 
         <Route path="/homeF" element={<HomeFeirante />} />
