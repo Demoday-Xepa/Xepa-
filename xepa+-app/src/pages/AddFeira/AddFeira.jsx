@@ -5,10 +5,9 @@ import PopUpAddFeira from "./componentes/popUpAddFeira";
 import styles from "./css/AddFeira.module.css";
 
 const feiras = [
-  { nome: "Rocinha do tio", endereco: "Rua Tito", dia: "Terças e Quintas", funcionario: "Matheus , Carneiro" },
-  { nome: "BemBom", endereco: "Rua Borboletas Psicodélicas", dia: "Sábados e Sextas", funcionario: "Jamilly , Henrique" },
-  { nome: "Fazendinha", endereco: "Rua Encontros e Despedidas", dia: "Segundas e Quartas", funcionario: "Murilo , Igor" },
-  
+  { nome: "Rocinha do tio", endereco: "Senac, Lapa Tito", dia: "Terças e Quintas", funcionario: "Murilo , Carneiro" },
+  { nome: "Rocinha do tio", endereco: "Senac, Lapa Tito", dia: "Terças e Quintas", funcionario: "Murilo , Carneiro" },
+  { nome: "Rocinha do tio", endereco: "Senac, Lapa Tito", dia: "Terças e Quintas", funcionario: "Murilo , Carneiro" },
 ];
 
 function AddFeira() {
@@ -26,7 +25,7 @@ function AddFeira() {
 
         <div className={styles.busca}>
           <div className={styles.campoBusca}>
-            <label htmlFor="busca">Busca :</label>
+            <label htmlFor="busca">Busca</label>
             <input id="busca" type="text" placeholder="Ex: Rua joão de campos" />
           </div>
 

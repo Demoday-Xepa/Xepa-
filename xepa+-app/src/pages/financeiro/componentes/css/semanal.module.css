@@ -1,8 +1,6 @@
-
 .grafico {
     min-width: 0;
     padding: 12px;
-    box-sizing: border-box;
 }
 
 .grafico h2 {
@@ -15,7 +13,7 @@
 
 .dias {
     display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(7, 1fr);
     gap: 8px;
     border-top: 2px solid var(--cinza-claro);
 }
@@ -32,7 +30,6 @@
     padding-top: 8px;
     color: var(--cinza);
     font-weight: bold;
-    font-size: 14px;
 }
 
 .areaBarra {
@@ -59,72 +56,4 @@
     color: var(--verde);
     font-size: 13px;
     text-align: center;
-    overflow-wrap: anywhere;
-}
-
-/* Tablets */
-@media (max-width: 1024px) {
-    .grafico h2 {
-        margin-bottom: 35px;
-        font-size: 22px;
-    }
-
-    .dias {
-        gap: 5px;
-    }
-
-    .areaBarra {
-        height: 100px;
-    }
-
-    .nomeDia {
-        font-size: 12px;
-    }
-
-    .dia strong {
-        font-size: 11px;
-    }
-
-    .barra {
-        width: 75%;
-    }
-}
-
-/* Celulares */
-@media (max-width: 600px) {
-    .grafico {
-        padding: 8px 4px;
-    }
-
-    .grafico h2 {
-        margin-bottom: 25px;
-        font-size: 19px;
-    }
-
-    .dias {
-        gap: 3px;
-    }
-
-    .dia {
-        gap: 6px;
-    }
-
-    .nomeDia {
-        padding-top: 6px;
-        font-size: 10px;
-    }
-
-    .areaBarra {
-        height: 80px;
-    }
-
-    .barra {
-        width: 70%;
-        max-width: 25px;
-        border-radius: 3px;
-    }
-
-    .dia strong {
-        font-size: 9px;
-    }
 }
