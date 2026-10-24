@@ -6,6 +6,8 @@ import ChatIA from '@/modulos/usuario/paginas/chat-ia/ChatIA';
 import { Impacto } from '@/modulos/usuario/paginas/impacto/ImpactoU';
 import Cozinha from '@/modulos/usuario/paginas/cozinha/componentes/Cozy';
 import ChatFeirante from '@/modulos/usuario/paginas/chat-feirante/ChatFeirante';
+import Pagamento from '@/modulos/usuario/paginas/pagamento/pagamento/pagamento';
+import { Carrinho } from '@/modulos/usuario/paginas/carrinho/componentes/carrinho';
 
 export const rotasUsuario = [
   <Route key="demo-usuario" path="/demo/consumidor" element={<HomeUsuario />} />,
@@ -16,4 +18,6 @@ export const rotasUsuario = [
   <Route key="chat-feirante" path="/chat-feirante" element={<ChatFeirante />} />,
   <Route key="impacto" path="/impacto" element={<Impacto />} />,
   <Route key="cozinha" path="/cozinha" element={<Cozinha />} />,
+  <Route key="pagamento" path="pagamento" element={<Pagamento />} />,
+  <Route key="carrinho" path="/carrinho" element={<Carrinho />} />,
 ];
