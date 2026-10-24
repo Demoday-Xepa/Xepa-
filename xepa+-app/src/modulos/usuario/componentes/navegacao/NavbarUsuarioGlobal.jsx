@@ -13,8 +13,8 @@ function NavbarUsuarioGlobal() {
     '/cozinha',
     '/carrinho',
     '/perfil',
-    '/chat-ia',
     '/chat-consumidor',
+    '/chat-ia',
   ];
 
   if (!caminhosUsuario.includes(pathname)) {

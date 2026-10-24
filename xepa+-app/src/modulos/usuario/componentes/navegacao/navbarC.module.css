@@ -58,10 +58,34 @@
 .acoes {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   flex-shrink: 0;
 }
 
+.linkCarrinho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 6px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.linkCarrinho svg {
+  width: 30px;
+  height: 30px;
+}
+
+.linkCarrinho:hover,
+.carrinhoAtivo {
+  color: #84cc16;
+}
+
+.linkCarrinho:hover {
+  transform: scale(1.1);
+}
 
 .perfil {
   display: flex;
@@ -83,7 +107,6 @@
 .perfil:hover .nomeUsuario {
   color: #84cc16;
 }
-
 
 .nomeUsuario {
   color: #ffffff;
@@ -148,5 +171,10 @@
 
   .nomeUsuario {
     display: none;
+  }
+
+  .linkCarrinho svg {
+    width: 28px;
+    height: 28px;
   }
 }
