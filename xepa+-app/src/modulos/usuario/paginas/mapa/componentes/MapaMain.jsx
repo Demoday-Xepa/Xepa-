@@ -1,11 +1,9 @@
 
 import Styles from '@/modulos/usuario/paginas/mapa/estilos/Mapa.module.css';
-import Header from '@/modulos/publico/paginas/inicio/componentes/Header';
 
 function MapaMain() {
   return (
     <>
-      <Header />
 
       <section className={Styles.mapaMain}>
         <iframe

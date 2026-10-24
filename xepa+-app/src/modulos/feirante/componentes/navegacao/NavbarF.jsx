@@ -35,10 +35,10 @@ export function NavbarF() {
       </nav>
 
       <div className={styles.acoes}>
-        <div className={styles.perfil}>
+        <Link to="/perfil-feirante" className={styles.perfil}>
           <div className={styles.avatar}></div>
           <span className={styles.nomeUsuario}>Fabiane</span>
-        </div>
+        </Link>
 
         <Link to="/" className={styles.botaoVoltar}>
           Sair

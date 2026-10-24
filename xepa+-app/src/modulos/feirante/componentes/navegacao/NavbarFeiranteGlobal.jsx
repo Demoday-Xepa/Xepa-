@@ -11,11 +11,10 @@ function NavbarFeiranteGlobal() {
     '/adicionar-produto',
     '/adicionar-feira',
     '/financeiro',
+    '/chat-feirante',
   ];
 
-  const mostrarNavbar = caminhosFeirante.includes(pathname);
-
-  if (!mostrarNavbar) {
+  if (!caminhosFeirante.includes(pathname)) {
     return null;
   }
 

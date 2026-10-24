@@ -1,30 +1,20 @@
-import { useNavigate } from "react-router-dom";
-import Styles from '../estilos/carrinho.module.css'
-import imageC from "@/assets/imagens/gerais/xepaCompleta.jpg";
-import imageL from "@/assets/imagens/gerais/xepaLegumes.jpg";
-import imageF from "@/assets/imagens/gerais/xepaFrutas.jpg";
-import Logo from "@/assets/imagens/gerais/logo.png";
+
+import { useNavigate } from 'react-router-dom';
+import Styles from '../estilos/carrinho.module.css';
+import imageC from '@/assets/imagens/gerais/xepaCompleta.jpg';
+import imageL from '@/assets/imagens/gerais/xepaLegumes.jpg';
+import imageF from '@/assets/imagens/gerais/xepaFrutas.jpg';
 
 export function Carrinho() {
-    const navegar = useNavigate();
-    return (
-    <div className={Styles.container}>
-      {/* Cabeçalho / Navbar */}
-      <header className={Styles.header}>
-        <div className={Styles.logo}>
-          {/* Logo Xepa+ */}
-          <img src={Logo} alt="Xepa+" />
-        </div>
-      </header>
+  const navegar = useNavigate();
 
-      {/* Título Principal */}
+  return (
+    <div className={Styles.container}>
       <main className={Styles.main_content}>
         <h1>Meu carrinho</h1>
 
         <div className={Styles.carrinho_grid}>
-          {/* Tabela / Lista de Produtos */}
           <section className={Styles.tabela_produtos}>
-            {/* Cabeçalho da Tabela */}
             <div className={Styles.tabela_header}>
               <h4>Produtos</h4>
               <h4>Retirada</h4>
@@ -32,7 +22,6 @@ export function Carrinho() {
               <h4>Ação</h4>
             </div>
 
-            {/* Linha 1 */}
             <div className={Styles.tabela_linha}>
               <div className={Styles.coluna_produto}>
                 <img src={imageC} alt="Xepa Completa" />
@@ -41,21 +30,23 @@ export function Carrinho() {
                   <p>Alface, brócolis, batata...</p>
                 </div>
               </div>
+
               <div className={Styles.coluna_retirada}>
                 <h4>Es. do Sabão 341</h4>
                 <p>Barraca do Gai</p>
               </div>
+
               <div className={Styles.coluna_total}>
                 <h4>R$40</h4>
               </div>
+
               <div className={Styles.coluna_acao}>
-                <button aria-label="Remover item">
-                  <span className={"icon"}>🗑️</span>
+                <button type="button" aria-label="Remover Xepa Completa">
+                  <span className={Styles.icon}>🗑️</span>
                 </button>
               </div>
             </div>
 
-            {/* Linha 2 */}
             <div className={Styles.tabela_linha}>
               <div className={Styles.coluna_produto}>
                 <img src={imageL} alt="Xepa de Legumes" />
@@ -64,21 +55,23 @@ export function Carrinho() {
                   <p>Alface, brócolis, batata...</p>
                 </div>
               </div>
+
               <div className={Styles.coluna_retirada}>
                 <h4>Es. do Sabão 341</h4>
                 <p>Barraca da Paula</p>
               </div>
+
               <div className={Styles.coluna_total}>
                 <h4>R$50</h4>
               </div>
+
               <div className={Styles.coluna_acao}>
-                <button aria-label="Remover item">
+                <button type="button" aria-label="Remover Xepa de Legumes">
                   <span className={Styles.icon}>🗑️</span>
                 </button>
               </div>
             </div>
 
-            {/* Linha 3 */}
             <div className={Styles.tabela_linha}>
               <div className={Styles.coluna_produto}>
                 <img src={imageF} alt="Xepa Frutas" />
@@ -87,22 +80,24 @@ export function Carrinho() {
                   <p>Alface, brócolis, batata...</p>
                 </div>
               </div>
+
               <div className={Styles.coluna_retirada}>
                 <h4>Es. do Sabão 341</h4>
                 <p>Barraca do Felipe</p>
               </div>
+
               <div className={Styles.coluna_total}>
                 <h4>R$40</h4>
               </div>
+
               <div className={Styles.coluna_acao}>
-                <button aria-label="Remover item">
-                  <span className={"icon"}>🗑️</span>
+                <button type="button" aria-label="Remover Xepa Frutas">
+                  <span className={Styles.icon}>🗑️</span>
                 </button>
               </div>
             </div>
           </section>
 
-          {/* Card Resumo do Pedido */}
           <aside className={Styles.resumo_card}>
             <h4>Resumo do pedido</h4>
 
@@ -111,14 +106,17 @@ export function Carrinho() {
                 <h4>Xepa Legumes</h4>
                 <p>R$ 40</p>
               </div>
+
               <div className={Styles.resumo_linha}>
                 <h4>Xepa Frutas</h4>
                 <p>R$ 40</p>
               </div>
+
               <div className={Styles.resumo_linha}>
                 <h4>Xepa Completa</h4>
                 <p>R$ 50</p>
               </div>
+
               <div className={Styles.resumo_linha}>
                 <h4>Retirada</h4>
                 <p>Grátis</p>
@@ -136,11 +134,15 @@ export function Carrinho() {
               <span className={Styles.icon}>⚠️</span>
               <p>
                 Reveja o endereço das barracas e lembre-se de mostrar o QRCode
-                para retirada do produto
+                para retirada do produto.
               </p>
             </div>
 
-            <button className={Styles.btn_pagar } onClick={() => navegar("/pagamento")} >
+            <button
+              type="button"
+              className={Styles.btn_pagar}
+              onClick={() => navegar('/pagamento')}
+            >
               <h3>Pagar</h3>
             </button>
           </aside>

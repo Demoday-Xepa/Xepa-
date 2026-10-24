@@ -54,6 +54,7 @@ function Lancamento({ aberto, tipo, aoFechar, aoSalvar }) {
                                 <option>Cereais e Grãos</option>
                                 <option>Embalagens e Sacos</option>
                                 <option>Transporte</option>
+                                <option>Funcionario</option>
                                 <option>Outros</option>
                             </select>
                         </>

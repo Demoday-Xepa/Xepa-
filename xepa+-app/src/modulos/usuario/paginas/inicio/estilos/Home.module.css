@@ -1,4 +1,4 @@
-/* Container da Seção de Boas-Vindas */
+
 .secaoBoasVindas {
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 
 
 .textoBoasVindas h1 {
-  font-size: 70px;
+  font-size: 50px;
   font-weight: bold;
   color: #111111;
   margin: 0;
@@ -27,13 +27,12 @@
 }
 
 .textoBoasVindas h2 {
-  font-size: 80px;
+  font-size: 50px;
   font-weight: bold;
   color: #111111;
   margin: 4px 0 0 0;
   font-family: poppins;
     margin-left:85px;
-     margin-top: 40px;
 }
 
 
@@ -212,4 +211,65 @@
   mask-image: linear-gradient(to left, black 60%, transparent 100%);
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
+}
+
+
+.tituloxepa{
+  font-family: poppins;
+  font-size: 20px;
+  margin-left:85px;
+
+
+}
+.card {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left:85px;
+
+  
+}
+
+.cardImg {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.cardConteudo {
+  padding: 16px;
+}
+
+.cardTitulo {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 8px;
+  font-family: poppins;
+}
+
+.cardDescricao {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.cardBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cardBtn:hover {
+  background-color: #0056b3;
 }

@@ -9,7 +9,7 @@
 /* Navbar */
 /* Cabeçalho / Navbar */
 .header {
-  background-color: var(--cor-primaria);
+  background-color: #18522C;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
