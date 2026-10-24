@@ -1,46 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "@/modulos/feirante/componentes/navegacao/navbarF.module.css";
-import logo from "@/assets/imagens/gerais/logo-2.png";
+
+import { NavLink, Link } from 'react-router-dom';
+import styles from './navbarF.module.css';
+import logo from '@/assets/imagens/gerais/logo-2.png';
+
+const links = [
+  { texto: 'Home', destino: '/homeF' },
+  { texto: 'Produtos', destino: '/adicionar-produto' },
+  { texto: 'Feiras', destino: '/adicionar-feira' },
+  { texto: 'Financeiro', destino: '/financeiro' },
+  { texto: 'Chat', destino: '/chat-feirante' },
+  { texto: 'Xep.AI', destino: '/chat-ia' },
+];
 
 export function NavbarF() {
   return (
     <header className={styles.navbar}>
-
-      <div className={styles.logo}>
+      <Link to="/homeF" className={styles.logo} aria-label="Home do feirante">
         <img src={logo} alt="Logo Xepa+" className={styles.iconeLogo} />
-      </div>
+      </Link>
 
-      <nav className={styles.navLinks}>
-
-        <Link to="/homeF" className={styles.linkAtivo}>
-          Home
-        </Link>
-
-        <Link to="/adicionar-produto" className={styles.linkNav}>
-          Produtos
-        </Link>
-
-        <Link to="/adicionar-feira" className={styles.linkNav}>
-          Feiras
-        </Link>
-
-        <Link to="/financeiro" className={styles.linkNav}>
-          Financeiro
-        </Link>
-
-        <Link to="/chat-feirante" className={styles.linkNav}>
-          Chat
-        </Link>
-
-        <Link to="/chat-ia" className={styles.linkNav}>
-          Xep.AI
-        </Link>
-
+      <nav className={styles.navLinks} aria-label="Navegação do feirante">
+        {links.map((link) => (
+          <NavLink
+            key={link.destino}
+            to={link.destino}
+            end
+            className={({ isActive }) =>
+              isActive ? styles.linkAtivo : styles.linkNav
+            }
+          >
+            {link.texto}
+          </NavLink>
+        ))}
       </nav>
 
       <div className={styles.acoes}>
-
         <div className={styles.perfil}>
           <div className={styles.avatar}></div>
           <span className={styles.nomeUsuario}>Fabiane</span>
@@ -49,9 +43,7 @@ export function NavbarF() {
         <Link to="/" className={styles.botaoVoltar}>
           Sair
         </Link>
-
       </div>
-
     </header>
   );
 }

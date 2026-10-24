@@ -1,14 +1,14 @@
+
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '@/modulos/publico/paginas/sobre-nos/estilos/Header.css'
-import logo from '@/assets/imagens/sobre-nos/logo-copy.png'
+import '@/modulos/publico/paginas/inicio/estilos/Header.css'
+import logo from '@/assets/imagens/pagina-inicial/logo-copy.png'
 
 const links = [
-  { texto: 'Home', destino: '#inicio' },
-  { texto: 'Sobre Nós', destino: '#sobre' },
-  { texto: 'Mapa', destino: '#mapa' },
-  { texto: 'Xepas', destino: '#xepas' },
-  { texto: 'Receitas', destino: '#receitas' },
+  { texto: 'Home', rota: '/' },
+  { texto: 'Sobre Nós', rota: '/sobre-nos' },
+  { texto: 'Mapa', rota: '/mapa' },
+  { texto: 'Receitas', rota: '/cozinha' },
 ]
 
 export default function Header() {
@@ -17,7 +17,16 @@ export default function Header() {
 
   return (
     <header className="cabecalho-xepa">
-      <a href="#inicio" className="marca-xepa" aria-label="Xepa+, ir para o início">
+      <a
+        href="/"
+        className="marca-xepa"
+        aria-label="Xepa+, ir para o início"
+        onClick={(e) => {
+          e.preventDefault()
+          navigate('/')
+          setAberto(false)
+        }}
+      >
         <img className="logo-xepa" src={logo} alt="Xepa+" />
       </a>
 
@@ -27,7 +36,15 @@ export default function Header() {
         aria-label="Principal"
       >
         {links.map((link) => (
-          <a key={link.texto} href={link.destino} onClick={() => setAberto(false)}>
+          <a
+            key={link.texto}
+            href={link.rota}
+            onClick={(e) => {
+              e.preventDefault()
+              navigate(link.rota)
+              setAberto(false)
+            }}
+          >
             {link.texto}
           </a>
         ))}

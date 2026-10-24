@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Header from "@/modulos/feirante/paginas/adicionar-feira/componentes/Header.jsx";
-import Footer from "@/modulos/feirante/paginas/adicionar-feira/componentes/Footer.jsx";
 import PopUpAddFeira from "@/modulos/feirante/paginas/adicionar-feira/componentes/PopUpAddFeira.jsx";
 import styles from "@/modulos/feirante/paginas/adicionar-feira/estilos/AddFeira.module.css";
 
@@ -16,7 +14,6 @@ function AddFeira() {
 
   return (
     <div className={styles.pagina}>
-      <Header />
 
       <main className={styles.conteudo}>
         <h1>Onde você trabalha?</h1>
@@ -61,7 +58,7 @@ function AddFeira() {
         </div>
       </main>
 
-      <Footer />
+      
 
       <PopUpAddFeira aberto={aberto} onFechar={() => setAberto(false)} />
     </div>
