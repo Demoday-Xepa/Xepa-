@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Styles from '../estilos/carrinho.module.css'
 import imageC from "@/assets/imagens/gerais/xepaCompleta.jpg";
-import imageL from "@/assets/imagens/gerais/xepaLegumes.jpg";
-import imageF from "@/assets/imagens/gerais/xepaFrutas.jpg";
+import imageL from "@/assets/imagens/gerais/XepaLegumes.jpg";
+import imageF from "@/assets/imagens/gerais/XepaFrutas.jpg";
 import Logo from "@/assets/imagens/gerais/logo.png";
 
 export function Carrinho() {
