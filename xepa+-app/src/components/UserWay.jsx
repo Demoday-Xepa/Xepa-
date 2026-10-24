@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 
 function UserWay() {
@@ -13,6 +12,7 @@ function UserWay() {
     script.setAttribute('data-account', 'y2KIm9pPv2');
     script.setAttribute('data-color', '#f76019');
     script.setAttribute('data-mobile', 'true');
+    script.setAttribute('data-language', 'pt-BR');
     script.setAttribute('data-xepa-userway', 'true');
     script.async = true;
 
@@ -32,6 +32,10 @@ function UserWay() {
     `;
 
     document.head.appendChild(estilo);
+
+    return () => {
+      estilo.remove();
+    };
   }, []);
 
   return null;
