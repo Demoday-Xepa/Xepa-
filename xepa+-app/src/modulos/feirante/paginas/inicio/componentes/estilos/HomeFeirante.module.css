@@ -1,11 +1,9 @@
 .pagina {
-  position: fixed;
-  inset: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
+  width: 100%;
+  min-height: auto;
+  overflow: visible;
   background: #fff;
 }
-
 
 .dashboard {
   --verdeEscuro: #17502c;
@@ -14,14 +12,14 @@
   --marrom: #a8400f;
   --amarelo: #ffc928;
   --branco: #ffffff;
-
-  width: 96%;
+  width: 100%;
   padding: clamp(16px, 2.5vw, 40px);
   background: var(--branco);
   font-family: "Poppins", Arial, sans-serif;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  box-sizing: border-box;
 }
 
 .dashboard *,

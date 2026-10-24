@@ -1,17 +1,33 @@
-import Header from "@/modulos/feirante/paginas/adicionar-produto/componentes/Header.jsx";
-import Footer from "@/modulos/feirante/paginas/adicionar-produto/componentes/Footer.jsx";
-import styles from "@/modulos/feirante/paginas/adicionar-produto/estilos/AddProduto.module.css";
+
+import { useState } from 'react';
+import styles from '@/modulos/feirante/paginas/adicionar-produto/estilos/AddProduto.module.css';
 
 function AddProduto() {
+  const [imagem, setImagem] = useState(null);
+
   function adicionarProduto(event) {
     event.preventDefault();
-    alert("Estrutura do formulário pronta!");
+    alert('Estrutura do formulário pronta!');
+  }
+
+  function selecionarImagem(event) {
+    const arquivo = event.target.files[0];
+
+    if (!arquivo) {
+      return;
+    }
+
+    if (arquivo.size > 30 * 1024 * 1024) {
+      alert('A imagem deve ter no máximo 30 MB.');
+      event.target.value = '';
+      return;
+    }
+
+    setImagem(arquivo);
   }
 
   return (
     <div className={styles.pagina}>
-      <Header styles={styles} />
-
       <main className={styles.conteudo}>
         <h1>Vamos adicionar seu produto!</h1>
 
@@ -28,7 +44,12 @@ function AddProduto() {
 
             <div className={styles.campo}>
               <label htmlFor="categoria">Categoria do Produto</label>
-              <select id="categoria" name="categoria" required defaultValue="">
+              <select
+                id="categoria"
+                name="categoria"
+                required
+                defaultValue=""
+              >
                 <option value="" disabled>
                   Selecione uma categoria
                 </option>
@@ -53,7 +74,12 @@ function AddProduto() {
 
             <div className={styles.campo}>
               <label htmlFor="validade">Validade Estimada</label>
-              <input id="validade" name="validade" type="date" required />
+              <input
+                id="validade"
+                name="validade"
+                type="date"
+                required
+              />
             </div>
 
             <div className={`${styles.campo} ${styles.campoCompleto}`}>
@@ -64,24 +90,34 @@ function AddProduto() {
 
           <section className={styles.secao}>
             <h2>Adicione a Imagem do Produto</h2>
+
             <p className={styles.descricaoSecao}>
               Envie uma foto clara e de boa qualidade do produto para atrair mais clientes.
             </p>
 
             <div className={styles.upload}>
               <h3>Escolha a imagem no seu dispositivo aqui</h3>
-              <p>png, jpg e outro</p>
-              <p>no máximo 30mb</p>
+              <p>PNG, JPG e outros formatos de imagem</p>
+              <p>No máximo 30 MB</p>
 
               <label className={styles.botaoImagem}>
                 Adicionar Imagem
-                <input type="file" name="imagem" accept="image/*" hidden />
+                <input
+                  type="file"
+                  name="imagem"
+                  accept="image/*"
+                  onChange={selecionarImagem}
+                  hidden
+                />
               </label>
+
+              {imagem && <p>Imagem selecionada: {imagem.name}</p>}
             </div>
           </section>
 
           <section className={styles.secao}>
             <h2>Descrição do Produto</h2>
+
             <p className={styles.descricaoSecao}>
               Descreva os detalhes do produto, como frescor, origem, peso ou quantidade disponível.
             </p>
@@ -100,8 +136,6 @@ function AddProduto() {
           </div>
         </form>
       </main>
-
-      <Footer styles={styles} />
     </div>
   );
 }

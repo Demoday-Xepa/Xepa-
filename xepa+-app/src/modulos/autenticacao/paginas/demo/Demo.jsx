@@ -1,15 +1,13 @@
 
-import { useNavigate } from 'react-router-dom'
-import Styles from '@/modulos/autenticacao/paginas/demo/demo.module.css'
+import { useNavigate } from 'react-router-dom';
+import Styles from '@/modulos/autenticacao/paginas/demo/demo.module.css';
 
 function Demo() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <main className={Styles.container}>
-      <section className={Styles.ladoImagem}>
-        
-      </section>
+      <section className={Styles.ladoImagem}></section>
 
       <section className={Styles.ladoForm}>
         <div className={Styles.form}>
@@ -28,6 +26,7 @@ function Demo() {
               <span className={Styles.tituloVerso}>
                 Área do feirante
               </span>
+
               <span className={Styles.descricao}>
                 Veja como cadastrar produtos e acompanhar suas vendas.
               </span>
@@ -47,6 +46,7 @@ function Demo() {
               <span className={Styles.tituloVerso}>
                 Área do consumidor
               </span>
+
               <span className={Styles.descricao}>
                 Explore as ofertas e conheça os produtos disponíveis.
               </span>
@@ -55,7 +55,7 @@ function Demo() {
         </div>
       </section>
     </main>
-  )
+  );
 }
 
-export default Demo
+export default Demo;

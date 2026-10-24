@@ -1,0 +1,97 @@
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 35px 6% 18px;
+    background-color: #18552f;
+    color: #ffffff;
+}
+.footerConteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footerMarca {
+    max-width: 480px;
+}
+.footerMarca a {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+.footerLogo {
+    display: block;
+    width: auto;
+    max-width: 160px;
+    height: 50px;
+    object-fit: contain;
+}
+.footerMarca p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.footerRedes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footerRedes h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footerRedes a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.iconeInstagram {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+.footerRedes a:hover {
+    text-decoration: underline;
+}
+.footerRodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 28px auto 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+}
+.footerRodape a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footerRodape a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .footer {
+        padding: 28px 6% 18px;
+    }
+    .footerConteudo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+    .footerMarca {
+        max-width: 100%;
+    }
+    .footerRodape {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

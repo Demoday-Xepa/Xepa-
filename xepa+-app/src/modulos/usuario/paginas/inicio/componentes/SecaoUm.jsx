@@ -14,8 +14,8 @@ export function SecaoUm() {
     <section className={styles.secaoBoasVindas}>
       <div className={styles.topoCabecalho}>
         <div className={styles.textoBoasVindas}>
-          <h1>Seja bem vindo</h1>
-          <h2>{nomeUsuario}</h2>
+          <h1>Seja bem vindo, <br />
+          {nomeUsuario} </h1>
         </div>
 
         <div className={styles.containerFotoPerfil}>

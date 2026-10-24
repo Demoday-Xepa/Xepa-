@@ -1,33 +1,64 @@
-import React from 'react';
-import styles from '@/modulos/usuario/componentes/navegacao/navbarC.module.css'; 
-import logo from '@/assets/imagens/gerais/logo-2.png'; 
 
-export function Navbar() {
+import { NavLink, Link } from 'react-router-dom';
+import { ShoppingCart } from 'lucide-react';
+import styles from './navbarC.module.css';
+import logo from '@/assets/imagens/gerais/logo-2.png';
+
+const links = [
+  { texto: 'Home', destino: '/homeU' },
+  { texto: 'Mapa', destino: '/mapa' },
+  { texto: 'Seu Impacto', destino: '/impacto' },
+  { texto: 'Receita', destino: '/cozinha' },
+  { texto: 'Chat', destino: '/chat-consumidor' },
+  { texto: 'Xep.IA', destino: '/chat-ia' },
+];
+
+function NavbarC() {
   return (
     <header className={styles.navbar}>
+      <Link to="/homeU" className={styles.logo} aria-label="Home do usuário">
+        <img src={logo} alt="Logo Xepa+" className={styles.iconeLogo} />
+      </Link>
 
-      <div className={styles.logo}>
-        <img src={logo} alt="Logo Xepa" className={styles.iconeLogo} />
-      </div>
-
-      <nav className={styles.navLinks}>
-        <a href="#home" className={styles.linkAtivo}>Home</a>
-        <a href="#mapa" className={styles.linkNav}>Mapa</a>
-        <a href="#impacto" className={styles.linkNav}>Seu Impacto</a>
-        <a href="#receita" className={styles.linkNav}>Receita</a>
-        <a href="#carrinho" className={styles.linkNav}>Carrinho</a>
-        <a href="#perfil" className={styles.linkNav}>Perfil</a>
-        <a href="#ia" className={styles.linkNav}>IA</a>
+      <nav className={styles.navLinks} aria-label="Navegação do usuário">
+        {links.map((link) => (
+          <NavLink
+            key={link.destino}
+            to={link.destino}
+            end
+            className={({ isActive }) =>
+              isActive ? styles.linkAtivo : styles.linkNav
+            }
+          >
+            {link.texto}
+          </NavLink>
+        ))}
       </nav>
 
-    
       <div className={styles.acoes}>
-        <div className={styles.perfil}>
+        <NavLink
+          to="/carrinho"
+          end
+          aria-label="Carrinho"
+          title="Carrinho"
+          className={({ isActive }) =>
+            `${styles.linkCarrinho} ${isActive ? styles.carrinhoAtivo : ''}`
+          }
+        >
+          <ShoppingCart size={30} strokeWidth={2} />
+        </NavLink>
+
+        <Link to="/perfil" className={styles.perfil}>
           <div className={styles.avatar}></div>
-          <span className={styles.nomeUsuario}>Henrique</span>
-        </div>
-        <button className={styles.botaoVoltar}>Voltar</button>
+          <span className={styles.nomeUsuario}>Usuário</span>
+        </Link>
+
+        <Link to="/" className={styles.botaoVoltar}>
+          Sair
+        </Link>
       </div>
     </header>
   );
 }
+
+export default NavbarC;

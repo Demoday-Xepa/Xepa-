@@ -1,10 +1,12 @@
+
 .navbar {
-  background-color: #113822;
+  background-color: #18552f;
   width: 100%;
-  height: 80px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   padding: 0 40px;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -13,21 +15,25 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex-shrink: 0;
 }
 
 .iconeLogo {
   width: 130px;
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: center;
+  gap: 22px;
 }
 
-.linkNav {
+.linkNav,
+.linkAtivo {
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
@@ -35,34 +41,58 @@
   font-family: sans-serif;
   padding-bottom: 6px;
   border-bottom: 3px solid transparent;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
-.linkNav:hover {
+.linkNav:hover,
+.linkAtivo:hover {
   color: #84cc16;
 }
 
 .linkAtivo {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 16px;
   font-weight: bold;
-  font-family: sans-serif;
-  padding-bottom: 6px;
-  border-bottom: 3px solid #84cc16;
-  transition: all 0.2s ease;
+  border-bottom-color: #84cc16;
 }
 
 .acoes {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.linkCarrinho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 6px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.linkCarrinho svg {
+  width: 30px;
+  height: 30px;
+}
+
+.linkCarrinho:hover,
+.carrinhoAtivo {
+  color: #84cc16;
+}
+
+.linkCarrinho:hover {
+  transform: scale(1.1);
 }
 
 .perfil {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .avatar {
@@ -71,6 +101,11 @@
   background-color: #ffffff;
   border-radius: 50%;
   border: 2px solid #84cc16;
+  flex-shrink: 0;
+}
+
+.perfil:hover .nomeUsuario {
+  color: #84cc16;
 }
 
 .nomeUsuario {
@@ -90,115 +125,56 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .botaoVoltar:hover {
   background-color: #65a30d;
 }
 
-.paginaHome {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navLinks {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .acoes {
+    gap: 12px;
+  }
 }
 
-.conteudo {
-  padding: 40px 60px; 
-  max-width: 1400px;  
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+  }
 
-.secaoBoasVindas {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 10px;
-  width: 100%;
-}
+  .iconeLogo {
+    width: 115px;
+  }
 
-.topoCabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
+  .navLinks {
+    gap: 16px;
+  }
 
-.textoBoasVindas h1 {
-  font-size: 42px;
-  font-weight: bold;
-  color: #111111;
-  margin: 0;
-  font-family: sans-serif;
-}
+  .linkNav,
+  .linkAtivo {
+    font-size: 14px;
+  }
 
-.textoBoasVindas h2 {
-  font-size: 42px;
-  font-weight: bold;
-  color: #111111;
-  margin: 4px 0 0 0;
-  font-family: sans-serif;
-}
+  .nomeUsuario {
+    display: none;
+  }
 
-.containerFotoPerfil {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fotoPerfil {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #84cc16;
-}
-
-.avatarPlaceholder {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  background-color: #84cc16;
-}
-
-.barraPesquisa {
-  width: 100%;
-  height: 54px;
-  padding: 0 24px;
-  border: 2px solid #113822;
-  border-radius: 12px;
-  font-size: 18px;
-  outline: none;
-  background-color: #ffffff;
-  box-sizing: border-box;
-}
-
-.barraPesquisa::placeholder {
-  color: #888888;
-}
-
-.categorias {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.botaoCategoria {
-  background-color: #113822;
-  color: #ffffff;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.botaoCategoria:hover {
-  background-color: #1b5233;
+  .linkCarrinho svg {
+    width: 28px;
+    height: 28px;
+  }
 }

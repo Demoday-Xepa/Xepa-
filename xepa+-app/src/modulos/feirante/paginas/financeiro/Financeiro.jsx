@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import '@/modulos/feirante/paginas/financeiro/financeiro.css';
-import { NavbarF } from '@/modulos/feirante/componentes/navegacao/NavbarF.jsx';
-import Footer from '@/modulos/feirante/componentes/rodape/Footer.jsx';
 import useFinanceiro from '@/modulos/feirante/hooks/useFinanceiro';
 import Renda from '@/modulos/feirante/paginas/financeiro/componentes/Renda.jsx';
 import Semanal from '@/modulos/feirante/paginas/financeiro/componentes/Semanal.jsx';
@@ -37,7 +35,6 @@ function Financeiro() {
 
   return (
     <div className="pagina">
-      <NavbarF />
       <main className="conteudo">
         <section className="titulo">
           <div>
@@ -76,7 +73,6 @@ function Financeiro() {
         </section>
       </main>
 
-      <Footer />
       <Lancamento
         aberto={modalAberto}
         tipo={tipo}
