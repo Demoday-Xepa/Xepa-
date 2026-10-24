@@ -1,4 +1,3 @@
-
 import { useLocation } from 'react-router-dom';
 import NavbarC from './NavbarC';
 
@@ -9,12 +8,14 @@ function NavbarUsuarioGlobal() {
     '/homeU',
     '/demo/consumidor',
     '/mapa',
-    '/impacto',
     '/cozinha',
+    '/impacto',
     '/carrinho',
     '/perfil',
     '/chat-consumidor',
     '/chat-ia',
+    '/Verduras',
+    '/pagamento',
   ];
 
   if (!caminhosUsuario.includes(pathname)) {

@@ -1,22 +1,30 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import '@/modulos/publico/paginas/inicio/estilos/Header.css'
-import logo from '@/assets/imagens/pagina-inicial/logo-copy.png'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '@/modulos/publico/paginas/inicio/estilos/Header.css';
+import logo from '@/assets/imagens/pagina-inicial/logo-copy.png';
 
 const links = [
   { texto: 'Home', destino: '#inicio' },
   { texto: 'Sobre Nós', destino: '#sobre' },
-  { texto: 'Mapa', rota: '/mapa' },
-  { texto: 'Receitas', destino: '/cozinha' },
-]
+  { texto: 'Mapa', rota: '/mapa-home' },
+  { texto: 'Receitas', rota: '/cozinha-home' },
+];
 
 export default function Header() {
-  const navigate = useNavigate()
-  const [aberto, setAberto] = useState(false)
+  const navigate = useNavigate();
+  const [aberto, setAberto] = useState(false);
 
   return (
     <header className="cabecalho-xepa">
-      <a href="#inicio" className="marca-xepa" aria-label="Xepa+, ir para o início">
+      <a
+        href="/"
+        className="marca-xepa"
+        aria-label="Xepa+, ir para o início"
+        onClick={(e) => {
+          e.preventDefault();
+          navigate('/');
+        }}
+      >
         <img className="logo-xepa" src={logo} alt="Xepa+" />
       </a>
 
@@ -30,10 +38,23 @@ export default function Header() {
             key={link.texto}
             href={link.rota || link.destino}
             onClick={(e) => {
-              setAberto(false)
+              setAberto(false);
+
               if (link.rota) {
-                e.preventDefault()
-                navigate(link.rota)
+                e.preventDefault();
+                navigate(link.rota);
+              } else if (link.destino.startsWith('#')) {
+                e.preventDefault();
+
+                if (window.location.pathname !== '/') {
+                  navigate('/');
+                }
+
+                setTimeout(() => {
+                  document.querySelector(link.destino)?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                }, 100);
               }
             }}
           >
@@ -65,5 +86,5 @@ export default function Header() {
         </button>
       </div>
     </header>
-  )
+  );
 }

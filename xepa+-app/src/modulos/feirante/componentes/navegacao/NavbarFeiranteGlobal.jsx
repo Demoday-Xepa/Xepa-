@@ -1,6 +1,5 @@
-
 import { useLocation } from 'react-router-dom';
-import NavbarF from './navbarF';
+import NavbarF from './NavbarF';
 
 function NavbarFeiranteGlobal() {
   const { pathname } = useLocation();
@@ -12,6 +11,7 @@ function NavbarFeiranteGlobal() {
     '/adicionar-feira',
     '/financeiro',
     '/chat-feirante',
+    '/chat-ia-feirante',
   ];
 
   if (!caminhosFeirante.includes(pathname)) {

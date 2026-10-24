@@ -1,4 +1,3 @@
-
 import { NavLink, Link } from 'react-router-dom';
 import styles from './navbarF.module.css';
 import logo from '@/assets/imagens/gerais/logo-2.png';
@@ -9,7 +8,7 @@ const links = [
   { texto: 'Feiras', destino: '/adicionar-feira' },
   { texto: 'Financeiro', destino: '/financeiro' },
   { texto: 'Chat', destino: '/chat-feirante' },
-  { texto: 'Xep.AI', destino: '/chat-ia' },
+  { texto: 'Xep.AI', destino: '/chat-ia-feirante' },
 ];
 
 export function NavbarF() {

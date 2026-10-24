@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes } from 'react-router-dom';
 
 import { rotasPublicas } from './aplicacao/rotas/rotas-publicas';
@@ -9,6 +8,7 @@ import { rotasUsuario } from './aplicacao/rotas/rotas-usuario';
 import Footer from './components/footer/footer';
 import UserWay from './components/UserWay';
 
+import HeaderHomeGlobal from './modulos/publico/componentes/navegacao/HeaderHomeGlobal';
 import NavbarFeiranteGlobal from './modulos/feirante/componentes/navegacao/NavbarFeiranteGlobal';
 import NavbarUsuarioGlobal from './modulos/usuario/componentes/navegacao/NavbarUsuarioGlobal';
 
@@ -18,6 +18,7 @@ function App() {
       <div className="app">
         <UserWay />
 
+        <HeaderHomeGlobal />
         <NavbarFeiranteGlobal />
         <NavbarUsuarioGlobal />
 
