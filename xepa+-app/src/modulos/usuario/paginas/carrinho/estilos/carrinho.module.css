@@ -1,0 +1,281 @@
+:root {
+  --cor-primaria: #1a3d2e;
+  --cor-texto: #1a202c;
+  --cor-borda: #d9dee5;
+  --cor-cinza-claro: #f3f4f6;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cor-texto);
+}
+
+/* Cabeçalho / Navbar */
+.header {
+  background-color: var(--cor-primaria);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 35px;
+  display: block;
+}
+
+/* Conteúdo Principal */
+.main_content {
+  padding: 2.5rem 5%;
+
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main_content h1 {
+  font-size: 2.2rem;
+  color: var(--cor-primaria);
+  margin: 0 0 2rem 0;
+}
+
+/* Grid que separa a Tabela do Card de Resumo */
+.carrinho_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Tabela de Produtos */
+.tabela_produtos {
+  border: 1.5px solid var(--cor-borda);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  
+  ;
+}
+
+.tabela_header,
+.tabela_linha {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 0.8fr 0.6fr;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.tabela_header {
+  border-bottom: 1.5px solid var(--cor-borda);
+}
+
+.tabela_header h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--cor-texto);
+}
+
+.tabela_linha {
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.tabela_linha:last-child {
+  border-bottom: none;
+}
+
+.coluna_produto {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.coluna_produto img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.coluna_produto > div {
+  min-width: 0;
+}
+
+.coluna_produto h4,
+.coluna_retirada h4,
+.coluna_total h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.coluna_produto p,
+.coluna_retirada p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.coluna_produto p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.coluna_acao {
+  display: flex;
+  justify-content: center;
+}
+
+.coluna_acao button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.coluna_acao button:hover {
+  transform: scale(1.1);
+}
+
+/* Card Resumo do Pedido */
+.resumo_card {
+  border: 1.5px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 1.8rem;
+  background-color: #fff;
+  position: sticky;
+  top: 1.5rem;
+  box-sizing: border-box;
+}
+
+.resumo_card > h4 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+}
+
+.resumo_itens {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.resumo_linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resumo_linha h4,
+.resumo_linha p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.resumo_card hr {
+  border: none;
+  border-top: 1px solid var(--cor-borda);
+  margin: 1.2rem 0;
+}
+
+.resumo_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.resumo_total h4 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--cor-primaria);
+}
+
+.alerta_endereco {
+  display: flex;
+  gap: 0.8rem;
+  background-color: var(--cor-cinza-claro);
+  padding: 0.9rem;
+  border-radius: 8px;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.alerta_endereco img {
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.alerta_endereco p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+.btn_pagar {
+  width: 100%;
+  background-color: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.2rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-sizing: border-box;
+}
+
+.btn_pagar h3 {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn_pagar:hover {
+  background-color: #132e22;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .carrinho_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resumo_card {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .main_content h1 {
+    font-size: 1.7rem;
+  }
+
+  .tabela_header {
+    display: none;
+  }
+
+  .tabela_linha {
+    grid-template-columns: 1fr auto;
+    row-gap: 0.6rem;
+  }
+
+  .coluna_produto {
+    grid-column: 1 / -1;
+  }
+}

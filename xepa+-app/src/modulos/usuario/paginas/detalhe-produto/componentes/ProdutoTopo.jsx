@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from "@/modulos/usuario/paginas/detalhe-produto/estilos/ProdutoTopo.module.css";
 
@@ -32,6 +33,7 @@ function Coracao({ ativo }) {
 }
 
 function ProdutoTopo({ produto }) {
+  const navegar = useNavigate();
   const [atual, setAtual] = useState(0);
   const [favorito, setFavorito] = useState(false);
 
@@ -86,7 +88,7 @@ function ProdutoTopo({ produto }) {
         </dl>
 
         <div className={styles.acoes}>
-          <button type="button" className={styles.carrinho}>Adicionar ao carrinho</button>
+          <button type="button" className={styles.carrinho} onClick={() => navegar("/carrinho")}>Adicionar ao carrinho</button>
         </div>
       </section>
     </div>

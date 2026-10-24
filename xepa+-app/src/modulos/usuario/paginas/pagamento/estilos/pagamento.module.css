@@ -1,0 +1,251 @@
+
+.pagamentoContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+/* Cabeçalho / Navbar */
+.header {
+  background-color: var(--cor-primaria);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header button {
+  width: auto;
+  min-width: 80px;
+  height: 35px;
+  padding: 0 1rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 16px;
+  background-color: #9cbb06;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+/* Conteúdo Principal */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  display: flex;
+
+
+  width: 100%;
+
+}
+
+.mainContainer h1{
+  margin-left: 30px;
+
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.sectionTitle, .summaryTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Opção de Pagamento PIX */
+.paymentOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #18522C;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: #f4fcf4;
+}
+
+.pixBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.pixIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.radioIndicator {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #2e7d32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioInner {
+  width: 10px;
+  height: 10px;
+  background-color: #2e7d32;
+  border-radius: 50%;
+}
+
+/* QR Code */
+.qrCodeWrapper {
+  text-align: center;
+}
+
+.qrInstructionsTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.qrInstructionsSub {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.qrCodeBox {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.btnCopyPix {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  padding: 0.75rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnCopyPix:hover {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+/* Resumo do Pedido */
+.orderItems {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.itemName {
+  color: #555;
+}
+
+.itemPrice {
+  font-weight: 500;
+}
+
+.freeTag {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.summaryDivider {
+  height: 1px;
+  background-color: #eee;
+  margin-bottom: 1.5rem;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.btnConfirmPayment {
+  width: 100%;
+  background-color: #18522C;
+  border: none;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s;
+}
+
+.btnConfirmPayment:hover {
+  background-color: #235d27;
+}
+
+.secureBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.mainContainer {
+ display: flex;
+ flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+}
