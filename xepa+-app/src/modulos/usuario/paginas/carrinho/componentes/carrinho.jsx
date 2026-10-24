@@ -1,10 +1,8 @@
-
 import { useNavigate } from 'react-router-dom';
 import Styles from '../estilos/carrinho.module.css';
 import imageC from '@/assets/imagens/gerais/xepaCompleta.jpg';
 import imageL from '@/assets/imagens/gerais/xepaLegumes.jpg';
 import imageF from '@/assets/imagens/gerais/xepaFrutas.jpg';
-
 
 export function Carrinho() {
   const navegar = useNavigate();
@@ -75,10 +73,10 @@ export function Carrinho() {
 
             <div className={Styles.tabela_linha}>
               <div className={Styles.coluna_produto}>
-                <img src={imageF} alt="Xepa Frutas" />
+                <img src={imageF} alt="Xepa de Frutas" />
                 <div>
-                  <h4>Xepa Frutas</h4>
-                  <p>Alface, brócolis, batata...</p>
+                  <h4>Xepa de Frutas</h4>
+                  <p>Frutas variadas da estação...</p>
                 </div>
               </div>
 
@@ -92,7 +90,7 @@ export function Carrinho() {
               </div>
 
               <div className={Styles.coluna_acao}>
-                <button type="button" aria-label="Remover Xepa Frutas">
+                <button type="button" aria-label="Remover Xepa de Frutas">
                   <span className={Styles.icon}>🗑️</span>
                 </button>
               </div>
@@ -105,7 +103,7 @@ export function Carrinho() {
             <div className={Styles.resumo_itens}>
               <div className={Styles.resumo_linha}>
                 <h4>Xepa Legumes</h4>
-                <p>R$ 40</p>
+                <p>R$ 50</p>
               </div>
 
               <div className={Styles.resumo_linha}>
@@ -115,7 +113,7 @@ export function Carrinho() {
 
               <div className={Styles.resumo_linha}>
                 <h4>Xepa Completa</h4>
-                <p>R$ 50</p>
+                <p>R$ 40</p>
               </div>
 
               <div className={Styles.resumo_linha}>
