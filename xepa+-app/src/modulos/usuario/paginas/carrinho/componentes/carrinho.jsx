@@ -5,6 +5,7 @@ import imageC from '@/assets/imagens/gerais/xepaCompleta.jpg';
 import imageL from '@/assets/imagens/gerais/xepaLegumes.jpg';
 import imageF from '@/assets/imagens/gerais/xepaFrutas.jpg';
 
+
 export function Carrinho() {
   const navegar = useNavigate();
 
