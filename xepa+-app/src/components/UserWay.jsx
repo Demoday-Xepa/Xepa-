@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 
 function UserWay() {
@@ -16,9 +17,8 @@ function UserWay() {
     script.setAttribute('data-xepa-userway', 'true');
     script.async = true;
 
-    document.body.appendChild(script);
-
     const estilo = document.createElement('style');
+
     estilo.id = 'xepa-userway-position';
     estilo.textContent = `
       #userwayAccessibilityIcon,
@@ -28,10 +28,12 @@ function UserWay() {
         bottom: 20px !important;
         left: auto !important;
         top: auto !important;
+        z-index: 99999 !important;
       }
     `;
 
     document.head.appendChild(estilo);
+    document.body.appendChild(script);
 
     return () => {
       estilo.remove();

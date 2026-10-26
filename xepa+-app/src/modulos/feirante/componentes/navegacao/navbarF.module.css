@@ -1,5 +1,6 @@
 
 .navbar {
+  position: relative;
   background-color: #18552f;
   width: 100%;
   min-height: 80px;
@@ -62,7 +63,6 @@
   flex-shrink: 0;
 }
 
-
 .perfil {
   display: flex;
   align-items: center;
@@ -83,7 +83,6 @@
 .perfil:hover .nomeUsuario {
   color: #84cc16;
 }
-
 
 .nomeUsuario {
   color: #ffffff;
@@ -110,35 +109,45 @@
   background-color: #65a30d;
 }
 
-@media (max-width: 1100px) {
-  .navbar {
-    padding: 16px 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navLinks {
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  .acoes {
-    gap: 12px;
-  }
+.botaoMenu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
-@media (max-width: 600px) {
+.botaoMenu span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.perfilMenu,
+.sairMenu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
   .navbar {
-    flex-direction: column;
-    gap: 18px;
+    gap: 16px;
+    padding: 0 24px;
   }
 
   .iconeLogo {
-    width: 115px;
+    width: 110px;
   }
 
   .navLinks {
-    gap: 16px;
+    gap: 14px;
   }
 
   .linkNav,
@@ -146,7 +155,108 @@
     font-size: 14px;
   }
 
+  .acoes {
+    gap: 12px;
+  }
+
   .nomeUsuario {
+    font-size: 14px;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .botaoVoltar {
+    padding: 9px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 76px;
+    padding: 0 16px 0 20px;
+    gap: 12px;
+  }
+
+  .iconeLogo {
+    width: 105px;
+  }
+
+  .acoes {
+    margin-left: auto;
+    gap: 0;
+  }
+
+  .acoes > .perfil,
+  .acoes > .botaoVoltar {
     display: none;
+  }
+
+  .botaoMenu {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 20px 16px;
+    background-color: #18552f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .menuAberto {
+    display: flex;
+  }
+
+  .linkNav,
+  .linkAtivo {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .linkAtivo {
+    border-bottom-color: #84cc16;
+  }
+
+  .perfilMenu {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .perfilMenu .avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .perfilMenu .nomeUsuario {
+    font-size: 16px;
+  }
+
+  .sairMenu {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .linkNav,
+  .linkAtivo,
+  .botaoVoltar {
+    transition: none;
   }
 }
