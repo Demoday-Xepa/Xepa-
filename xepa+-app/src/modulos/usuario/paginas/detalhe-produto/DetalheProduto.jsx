@@ -1,5 +1,3 @@
-import Header from "@/modulos/usuario/paginas/detalhe-produto/componentes/Header.jsx";
-import Footer from "@/modulos/usuario/paginas/detalhe-produto/componentes/Footer.jsx";
 import ProdutoTopo from "@/modulos/usuario/paginas/detalhe-produto/componentes/ProdutoTopo.jsx";
 import LocalizacaoPerfil from "@/modulos/usuario/paginas/detalhe-produto/componentes/LocalizacaoPerfil.jsx";
 import styles from "@/modulos/usuario/paginas/detalhe-produto/estilos/DetalheProduto.module.css";
@@ -36,14 +34,12 @@ const feirante = {
 function DetalheProduto() {
   return (
     <div className={styles.pagina}>
-      <Header />
 
       <main className={styles.conteudo}>
         <ProdutoTopo produto={produto} />
         <LocalizacaoPerfil feira={feira} feirante={feirante} />
       </main>
 
-      <Footer />
     </div>
   );
 }

@@ -23,13 +23,7 @@ export default function Pagamento() {
   return (
     <div className={Styles.mainContainer}>
     <div className={Styles.pagamentoContainer}>
-     <header className={Styles.header}>
-            <div className={Styles.logo}>
-              {/* Logo Xepa+ */}
-              <img src={Logo} alt="Xepa+" />
-            </div>
-            <button type="button" onClick={() => navegar("/carrinho")}>Voltar</button>
-          </header>
+           
 
       {/* Conteúdo Principal */}
       <main className={Styles.mainContainer}>
