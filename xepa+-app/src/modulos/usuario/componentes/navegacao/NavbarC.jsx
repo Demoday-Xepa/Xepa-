@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { ShoppingCart } from 'lucide-react';
 import styles from './navbarC.module.css';
@@ -14,9 +15,20 @@ const links = [
 ];
 
 function NavbarC() {
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  function fecharMenu() {
+    setMenuAberto(false);
+  }
+
   return (
     <header className={styles.navbar}>
-      <Link to="/homeU" className={styles.logo} aria-label="Home do usuário">
+      <Link
+        to="/homeU"
+        className={styles.logo}
+        aria-label="Home do usuário"
+        onClick={fecharMenu}
+      >
         <img src={logo} alt="Logo Xepa+" className={styles.iconeLogo} />
       </Link>
 
@@ -26,6 +38,7 @@ function NavbarC() {
             key={link.destino}
             to={link.destino}
             end
+            onClick={fecharMenu}
             className={({ isActive }) =>
               isActive ? styles.linkAtivo : styles.linkNav
             }
@@ -33,6 +46,23 @@ function NavbarC() {
             {link.texto}
           </NavLink>
         ))}
+
+        <Link
+          to="/perfil"
+          className={`${styles.perfil} ${styles.perfilMenu}`}
+          onClick={fecharMenu}
+        >
+          <div className={styles.avatar}></div>
+          <span className={styles.nomeUsuario}>Usuário</span>
+        </Link>
+
+        <Link
+          to="/"
+          className={`${styles.botaoVoltar} ${styles.sairMenu}`}
+          onClick={fecharMenu}
+        >
+          Sair
+        </Link>
       </nav>
 
       <div className={styles.acoes}>
@@ -56,6 +86,18 @@ function NavbarC() {
         <Link to="/" className={styles.botaoVoltar}>
           Sair
         </Link>
+
+        <button
+          type="button"
+          className={styles.botaoMenu}
+          aria-label={menuAberto ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={menuAberto}
+          onClick={() => setMenuAberto(!menuAberto)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
   );

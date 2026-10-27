@@ -1,40 +1,59 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '@/modulos/usuario/paginas/inicio/estilos/Home.module.css';
 
+
 export function SecaoTres() {
- const lidarComClique = () => {
-    alert("Detalhes clicados!");
+  const lidarComClique = (nomeXepa) => {
+    alert(`Ver mais detalhes: ${nomeXepa}`);
   };
 
   return (
-        <section className={styles.secaocards}>
-      <div className={styles.tituloxepa}>
-        <h2>Xepas Completas</h2>
+    <section className={styles.secaoXepasPerto}>
+      <div className={styles.tituloXepas}>
+        <h2>Feiras perto de você</h2>
       </div>
 
-      <div className={styles.card}>
-        <img 
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRvZ24jCcZdRMOB2MhFenP1XVYEJx7sXYjX_Qu2CXe01oUlcoA" 
-          alt="" 
-          className={styles.cardImg} 
-        />
-        
-        <div className={styles.cardConteudo}>
-          <h3 className={styles.cardTitulo}>Título da Xepa</h3>
-          <p className={styles.cardDescricao}>
-           Xepas completas com verduras e legumes
-          </p>
-          <button 
-            className={styles.cardBtn} 
-            onClick={lidarComClique}
-          >
-            Ver mais detalhes
-          </button>
+      <div className={styles.containerCardsXepas}>
+        <div className={styles.cardHorizontalXepa}>
+          <img 
+            src="https://via.placeholder.com/150" 
+            alt="Xepa Completa" 
+            className={styles.imgCardXepa} 
+          />
+          <div className={styles.conteudoCardXepa}>
+            <h3 className={styles.tituloCardXepa}>Xepa da Brasilândia</h3>
+            <p className={styles.descricaoCardXepa}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nisi accusantium natus, tempore minus laudantium similique numquam repudiandae recusandae harum ducimus corrupti. Dolor quam omnis nam dolores, assumenda neque placeat!
+            </p>
+            <button 
+              className={styles.botaoCardXepa} 
+              onClick={() => lidarComClique("Xepa da Brasilândia")}
+            >
+            Ver no Mapa
+            </button>
+          </div>
         </div>
+
+        <div className={styles.cardHorizontalXepa}>
+          <img 
+            src="https://via.placeholder.com/150" 
+            alt="Xepa Completa" 
+            className={styles.imgCardXepa} 
+          />
+          <div className={styles.conteudoCardXepa}>
+            <h3 className={styles.tituloCardXepa}>Xepa Morro Grande</h3>
+            <p className={styles.descricaoCardXepa}>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nisi accusantium natus, tempore minus laudantium similique numquam repudiandae recusandae harum ducimus corrupti. Dolor quam omnis nam dolores, assumenda neque placeat!
+            </p>
+            <button 
+              className={styles.botaoCardXepa} 
+              onClick={() => lidarComClique("Xepa Morro Grande")}
+            >
+            Ver no Mapa
+            </button>
+          </div>
+        </div>  
       </div>
-
-
-      
     </section>
   );
 }
