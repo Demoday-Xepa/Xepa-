@@ -20,7 +20,7 @@ function NavbarC() {
         <img src={logo} alt="Logo Xepa+" className={styles.iconeLogo} />
       </Link>
 
-      <nav className={styles.navLinks} aria-label="Navegação do usuário">
+      <nav className={styles.navLinks} aria-label="Navegação do usuário"> 
         {links.map((link) => (
           <NavLink
             key={link.destino}

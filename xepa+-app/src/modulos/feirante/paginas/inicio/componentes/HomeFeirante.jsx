@@ -1,115 +1,162 @@
-
 import { useNavigate } from 'react-router-dom';
+import { Headset, Leaf, Store, UserRound } from 'lucide-react';
 import Styles from '@/modulos/feirante/paginas/inicio/componentes/estilos/HomeFeirante.module.css';
-import Image1 from '@/assets/imagens/feirante/xepaf.png';
-import Image2 from '@/assets/imagens/marca/ia.png';
+import CestaXepa from '@/assets/imagens/gerais/xepaCompleta.jpg';
+import Xepinha from '@/assets/imagens/marca/ia.png';
+import Produto from '@/assets/imagens/marca/image.png';
 
-function Dashboard() {
+const conversas = [
+  {
+    nome: 'Seu Zé - Feira Livre Centro',
+    mensagem: 'Opa, Lucas! Já separei sua xepa. Pode passar na banca 24.',
+    horario: 'Hoje, 10:24',
+    Icone: UserRound,
+    estilo: 'avatar_feirante',
+  },
+  {
+    nome: 'Equipe Xepa+',
+    mensagem: 'Sua compra foi confirmada! ✅',
+    horario: 'Hoje, 09:48',
+    Icone: Leaf,
+    estilo: 'avatar_equipe',
+  },
+  {
+    nome: 'Banca do Seu Zé',
+    mensagem: 'Temos novas xepas disponíveis hoje!',
+    horario: 'Hoje, 08:32',
+    Icone: Store,
+    estilo: 'avatar_banca',
+  },
+  {
+    nome: 'Suporte Xepa+',
+    mensagem: 'Qualquer dúvida, estamos por aqui! 🙂',
+    horario: 'Ontem, 17:21',
+    Icone: Headset,
+    estilo: 'avatar_suporte',
+  },
+];
+
+function HomeFeirante() {
   const navigate = useNavigate();
 
   return (
     <div className={Styles.pagina}>
       <main className={Styles.dashboard}>
-        <h1 className={Styles.titulo}>
-          Seja bem-vinda <br />
-          Fabiane Carneiro
-        </h1>
-
-        <nav className={Styles.topo}>
-          <div className={Styles.buscaWrapper}>
-            <span className={Styles.lupa} aria-hidden="true">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              >
-                <circle cx="11" cy="11" r="7" />
-                <path d="M20 20l-3.5-3.5" />
-              </svg>
-            </span>
-
-            <input
-              type="text"
-              className={Styles.busca}
-              placeholder="Buscar..."
-            />
+        <section className={Styles.banner} aria-labelledby="banner-titulo">
+          <div className={Styles.banner_foto}>
+            <img src={CestaXepa} alt="Cesta com frutas e verduras frescas" />
           </div>
 
-          <button
-            type="button"
-            className={Styles.btnMenu}
-            onClick={() => navigate('/adicionar-produto')}
-          >
-            Produtos
-          </button>
+          <div className={Styles.banner_texto}>
+            <span className={Styles.banner_marca}>Xepa Mais</span>
+            <h1 id="banner-titulo">A feira que rende mais.</h1>
+            <p>
+              Com a Xepa.AI, você encontra as melhores ofertas da feira,
+              economiza e ainda ajuda a reduzir o desperdício de alimentos.
+            </p>
+            <button
+              type="button"
+              className={Styles.botao_banner}
+              onClick={() => navigate('/chat-ia-feirante')}
+            >
+              <span aria-hidden="true"></span>
+              <span>Conheça a Xepa.AI</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
 
-          <button
-            type="button"
-            className={Styles.btnMenu}
-            onClick={() => navigate('/financeiro')}
-          >
-            Vendas
-          </button>
-
-          <button
-            type="button"
-            className={Styles.btnMenu}
-            onClick={() => navigate('/chat-feirante')}
-          >
-            Chat
-          </button>
-
-          <button
-            type="button"
-            className={Styles.btnMenu}
-            onClick={() => navigate('/chat-ia')}
-          >
-            XepAI
-          </button>
-        </nav>
-
-        <div className={Styles.grid}>
-          <section className={`${Styles.card} ${Styles.cardXepa}`}>
-            <div className={Styles.xepaImagem}>
-              <img src={Image1} alt="Produtos da Xepa+" />
+          <div className={Styles.banner_assistente}>
+            <div className={Styles.assistente_marca}>
+              <div>
+                <strong>Xepinha</strong>
+                <span>Seu assistente inteligente da feira!</span>
+              </div>
             </div>
 
-            <div className={Styles.xepaInfo}>
-              <h2>Xepa De Poa</h2>
-              <small>
-                Conheça seus produtos e acompanhe sua feira.
-              </small>
+            <p>
+              A Xepa.AI analisa os dados da feira, indica as melhores ofertas,
+              te avisa sobre as xepas disponíveis e ajuda você a economizar de
+              verdade.
+            </p>
 
-              <p>
-                Gerencie seus produtos e aproveite a plataforma Xepa+ para
-                divulgar suas ofertas e acompanhar suas vendas.
-              </p>
+            <div className={Styles.beneficios}>
+              <span>
+                ◉
+                <small>
+                  Ofertas
+                  <br />
+                  personalizadas
+                </small>
+              </span>
+              <span>
+                ◉
+                <small>
+                  Menos
+                  <br />
+                  desperdício
+                </small>
+              </span>
+              <span>
+                ◉
+                <small>
+                  Mais
+                  <br />
+                  economia
+                </small>
+              </span>
+            </div>
+          </div>
 
-              <button
-                type="button"
-                className={Styles.btnBranco}
-                onClick={() => navigate('/adicionar-produto')}
-              >
-                Adicionar novo produto{' '}
-                <span className={Styles.seta}>↗</span>
-              </button>
+          <img
+            className={Styles.banner_xepinha}
+            src={Xepinha}
+            alt="Xepinha, assistente virtual da Xepa"
+          />
+        </section>
+
+        <div className={Styles.grid}>
+          <section className={Styles.card_destaque}>
+            <div className={Styles.card_header}>
+              <h2>Xepa em destaque</h2>
+              <span className={Styles.controle}>›</span>
+            </div>
+
+            <div className={Styles.destaque_conteudo}>
+              <div className={Styles.destaque_imagem}>
+                <img src={Produto} alt="Xepinha, assistente da Xepa" />
+              </div>
+
+              <div className={Styles.destaque_info}>
+                <strong>Xepa de Legumes e Verduras</strong>
+                <p>
+                  Produtos frescos e de ótima qualidade, com aquele preço
+                  especial da feira!
+                </p>
+                <div className={Styles.preco}>
+                  R$ 2,00 <span> 50% OFF</span>
+                </div>
+                <button
+                  type="button"
+                  className={Styles.botao_verde}
+                  onClick={() => navigate('/adicionar-produto')}
+                >
+                  Ver detalhes <span aria-hidden="true">→</span>
+                </button>
+              </div>
             </div>
           </section>
 
-          <section className={`${Styles.card} ${Styles.cardFinancas}`}>
-            <h2>Finanças</h2>
-            <p className={Styles.ganhosLabel}>Ganhos da feira passada</p>
-            <p className={Styles.ganhosValor}>R$ 2.000</p>
+           <section className={Styles.card_financas}>
+            <h2>↗ &nbsp;Finanças</h2>
+            <p>Ganhos da feira passada</p>
+            <strong className={Styles.ganhos_valor}>R$ 2.000</strong>
 
-            <div className={Styles.ganhosCaixas}>
-              <div className={Styles.caixaGanho}>
+            <div className={Styles.ganhos_caixas}>
+              <div>
                 <span>Ganho Bruto mensal</span>
                 <strong>R$ 9.000</strong>
               </div>
-
-              <div className={Styles.caixaGanho}>
+              <div>
                 <span>Ganho Líquido mensal</span>
                 <strong>R$ 4.500</strong>
               </div>
@@ -117,104 +164,65 @@ function Dashboard() {
 
             <button
               type="button"
-              className={Styles.btnBranco}
+              className={Styles.botao_financas}
               onClick={() => navigate('/financeiro')}
             >
-              Ver financeiro <span className={Styles.seta}>↗</span>
+              Ver financeiro <span aria-hidden="true">➜</span>
             </button>
           </section>
 
-          <section className={`${Styles.card} ${Styles.cardBranco}`}>
-            <div className={Styles.cardHeader}>
+          <section className={Styles.card_gastos}>
+            <div className={Styles.card_header}>
               <h2>Gastos</h2>
-
-              <button
-                type="button"
-                className={Styles.seta}
-                onClick={() => navigate('/financeiro')}
-                aria-label="Ver financeiro"
-              >
-                ↗
-              </button>
             </div>
 
-            <div className={Styles.graficoPizza}></div>
-
-            <ul className={Styles.legenda}>
-              <li>
-                <span className={`${Styles.cor} ${Styles.corMensal}`}></span>
-                Ganho mensal
-              </li>
-
-              <li>
-                <span className={`${Styles.cor} ${Styles.corSemanal}`}></span>
-                Ganho semanal
-              </li>
-
-              <li>
-                <span className={`${Styles.cor} ${Styles.corDiario}`}></span>
-                Ganho diário
-              </li>
-
-              <li>
-                <span className={`${Styles.cor} ${Styles.corGasto}`}></span>
-                Gasto
-              </li>
-            </ul>
+            <div className={Styles.gastos_conteudo}>
+              <div
+                className={Styles.grafico_pizza}
+                role="img"
+                aria-label="Gráfico de gastos e ganhos"
+              />
+              <ul className={Styles.legenda}>
+                <li><i className={Styles.cor_mensal} />Ganho mensal</li>
+                <li><i className={Styles.cor_diario} />Ganho diário</li>
+                <li><i className={Styles.cor_semanal} />Ganho semanal</li>
+                <li><i className={Styles.cor_gasto} />Gaste</li>
+              </ul>
+            </div>
           </section>
 
-          <section className={`${Styles.card} ${Styles.cardBranco}`}>
-            <div className={Styles.cardHeader}>
-              <h2>Notificações</h2>
-
-              <button
-                type="button"
-                className={Styles.seta}
-                onClick={() => navigate('/chat-feirante')}
-                aria-label="Abrir chat"
-              >
-                ↗
-              </button>
+         <section className={Styles.card_conversas}>
+            <div className={Styles.card_header}>
+              <h2>Últimas conversas</h2>
             </div>
 
-            {[1, 2, 3, 4].map((item) => (
-              <div className={Styles.notificacao} key={item}>
-                <div className={Styles.notificacaoFoto}></div>
-
-                <div className={Styles.notificacaoTexto}>
-                  <strong>Lorem ipsum dolor sim</strong>
-                  <small>Lorem ipsum dolor sim</small>
-                </div>
-
-                <small>Lorem ipsum</small>
-              </div>
-            ))}
-          </section>
-
-          <section className={`${Styles.card} ${Styles.cardAi}`}>
-            <h2>Xep.AI</h2>
-
-            <div className={Styles.aiImagem}>
-              <img src={Image2} alt="Assistente virtual Xepinha" />
+            <div className={Styles.lista_conversas}>
+              {conversas.map(({ nome, mensagem, horario, Icone, estilo }) => (
+                <button
+                  className={Styles.conversa}
+                  key={nome}
+                  type="button"
+                  onClick={() => navigate('/chat-feirante')}
+                  aria-label={`Abrir conversa com ${nome}`}
+                >
+                  <span className={`${Styles.conversa_avatar} ${Styles[estilo]}`} aria-hidden="true">
+                    <Icone size={20} strokeWidth={2.2} />
+                  </span>
+                  <span className={Styles.conversa_texto}>
+                    <strong>{nome}</strong>
+                    <span>{mensagem}</span>
+                  </span>
+                  <small className={Styles.conversa_horario}>{horario}</small>
+                  <span className={Styles.conversa_seta} aria-hidden="true">›</span>
+                </button>
+              ))}
             </div>
-
-            <p>
-              Tem alguma dúvida de como usar o Xepa+? Chame o Xepinha para
-              te ajudar.
-            </p>
-
-            <button
-              type="button"
-              className={`${Styles.btnBranco} ${Styles.btnCentro}`}
-              onClick={() => navigate('/chat-ia')}
-            >
-              Falar com o Xepinha
-            </button>
           </section>
+
         </div>
       </main>
     </div>
   );
 }
 
-export default Dashboard;
+export default HomeFeirante;

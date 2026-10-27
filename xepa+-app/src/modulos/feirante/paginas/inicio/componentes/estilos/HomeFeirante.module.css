@@ -1,524 +1,611 @@
 .pagina {
   width: 100%;
-  min-height: auto;
-  overflow: visible;
+  min-height: calc(100vh - 64px);
+  overflow: hidden;
   background: #fff;
 }
 
 .dashboard {
-  --verdeEscuro: #17502c;
-  --verdeLima: #9bba0b;
-  --laranja: #f96a14;
-  --marrom: #a8400f;
-  --amarelo: #ffc928;
-  --branco: #ffffff;
+  --verde: #14532f;
+  --borda: #d9e3e9;
+  box-sizing: border-box;
+  display: flex;
   width: 100%;
-  padding: clamp(16px, 2.5vw, 40px);
-  background: var(--branco);
+  flex-direction: column;
+  gap: 14px;
+  padding: 12px clamp(18px, 2.1vw, 40px) 16px;
+  color: var(--verde);
   font-family: "Poppins", Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+}
+
+.dashboard * {
   box-sizing: border-box;
 }
 
-.dashboard *,
-.footer,
-.footer * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
-}
-
-/* ===== Título ===== */
-.titulo {
-  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-  line-height: 1.2;
-  color: var(--verdeEscuro);
-}
-
-/* ===== Topo (busca + menu) ===== */
-.topo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-
-.buscaWrapper {
+.banner {
   position: relative;
-  flex: 1 1 220px;
-  min-width: 0;
-}
-
-.lupa {
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  color: var(--verdeEscuro);
-  pointer-events: none;
-  display: flex;
-}
-
-.busca {
-  width: 100%;
-  height: 44px;
-  border: 1.5px solid var(--verdeEscuro);
-  border-radius: 999px;
-  padding: 0 20px 0 46px;
-  font-size: 0.95rem;
-  outline: none;
-}
-
-.btnMenu {
-  background: var(--verdeEscuro);
-  color: var(--branco);
-  border: none;
-  border-radius: 999px;
-  padding: 0 28px;
-  height: 44px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* ===== Grid ===== */
-.grid {
+  isolation: isolate;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: minmax(320px, auto);
-  gap: 24px;
+  min-height: clamp(250px, 18vw, 314px);
+  grid-template-columns: 31% 34% 35%;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at 86% 15%, #75bb1c 0, transparent 30%),
+    linear-gradient(112deg, #07512c, #0d522c 54%, #218539);
+  color: #fff;
 }
 
-.card {
-  border-radius: 24px;
-  padding: 24px;
-  min-width: 0;
+.banner::before,
+.banner::after {
+  position: absolute;
+  z-index: -1;
+  border-radius: 100% 0;
+  background: #55a916;
+  content: "";
+  opacity: 0.55;
+  transform: rotate(-23deg);
 }
 
-.card h2 {
-  font-size: 1.35rem;
+.banner::before {
+  top: -28px;
+  left: -45px;
+  width: 180px;
+  height: 95px;
 }
 
-.cardBranco {
-  background: var(--branco);
-  border: 1.5px solid var(--verdeEscuro);
-  color: var(--verdeEscuro);
+.banner::after {
+  right: -65px;
+  bottom: -34px;
+  width: 210px;
+  height: 100px;
+}
+
+.banner_foto {
   display: flex;
-  flex-direction: column;
-}
-
-.cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.seta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--laranja);
-  color: var(--branco);
-  font-size: 0.85rem;
-  flex-shrink: 0;
-}
-
-/* ===== Xepa de Poa ===== */
-.cardXepa {
-  grid-column: span 2;
-  background: var(--verdeEscuro);
-  color: var(--branco);
-  display: flex;
-  gap: 24px;
-}
-
-.xepaImagem {
-  flex: 0 0 45%;
-  min-height: 260px;
-  background: #e5dcc8;
-  border-radius: 16px;
+  min-height: 250px;
+  align-items: flex-end;
   overflow: hidden;
 }
 
-.xepaImagem img {
+.banner_foto img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  max-height: 314px;
+  object-fit: cover;
   object-position: center;
-  display: block;
+  mix-blend-mode: multiply;
+  mask-image: linear-gradient(90deg, #000 72%, transparent);
 }
 
-.xepaInfo {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.banner_texto {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  padding: 26px 10px 26px 4px;
 }
 
-.xepaInfo small {
-  font-size: 0.8rem;
-  opacity: 0.8;
+.banner_marca {
+  color: #aee77d;
+  font-size: clamp(24px, 2.2vw, 38px);
+  font-weight: 800;
 }
 
-.xepaInfo p {
-  font-size: 0.95rem;
+.banner_texto h1 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: clamp(25px, 2.4vw, 40px);
+  line-height: 1.1;
+}
+
+.banner_texto p {
+  max-width: 460px;
+  margin: 0 0 18px;
+  font-size: clamp(13px, 0.95vw, 17px);
   line-height: 1.5;
 }
 
-.btnBranco {
-  background: var(--branco);
-  color: #222;
-  border: none;
-  border-radius: 999px;
-  padding: 12px 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
+.botao_banner {
   display: flex;
-  justify-content: space-between;
+  height: 48px;
   align-items: center;
   gap: 12px;
-  margin-top: auto;
-}
-
-.btnCentro {
-  justify-content: center;
-  width: 100%;
-}
-
-/* ===== Finanças ===== */
-.cardFinancas {
-  background: var(--laranja);
-  color: var(--branco);
-  display: flex;
-  flex-direction: column;
-}
-
-.ganhosLabel {
-  margin-top: 16px;
-  font-size: 0.95rem;
-}
-
-.ganhosValor {
-  font-size: clamp(2rem, 3vw, 2.75rem);
+  padding: 0 22px;
+  border: 0;
+  border-radius: 30px;
+  background: #d8f257;
+  color: #124b29;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
   font-weight: 700;
-  margin-bottom: 20px;
 }
 
-.ganhosCaixas {
+.banner_assistente {
+  position: relative;
+  z-index: 1;
   display: flex;
-  gap: 10px;
-  margin-top: auto;
-}
-
-.caixaGanho {
-  flex: 1;
-  background: var(--marrom);
-  border-radius: 12px;
-  padding: 12px;
-  text-align: center;
-  display: flex;
+  min-height: 230px;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  align-self: center;
+  margin: 20px 6% 20px 0;
+  padding: 18px 24px 16px 105px;
+  transform: rotate(-2deg);
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #13532e;
 }
 
-.caixaGanho span {
-  font-size: 0.75rem;
+.assistente_marca strong {
+  display: block;
+  color: #16833e;
+  font-size: clamp(22px, 2vw, 32px);
 }
 
-.caixaGanho strong {
-  font-size: 1rem;
-}
-
-/* ===== Gastos (gráfico de pizza só com CSS) ===== */
-.graficoPizza {
-  width: clamp(140px, 14vw, 200px);
-  aspect-ratio: 1 / 1;
-  margin: auto;
+.assistente_marca strong::before {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  margin-right: 10px;
   border-radius: 50%;
-  flex-shrink: 0;
+  background: #84c600;
+  color: #fff;
+  content: "IA";
+  font-size: 17px;
+  vertical-align: 3px;
+}
+
+.assistente_marca span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.banner_assistente p {
+  max-width: 300px;
+  margin: 9px 0 10px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.beneficios {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.beneficios > span {
+  color: #37833d;
+  font-size: 20px;
+}
+
+.beneficios small {
+  display: block;
+  margin-top: 2px;
+  color: #294966;
+  font-size: 11px;
+}
+
+.banner_xepinha {
+  position: absolute;
+  z-index: 2;
+  bottom: -3%;
+  left: 59%;
+  width: clamp(128px, 13vw, 210px);
+  height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 3px #0e472d66);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(205px, auto));
+  gap: 14px;
+}
+
+.card_destaque,
+.card_gastos,
+.card_financas,
+.card_conversas {
+  min-width: 0;
+  padding: 14px 16px;
+  border-radius: 18px;
+}
+
+.card_gastos,
+.card_conversas {
+  min-height: 500px;
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.card_destaque h2,
+.card_gastos h2,
+.card_financas h2,
+.card_conversas h2 {
+  margin: 0;
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.card_destaque,
+.card_gastos {
+  border: 1px solid var(--borda);
+  background: #fff;
+  box-shadow: 0 3px 12px #173a5010;
+}
+
+.controle {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: #d0e8d5;
+  color: #267340;
+  font-size: 22px;
+}
+
+.destaque_conteudo {
+  display: flex;
+  height: calc(100% - 38px);
+  align-items: stretch;
+  gap: 14px;
+}
+
+.destaque_imagem {
+  display: grid;
+  width: 44%;
+  min-height: 145px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e7f0dd;
+}
+
+.destaque_imagem img {
+  width: 80%;
+  height: 95%;
+  object-fit: contain;
+}
+
+.destaque_info {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.destaque_info > strong {
+  font-size: 13px;
+}
+
+.destaque_info p {
+  margin: 3px 0 8px;
+  color: #435e76;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.preco {
+  color: #197340;
+  font-size: 22px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.preco span {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #dff2d5;
+  font-size: 10px;
+  vertical-align: 4px;
+}
+
+.botao_verde {
+  display: flex;
+  min-width: 140px;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 24px;
+  background: #176338;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.gastos_conteudo {
+  display: flex;
+  height: calc(100% - 38px);
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.grafico_pizza {
+  width: clamp(100px, 9vw, 140px);
+  aspect-ratio: 1;
+  border-radius: 50%;
   background: conic-gradient(
-    var(--verdeEscuro) 0deg 215deg,
-    var(--verdeLima) 215deg 290deg,
-    var(--amarelo) 290deg 325deg,
-    var(--laranja) 325deg 360deg
+    #175b37 0 215deg,
+    #8ebe10 215deg 270deg,
+    #ffc928 270deg 320deg,
+    #f36b18 320deg
   );
 }
 
 .legenda {
-  list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 16px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  color: #354e68;
+  font-size: 12px;
+  list-style: none;
 }
 
 .legenda li {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
 }
 
-.cor {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  flex-shrink: 0;
+.legenda i {
+  display: block;
+  width: 13px;
+  height: 13px;
+  flex: none;
+  border-radius: 4px;
 }
 
-.corMensal { background: var(--verdeEscuro); }
-.corSemanal { background: var(--verdeLima); }
-.corDiario { background: var(--amarelo); }
-.corGasto { background: var(--laranja); }
+.cor_mensal { background: #175b37; }
+.cor_diario { background: #8ebe10; }
+.cor_semanal { background: #ffc928; }
+.cor_gasto { background: #f36b18; }
 
-/* ===== Notificações ===== */
-.notificacao {
+.card_financas {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: var(--verdeLima);
-  border: 1.5px solid var(--verdeEscuro);
-  border-radius: 12px;
-  padding: 10px 12px;
-  margin-bottom: 10px;
-  color: #111;
+  flex-direction: column;
+  padding: 14px 20px;
+  background: linear-gradient(120deg, #ff680e, #f45508);
+  color: #fff;
 }
 
-.notificacao:last-child {
-  margin-bottom: 0;
+.card_financas > p {
+  margin: 3px 0 0;
+  font-size: 14px;
 }
 
-.notificacaoFoto {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--branco);
-  flex-shrink: 0;
+.ganhos_valor {
+  margin: 4px 0 6px;
+  font-size: clamp(28px, 2.5vw, 38px);
+  line-height: 1.2;
 }
 
-.notificacaoTexto {
-  flex: 1;
+.ganhos_caixas {
+  display: flex;
+  gap: 9px;
+  margin-top: auto;
+}
+
+.ganhos_caixas > div {
+  display: flex;
   min-width: 0;
-  display: flex;
+  flex: 1;
   flex-direction: column;
-}
-
-.notificacaoTexto strong {
-  font-size: 0.85rem;
-}
-
-.notificacao small {
-  font-size: 0.7rem;
-}
-
-/* ===== Xep.AI ===== */
-.cardAi {
-  background: var(--verdeLima);
-  color: var(--branco);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 3px;
+  padding: 9px 6px;
+  border-radius: 11px;
+  background: #ad430f;
   text-align: center;
 }
 
-.cardAi h2 {
-  text-align: left;
-}
+.ganhos_caixas span { font-size: 10px; }
+.ganhos_caixas strong { font-size: 14px; }
 
-.cardAi p {
-  font-size: 0.9rem;
-}
-
-.aiImagem {
-  flex: 1;
-  min-height: 160px;
+.botao_financas {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.aiImagem img {
-  max-width: 100%;
-  max-height: 220px;
-  object-fit: contain;
-}
-
-/* ===== Footer (fora do main, ocupa a largura toda) ===== */
-.footer {
-  --verde: #17532c;
-  --branco: #ffffff;
-
-  background: var(--verde);
-  color: var(--branco);
-  padding: 40px clamp(24px, 5vw, 64px) 24px;
   width: 100%;
-  font-family: "Poppins", Arial, sans-serif;
-}
-
-.rodapeTopo {
-  display: flex;
-  justify-content: space-between;
-  gap: 48px;
-  flex-wrap: wrap;
-}
-
-.marca {
-  flex: 0 1 300px;
-  
-}
-
-.logo {
-  display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 14px;
+  justify-content: space-between;
+  margin-top: 9px;
+  padding: 9px 15px;
+  border: 0;
+  border-radius: 22px;
+  background: #fff;
+  color: #8e3a13;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
 }
 
-.logo img {
-  width: 34px;
-  height: 34px;
-}
-
-.descricao {
-  font-size: 0.8rem;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 18px;
-}
-
-.redes {
-  display: flex;
-  gap: 10px;
-}
-
-.redes a {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--branco);
+.botao_financas span {
   display: grid;
+  width: 22px;
+  height: 22px;
   place-items: center;
-  transition: transform 0.2s;
+  border-radius: 50%;
+  background: #f76a12;
+  color: #fff;
+  font-size: 14px;
 }
 
-.redes a:hover {
-  transform: scale(1.12);
+.card_conversas {
+  padding: 12px 16px;
+  border: 1px solid #c6e6da;
+  background: #f1faf5;
 }
 
-.redes svg {
-  width: 15px;
-  height: 15px;
-  fill: var(--verde);
+.lista_conversas {
+  display: grid;
+  gap: 8px;
 }
 
-.colunas {
+.conversa {
   display: flex;
-  gap: clamp(32px, 6vw, 80px);
-  flex-wrap: wrap;
-}
-
-.coluna h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.coluna ul {
-  list-style: none;
-}
-
-.coluna li {
-  margin-bottom: 8px;
-}
-
-.coluna a {
-  color: var(--branco);
-  text-decoration: none;
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
-.coluna a:hover {
-  text-decoration: underline;
-  opacity: 1;
-}
-
-.espaco {
-  margin-top: 22px;
-}
-
-.base {
-  margin-top: 32px;
-  padding-top: 16px;
-  border-top: 2px solid var(--branco);
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  min-height: 68px;
   align-items: center;
-  flex-wrap: wrap;
   gap: 12px;
-  font-size: 0.8rem;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #145b4c;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: background 150ms ease, transform 150ms ease;
 }
 
-.legal {
-  display: flex;
-  gap: 28px;
+.conversa:hover {
+  background: #fff;
+  transform: translateY(-1px);
 }
 
-.legal a {
-  color: var(--branco);
-  text-decoration: none;
+.conversa:focus-visible {
+  outline: 2px solid #348638;
+  outline-offset: 2px;
 }
 
-.legal a:hover {
-  text-decoration: underline;
+.conversa_avatar {
+  position: relative;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
 }
 
-/* ===== Responsivo ===== */
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.conversa_avatar::after {
+  position: absolute;
+  right: -1px;
+  bottom: 0;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #f1faf5;
+  border-radius: 50%;
+  background: #20bd48;
+  content: "";
 }
 
-@media (max-width: 700px) {
-  .grid {
+.avatar_feirante { background: #a8cf20; }
+.avatar_equipe { background: #14532f; }
+.avatar_banca { background: #438e3d; }
+.avatar_suporte { background: #0e5133; }
+
+.conversa_texto {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  gap: 3px;
+}
+
+.conversa_texto strong {
+  overflow: hidden;
+  color: #145b4c;
+  font-size: 14px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversa_texto > span {
+  overflow: hidden;
+  color: #6986a0;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversa_horario {
+  color: #6986a0;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.conversa_seta {
+  color: #7896a0;
+  font-size: 24px;
+  line-height: 1;
+}
+
+@media (max-width: 1100px) {
+  .banner { grid-template-columns: 27% 38% 35%; }
+  .banner_assistente { margin-right: 4%; padding-left: 65px; }
+  .banner_xepinha { left: 55%; width: 150px; }
+
+  .card_destaque,
+  .card_gastos,
+  .card_financas,
+  .card_conversas { min-height: 280px; }
+}
+
+@media (max-width: 720px) {
+  .dashboard { gap: 12px; padding: 12px; }
+
+  .banner {
+    min-height: 480px;
     grid-template-columns: 1fr;
+    grid-template-rows: 170px auto 150px;
   }
 
-  .cardXepa {
-    grid-column: span 1;
-    flex-direction: column;
+  .banner_foto { min-height: 170px; max-height: 170px; }
+
+  .banner_foto img {
+    object-position: center 55%;
+    mask-image: linear-gradient(180deg, #000 65%, transparent);
   }
 
-  .xepaImagem {
-    flex: none;
-    width: 100%;
-    min-height: 220px;
+  .banner_texto { align-self: start; padding: 0 20px 16px; }
+  .banner_texto h1 { font-size: 28px; }
+  .banner_texto p { max-width: 390px; }
+  .banner_assistente { display: none; }
+
+  .banner_xepinha {
+    right: 15px;
+    bottom: 0;
+    left: auto;
+    width: 125px;
+    height: 165px;
   }
 
-  .rodapeTopo {
-    flex-direction: column;
-    gap: 32px;
+  .grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+
+  .card_destaque,
+  .card_gastos,
+  .card_financas,
+  .card_conversas {
+    min-height: 190px;
+    grid-column: 1;
   }
 
-  .marca {
-    flex-basis: auto;
-    max-width: 100%;
+  .card_gastos { min-height: 250px; }
+  .card_conversas { min-height: 260px; }
+  .destaque_conteudo { min-height: 142px; }
+
+  .conversa {
+    gap: 8px;
+    padding: 8px;
   }
+
+  .conversa_avatar { width: 42px; height: 42px; }
+  .conversa_horario { display: none; }
 }
