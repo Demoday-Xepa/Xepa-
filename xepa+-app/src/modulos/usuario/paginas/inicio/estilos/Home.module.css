@@ -218,58 +218,223 @@
   font-family: poppins;
   font-size: 20px;
   margin-left:85px;
-
-
 }
-.card {
-  width: 280px;
-  background-color: #ffffff;
-  border-radius: 8px;
+
+/*CARD FEIRAS PERTO*/
+
+.secaoXepasPerto {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 40px 56px;
+  box-sizing: border-box;
+}
+
+.tituloXepas {
+  margin-bottom: 24px;
+}
+
+.tituloXepas h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+.containerCardsXepas {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cardHorizontalXepa {
+  flex: 1 1 520px;
+  display: flex;
+  min-height: 280px;
+  background-color: #f46a25;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-left:85px;
-
-  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
 }
 
-.cardImg {
-  width: 100%;
-  height: 160px;
+.imgCardXepa {
+  width: 240px;
+  height: auto;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
 }
 
-.cardConteudo {
-  padding: 16px;
+.conteudoCardXepa {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  color: #ffffff;
 }
 
-.cardTitulo {
-  font-size: 18px;
-  color: #333333;
-  margin-bottom: 8px;
-  font-family: poppins;
+.tituloCardXepa {
+  font-size: 26px;
+  color: #ffffff;
+  margin: 0 0 8px;
+  font-weight: 700;
 }
 
-.cardDescricao {
+.descricaoCardXepa {
   font-size: 14px;
-  color: #666666;
-  margin-bottom: 16px;
-  line-height: 1.4;
+  color: #ffffff;
+  opacity: 0.9;
+  margin: 0 0 16px;
+  line-height: 1.5;
 }
 
-.cardBtn {
+.botaoCardXepa {
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  padding: 12px;
+  background-color: #b53807;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
+  text-align: center;
   transition: background-color 0.2s;
 }
 
-.cardBtn:hover {
-  background-color: #0056b3;
+.botaoCardXepa:hover {
+  background-color: #922b05;
+}
+/* CSS DOS CARDS DAS XEPAS*/
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 40px 56px;
+  box-sizing: border-box;
+}
+
+.tituloSecao {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+.carrossel {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.rolagem {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 4px 0 8px;
+
+  scrollbar-width: none;
+}
+
+.rolagem::-webkit-scrollbar {
+  display: none;
+}
+
+.setaesquerda,
+.setadireita {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.setaesquerda {
+  left: -24px;
+}
+
+.setadireita {
+  right: -24px;
+}
+
+.setaesquerda:hover,
+.setadireita:hover {
+  background: #f2f2f2;
+}
+
+.cardscompletos,
+.cardsfrutas {
+  flex: 0 0 340px; 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.cardscompletos {
+  background: #f26b21;
+}
+
+.cardsfrutas {
+  background: #9bbb0f;
+}
+
+.imagem {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.titulo {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+
+.local {
+  font-size: 14px;
+}
+
+.descricao {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.botaocompleto,
+.botaofrutas {
+  margin-top: auto;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botaocompleto {
+  color: #f26b21;
+}
+
+.botaofrutas {
+  color: #9bbb0f;
 }
