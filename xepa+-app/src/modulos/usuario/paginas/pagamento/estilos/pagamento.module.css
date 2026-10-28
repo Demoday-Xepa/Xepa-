@@ -52,14 +52,16 @@
 }
 
 .pageTitle {
-  font-size: 1.75rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #1a1a1a;
+  color: #18522C;
 }
 
 .contentGrid {
-  display: grid;
+  margin: 20px;
+  margin-bottom: 30px;
+  display: flex;
   grid-template-columns: 1.2fr 1fr;
   gap: 2rem;
 }
@@ -72,16 +74,19 @@
 
 /* Cards */
 .card {
+  width: 100%;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 30px;
+  border: 2.5px solid #18522C;
   padding: 2rem;
+  align-items: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .sectionTitle, .summaryTitle {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #666;
+  color: #18522C;
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
 }
@@ -95,7 +100,7 @@
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  background-color: #f4fcf4;
+  background-color: #ffffff;
 }
 
 .pixBrand {
@@ -103,7 +108,7 @@
   align-items: center;
   gap: 0.75rem;
   font-weight: bold;
-  color: #2e7d32;
+  color: #18522C;
 }
 
 .pixIcon {
@@ -114,7 +119,7 @@
 .radioIndicator {
   width: 20px;
   height: 20px;
-  border: 2px solid #2e7d32;
+  border: 2px solid #18522C;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -124,7 +129,7 @@
 .radioInner {
   width: 10px;
   height: 10px;
-  background-color: #2e7d32;
+  background-color: #18522C;
   border-radius: 50%;
 }
 
@@ -134,14 +139,16 @@
 }
 
 .qrInstructionsTitle {
-  font-size: 1.1rem;
+  color: #18522C;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .qrInstructionsSub {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #848181;
   margin-bottom: 1.5rem;
 }
 
@@ -155,10 +162,10 @@
 }
 
 .btnCopyPix {
-  width: 100%;
+  width: 72%;
   background-color: transparent;
-  border: 2px solid #2e7d32;
-  color: #2e7d32;
+  border: 2px solid #18522C;
+  color: #18522C;
   padding: 0.75rem;
   font-weight: bold;
   border-radius: 8px;
@@ -167,7 +174,7 @@
 }
 
 .btnCopyPix:hover {
-  background-color: #2e7d32;
+  background-color: #18522C;
   color: #fff;
 }
 
@@ -177,39 +184,50 @@
   margin-bottom: 1.5rem;
 }
 
+.summaryDivider {
+  height: 2px;
+  background-color: #848181;
+  margin-bottom: 1.5rem;
+}
+
 .itemRow {
+  margin-left: -40px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .itemName {
-  color: #555;
+  color: #18522C;
 }
 
 .itemPrice {
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #848181;
 }
 
 .freeTag {
-  color: #2e7d32;
+  font-size: 1.5rem;
+  color: #18522C;
   font-weight: bold;
 }
 
 .summaryDivider {
-  height: 1px;
-  background-color: #eee;
+  height: 2px;
+  background-color: #848181;
   margin-bottom: 1.5rem;
 }
 
 .totalRow {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #1a1a1a;
+  color: #18522C;
 }
 
 .btnConfirmPayment {
@@ -219,7 +237,7 @@
   color: white;
   padding: 1rem;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 1rem;
@@ -227,7 +245,7 @@
 }
 
 .btnConfirmPayment:hover {
-  background-color: #235d27;
+  background-color: #18522C;
 }
 
 .secureBadge {
@@ -235,8 +253,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
-  color: #666;
+  font-size: 1.2rem;
+  color: #848181;
+}
+
+.secureBadge img {
+  width: 5%;
+  height: 20px;
 }
 
 .mainContainer {
