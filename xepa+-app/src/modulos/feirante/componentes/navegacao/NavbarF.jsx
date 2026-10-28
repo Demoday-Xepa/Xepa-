@@ -9,7 +9,7 @@ const links = [
   { texto: 'Produtos', destino: '/adicionar-produto' },
   { texto: 'Feiras', destino: '/adicionar-feira' },
   { texto: 'Financeiro', destino: '/financeiro' },
-  { texto: 'Chat', destino: '/chat-feirante' },
+  { texto: 'Chat', destino: '/HistoricoChat' },
   { texto: 'Xep.AI', destino: '/chat-ia-feirante' },
 ];
 

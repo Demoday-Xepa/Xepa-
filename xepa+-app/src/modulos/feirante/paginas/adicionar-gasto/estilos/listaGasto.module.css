@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.containerResumo {
+  /* Base do tamanho de TODO o bloco (tudo abaixo usa em).
+     1920px de tela = ~19px; mínimo 14px; máximo 27px. */
+  font-size: clamp(20px, 1.2vw, 27px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5em;
+  margin: 0 auto;
+  padding: 1.5em 5vw;
+  font-family: 'Nunito', sans-serif;
+}
+
+.conteudoEsquerda {
+  flex: 1;
+}
+
+.titulo {
+  color: #1b4d2e;
+  font-size: 2.9em;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.35em 0;
+}
+
+.subtitulo {
+  color: #111;
+  font-size: 0.95em;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0 0 1.7em 0;
+}
+
+.areaAcoes {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25em;
+}
+
+/* Cartão do total */
+.cartaoTotal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 15.4em;
+  padding: 0.75em 2em 0.9em;
+  background-color: #1b4d2e;
+  color: #fff;
+  border-radius: 0.4em;
+  text-align: center;
+}
+
+.labelTotal {
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.valorTotal {
+  font-size: 2em;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.btnAdicionar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 13.4em;
+  height: 2.6em;
+  margin-bottom: 0.55em;
+  padding: 0 1.5em;
+  background-color: #1b4d2e;
+  color: #fff;
+  border: none;
+  border-radius: 0.4em;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.05em;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btnAdicionar:hover {
+  background-color: #123620;
+}
+
+/* O TAMANHO DA IMAGEM É CONTROLADO AQUI */
+.imagemDireita {
+  width: 17em; /* 14em = menor | 18em = atual | 22em = maior */
+  flex-shrink: 0;
+}
+
+.frutasImg {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+
+  /* Teste: descomente para ver a área real da imagem (borda vermelha) */
+  /* outline: 2px solid red; */
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .containerResumo {
+    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em 6vw;
+  }
+
+  .subtitulo br {
+    display: none;
+  }
+
+  .areaAcoes {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btnAdicionar {
+    height: 3em;
+    margin-bottom: 0;
+  }
+
+  .imagemDireita {
+    align-self: center;
+    width: 24em;
+  }
+}

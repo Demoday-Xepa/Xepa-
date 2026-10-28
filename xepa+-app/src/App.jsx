@@ -21,7 +21,6 @@ function App() {
         <HeaderHomeGlobal />
         <NavbarFeiranteGlobal />
         <NavbarUsuarioGlobal />
-
         <Routes>
           {rotasAutenticacao}
           {rotasFeirante}

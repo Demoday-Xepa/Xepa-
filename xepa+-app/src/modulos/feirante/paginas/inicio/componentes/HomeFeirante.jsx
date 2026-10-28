@@ -188,9 +188,16 @@ function HomeFeirante() {
                 <li><i className={Styles.cor_semanal} />Ganho semanal</li>
                 <li><i className={Styles.cor_gasto} />Gaste</li>
               </ul>
+             <button
+            type="button"
+            className={Styles.botao_verde}
+            onClick={() => navigate('/adicionar-gasto')}
+            >
+            Ver detalhes <span aria-hidden="true">→</span>
+            </button>
             </div>
           </section>
-
+          
          <section className={Styles.card_conversas}>
             <div className={Styles.card_header}>
               <h2>Últimas conversas</h2>
