@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.containerHistorico,
+.containerHistorico * {
+  box-sizing: border-box;
+}
+
+.containerHistorico {
+  /* Mesma base do ListaGasto: tudo abaixo usa em e escala junto */
+  font-size: clamp(14px, 1vw, 27px);
+
+  margin: 0 auto;
+  padding: 0.5em 5vw 2em;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Barra de busca: [Busca | campo ........ ícone]  [Filtrar] */
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 1.35em;
+  margin-bottom: 3em;
+}
+
+.grupoBusca {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  height: 2.5em;
+}
+
+.botaoBusca {
+  min-width: 5.6em;
+  padding: 0 1em;
+  background-color: #a4c400;
+  color: #1b4d2e;
+  border: 0;
+  border-radius: 0.4em 0 0 0.4em;
+  font-family: inherit;
+  font-size: 0.95em;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botaoBusca:hover {
+  background-color: #93b100;
+}
+
+.campoBusca {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+
+.campoBusca input {
+  width: 100%;
+  padding: 0 4.2em 0 1.2em;
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #aaa;
+  border-radius: 0 0.4em 0.4em 0;
+  font-family: inherit;
+  font-size: 0.95em;
+  font-weight: 600;
+}
+
+.campoBusca input::placeholder {
+  color: #9a9a9a;
+  font-weight: 400;
+}
+
+.campoBusca input:focus-visible {
+  outline: 2px solid #a4c400;
+  outline-offset: -2px;
+}
+
+.iconeFiltro {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  width: 2.2em;
+  height: 1.5em;
+  color: #a4c400;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.botaoFiltrar {
+  min-width: 5.8em;
+  height: 2.15em;
+  padding: 0 1.4em;
+  background-color: #1b4d2e;
+  color: #fff;
+  border: 0;
+  border-radius: 0.4em;
+  font-family: inherit;
+  font-size: 0.95em;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botaoFiltrar:hover {
+  background-color: #123620;
+}
+
+.visualmenteOculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Abas: Diário / Semanal / Mensal */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-bottom: 1.6em;
+}
+
+.filtro,
+.filtroAtivo {
+  min-width: 5.6em;
+  padding: 0.5em 1.4em;
+  border: 1px solid #1b4d2e;
+  border-radius: 0.5em;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 800;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filtro {
+  background-color: #1b4d2e;
+  color: #fff;
+}
+
+.filtro:hover {
+  background-color: #123620;
+}
+
+.filtroAtivo {
+  background-color: #cfe38a;
+  color: #1b4d2e;
+}
+
+.filtro:focus-visible,
+.filtroAtivo:focus-visible,
+.botaoBusca:focus-visible,
+.botaoFiltrar:focus-visible,
+.botaoEditar:focus-visible {
+  outline: 2px solid #1b4d2e;
+  outline-offset: 3px;
+}
+
+/* Lista de cartões */
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+
+.cartaoGasto {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1.2fr 1.2fr auto;
+  align-items: center;
+  padding: 0.9em 1.6em 0.9em 0.6em;
+  background-color: #fff;
+  border: 1px solid #1b4d2e;
+  border-radius: 1.5em;
+}
+
+/* Cada coluna, com divisória cinza à esquerda (menos a primeira) */
+.dado {
+  position: relative;
+  padding: 0.3em 1em;
+  text-align: center;
+}
+
+.dado + .dado::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2px;
+  height: 4em;
+  background-color: #707070;
+  transform: translateY(-50%);
+}
+
+.dadoDescricao {
+  text-align: left;
+  padding-left: 2.2em;
+}
+
+.dado h3 {
+  margin: 0 0 0.25em;
+  color: #1b4d2e;
+  font-size: 0.95em;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.dado p {
+  margin: 0;
+  color: #000;
+  font-size: 1em;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Botão de editar (quadrado verde com lápis) */
+.botaoEditar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3em;
+  height: 2.3em;
+  margin-left: 1.2em;
+  padding: 0;
+  background-color: #1b4d2e;
+  color: #fff;
+  border: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.botaoEditar:hover {
+  background-color: #123620;
+}
+
+.semResultados {
+  margin: 1em 0;
+  color: #1b4d2e;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .containerHistorico {
+    font-size: 14px;
+    padding: 0.5em 6vw 2em;
+  }
+
+  /* Campo de busca em cima, "Filtrar" embaixo ocupando a largura toda */
+  .busca {
+    flex-wrap: wrap;
+    gap: 0.8em;
+  }
+
+  .grupoBusca {
+    flex-basis: 100%;
+  }
+
+  .botaoFiltrar {
+    width: 100%;
+    height: 2.6em;
+  }
+
+  .filtros {
+    gap: 0.8em;
+  }
+
+  .cartaoGasto {
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em 0;
+    padding: 1em;
+    border-radius: 1.2em;
+  }
+
+  .dado,
+  .dadoDescricao {
+    padding: 0 0.5em;
+    text-align: left;
+  }
+
+  .dado + .dado::before {
+    display: none;
+  }
+
+  .botaoEditar {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    margin: 0;
+  }
+}

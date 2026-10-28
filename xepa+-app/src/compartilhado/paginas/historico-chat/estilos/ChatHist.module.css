@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.paginaChat {
+  padding: 40px; 
+  max-width: 100%; 
+  margin: 0 auto; 
+  font-family: 'Nunito', sans-serif; 
+}
+
+.chatHistContainer {
+  margin-bottom: 20px;
+}
+
+.tituloHist {
+  color: #1b4d2e;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.containerBusca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.labelBusca {
+  color: #1b4d2e;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.inputBusca {
+  width: 100%;
+  max-width: 450px;
+  padding: 10px 16px;
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif; 
+  outline: none;
+}
+
+.btnBusca {
+  background-color: transparent;
+  border: 1.5px solid #1b4d2e;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnBusca:hover {
+  background-color: #e8f0eb;
+}
+
+
+.quadroChat {
+  display: flex;
+  background-color: #d1e29c; 
+  border-radius: 20px;
+  overflow: hidden; 
+  height: 700px; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+}
+
+.barraLateral {
+  width: 320px;
+  background-color: #9cb823; 
+  display: flex;
+  flex-direction: column;
+}
+
+.tituloLateral {
+  background-color: #1b4d2e; 
+  color: #9cb823;
+  padding: 20px; 
+  margin: 0;
+}
+
+.tituloLateral h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.listaContatos {
+  overflow-y: auto; 
+  flex: 1;
+}
+
+.itemContato {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 2px solid #8aa31e;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.itemContato:hover {
+  background-color: #a8c627;
+}
+
+.avatarContato {
+  width: 50px;
+  height: 50px;
+  background-color: #f26522; 
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.infoContato {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.nomeContato {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.msgContato {
+  color: white;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.areaConversa {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px; 
+}
+
+.cabecalhoConversa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.fotoAtiva {
+  width: 100px; 
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.nomeAtivo {
+  color: #1b4d2e;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.areaMensagens {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.balaoRecebido {
+  background-color: #387c1c; 
+  color: white;
+  padding: 15px 25px;
+  border-radius: 20px 20px 20px 0; 
+  align-self: flex-start;
+  max-width: 75%;
+  font-size: 1.1rem;
+  font-weight: 600; 
+}
+
+.balaoEnviado {
+  background-color: #f26522; 
+  color: white;
+  padding: 15px 25px;
+  border-radius: 20px 20px 0 20px; 
+  align-self: flex-end;
+  max-width: 75%;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.areaInput {
+  position: relative;
+  margin-top: 30px;
+}
+
+.inputMensagem {
+  width: 100%;
+  padding: 18px 60px 18px 25px;
+  border: 1px solid #1b4d2e;
+  border-radius: 40px; 
+  background-color: white;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif; 
+  outline: none;
+}
+
+.btnEnviar {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f26522;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

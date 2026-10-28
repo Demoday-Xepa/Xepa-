@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+.fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.modal, .modal * {
+  box-sizing: border-box;
+}
+
+.modal {
+  width: min(100%, 560px);
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  color: #18552f;
+  font-family: 'Outfit', Arial, sans-serif;
+}
+
+/* Popup de filtro: um pouco mais estreito e com cantos mais arredondados */
+.modalFiltro {
+  width: min(100%, 480px);
+  border-radius: 16px;
+}
+
+.topo {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 6px 28px;
+  background: #18552f;
+  color: #fff;
+}
+
+.topo h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 24px 16px;
+}
+
+.subtitulo {
+  margin: 4px 0 6px;
+  color: #18552f;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.campo input {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #18552f;
+  border-radius: 7px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+  font-size: 14px;
+}
+
+.campo input::placeholder {
+  color: #9c9290;
+  opacity: 1;
+}
+
+.campo input:focus {
+  outline: 2px solid #a4c400;
+  outline-offset: 1px;
+}
+
+/* Valor total é calculado, não digitado */
+.campo input[readonly] {
+  cursor: default;
+}
+
+/* Remove as setinhas dos campos numéricos */
+.campo input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.campo input[type="number"]::-webkit-outer-spin-button,
+.campo input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+/* Selects do popup de filtro */
+.campoSelect {
+  position: relative;
+}
+
+.campoSelect select {
+  width: 100%;
+  height: 34px;
+  padding: 0 38px 0 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #18552f;
+  border-radius: 7px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.campoSelect select.vazio {
+  color: #9c9290;
+}
+
+.campoSelect select option {
+  color: #222;
+}
+
+.campoSelect select:focus {
+  outline: 2px solid #a4c400;
+  outline-offset: 1px;
+}
+
+.iconeSelect {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  color: #111;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Botões */
+.secundario, .principal {
+  min-height: 34px;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secundario {
+  margin-top: 8px;
+  border: 1px solid #18552f;
+  background: #cfdf84;
+  color: #18552f;
+}
+
+.secundario:hover {
+  background: #c2d56c;
+}
+
+.principal {
+  margin-top: 8px;
+  border: 0;
+  background: #18552f;
+  color: #fff;
+}
+
+.secundario + .principal {
+  margin-top: 0;
+}
+
+.principal:hover {
+  background: #287447;
+}
+
+.espacado {
+  margin-top: 14px;
+}
+
+.secundario:focus-visible,
+.principal:focus-visible {
+  outline: 2px solid #a4c400;
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .modal { max-width: 390px; }
+  .topo { padding-inline: 16px; }
+  .form { padding-inline: 16px; }
+}
