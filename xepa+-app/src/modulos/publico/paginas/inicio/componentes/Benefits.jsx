@@ -1,4 +1,3 @@
-
 import '@/modulos/publico/paginas/inicio/estilos/Benefits.css'
 
 import cestaXepa from '@/assets/imagens/pagina-inicial/xepa.png'

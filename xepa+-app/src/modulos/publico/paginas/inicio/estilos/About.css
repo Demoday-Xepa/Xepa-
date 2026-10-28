@@ -1,15 +1,12 @@
-
 .secao-sobre {
   display: grid;
-  grid-template-columns: 42% 58%;
+  grid-template-columns: 46% 54%;
   align-items: center;
-
   position: relative;
   width: 100%;
-  height: clamp(380px, 48vw, 570px);
+  height: clamp(420px, 46vw, 600px);
   box-sizing: border-box;
-  padding: 30px 0 30px 6%;
-
+  padding: 40px 0 40px 6%;
   overflow: hidden;
   background: #fff3ec;
 }
@@ -18,43 +15,53 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 390px;
+  max-width: 440px;
 }
 
 .conteudo-sobre h2 {
   margin: 0;
   color: #195132;
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(30px, 3.4vw, 40px);
+  font-size: clamp(34px, 4vw, 48px);
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.8px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  animation: fadeUp 0.7s ease-out 0.1s both;
 }
 
 .conteudo-sobre p {
-  max-width: 350px;
+  max-width: 400px;
   margin: 28px 0 0;
-  color: #d45a32;
-  font-size: 12px;
-  line-height: 1.5;
+  color: #195132;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+  animation: fadeUp 0.7s ease-out 0.3s both;
 }
 
 .botao-sobre {
-  display: inline-block;
-  margin-top: 26px;
-  padding: 9px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 12px 32px;
   border: 0;
-  border-radius: 4px;
+  border-radius: 8px;
   background: #f15a24;
-  color: white;
-  font-size: 11px;
-  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
   text-decoration: none;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  animation: fadeUp 0.7s ease-out 0.5s both;
 }
 
 .botao-sobre:hover {
   background: #d94b19;
+  transform: translateY(-1px);
 }
 
 .colagem-sobre {
@@ -71,30 +78,98 @@
   height: auto;
   max-width: none;
   object-fit: contain;
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.15));
 }
 
-/* Imagem superior, inclinada para a direita */
 .foto-sobre--feira {
   z-index: 2;
-  top: 2%;
-  right: -13%;
-  width: 115%;
-  transform: rotate(-8deg);
+  top: 0%;
+  right: 8%;
+  width: 108%;
+  transform: rotate(-5deg);
+  animation: photoFeira 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
 }
 
-/* Imagem inferior, sobreposta à primeira */
 .foto-sobre--alimentos {
   z-index: 1;
-  right: -15%;
-  bottom: 2%;
-  width: 120%;
+  right: -8%;
+  bottom: 0%;
+  width: 115%;
   transform: rotate(4deg);
+  animation: photoAlimentos 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes photoFeira {
+  from {
+    opacity: 0;
+    transform: translate(20px, -40px) rotate(-15deg) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(-5deg) scale(1);
+  }
+}
+
+@keyframes photoAlimentos {
+  from {
+    opacity: 0;
+    transform: translate(30px, 40px) rotate(14deg) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(4deg) scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .secao-sobre {
+    grid-template-columns: 48% 52%;
+    height: clamp(380px, 60vw, 480px);
+    padding: 32px 0 32px 5%;
+  }
+
+  .conteudo-sobre h2 {
+    font-size: clamp(28px, 4.6vw, 38px);
+  }
+
+  .conteudo-sobre p {
+    font-size: clamp(13px, 1.6vw, 15px);
+    margin-top: 20px;
+  }
+
+  .botao-sobre {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  .foto-sobre--feira {
+    top: 90%;
+    right: 0%;
+    width: 115%;
+  }
+
+  .foto-sobre--alimentos {
+    right: -12%;
+    bottom: 0%;
+    width: 122%;
+  }
 }
 
 @media (max-width: 600px) {
   .secao-sobre {
-    grid-template-columns: 42% 58%;
-    height: 330px;
+    grid-template-columns: 46% 54%;
+    height: 340px;
     padding: 24px 0 24px 5%;
   }
 
@@ -103,31 +178,43 @@
   }
 
   .conteudo-sobre h2 {
-    font-size: clamp(22px, 5.5vw, 29px);
-    line-height: 1.2;
+    font-size: clamp(24px, 6vw, 30px);
+    line-height: 1.18;
+    letter-spacing: -0.5px;
   }
 
   .conteudo-sobre p {
-    margin-top: 16px;
-    font-size: 10px;
-    line-height: 1.45;
+    margin-top: 14px;
+    font-size: 11.5px;
+    line-height: 1.5;
   }
 
   .botao-sobre {
-    margin-top: 16px;
-    padding: 7px 10px;
-    font-size: 9px;
+    margin-top: 18px;
+    padding: 9px 20px;
+    font-size: 13px;
+    border-radius: 6px;
   }
 
   .foto-sobre--feira {
-    top: 8%;
-    right: -22%;
-    width: 140%;
+    top: 2%;
+    right: -8%;
+    width: 130%;
   }
 
   .foto-sobre--alimentos {
-    right: -25%;
-    bottom: 5%;
-    width: 145%;
+    right: -16%;
+    bottom: 2%;
+    width: 140%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .conteudo-sobre h2,
+  .conteudo-sobre p,
+  .botao-sobre,
+  .foto-sobre--feira,
+  .foto-sobre--alimentos {
+    animation: none;
   }
 }
