@@ -1,3 +1,4 @@
+
 .resumo {
     padding: 16px;
     border: 1.5px solid var(--verde);
@@ -11,6 +12,7 @@
     margin: 0 0 14px;
     padding-bottom: 12px;
     border-bottom: 2px solid var(--cinza-claro);
+    font-size: 22px;
     overflow-wrap: break-word;
 }
 
@@ -24,10 +26,13 @@
 .linha span,
 .total span {
     color: var(--cinza);
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .linha strong,
 .total strong {
+    font-size: 17px;
     overflow-wrap: anywhere;
 }
 
@@ -39,12 +44,28 @@
     border-top: 2px solid var(--cinza-claro);
 }
 
+.total span {
+    font-size: 18px;
+    color: var(--cinza);
+}
+
+/* Tablets */
 @media (max-width: 1024px) {
     .resumo {
         padding: 14px;
     }
+
+    .resumo h2 {
+        font-size: 20px;
+    }
+
+    .linha span,
+    .total span {
+        font-size: 16px;
+    }
 }
 
+/* Celulares */
 @media (max-width: 600px) {
     .resumo {
         padding: 12px;
@@ -52,11 +73,22 @@
     }
 
     .resumo h2 {
+        font-size: 19px;
         margin-bottom: 12px;
     }
 
     .linha {
         margin-bottom: 14px;
+    }
+
+    .linha span,
+    .total span {
+        font-size: 14px;
+    }
+
+    .linha strong,
+    .total strong {
+        font-size: 16px;
     }
 
     .total {

@@ -1,3 +1,4 @@
+
 .capital {
     padding: 16px;
     border: 1.5px solid var(--limao);
@@ -11,11 +12,14 @@
     border-bottom: 2px solid var(--cinza-claro);
     margin: 0 0 18px;
     padding-bottom: 12px;
+    font-size: 32px;
     overflow-wrap: break-word;
 }
 
 .aviso {
     margin: 0 0 18px;
+    font-size: 14px;
+    font-weight: bold;
     color: var(--cinza);
 }
 
@@ -28,10 +32,12 @@
 
 .linha span,
 .reserva span {
+    font-size: 13px;
     font-weight: bold;
 }
 
 .linha strong {
+    font-size: 20px;
     overflow-wrap: break-word;
 }
 
@@ -43,6 +49,7 @@
 }
 
 .reserva strong {
+    font-size: 36px;
     overflow-wrap: break-word;
 }
 
@@ -50,12 +57,21 @@
     margin: 20px 0 0;
     padding-top: 14px;
     border-top: 2px solid var(--cinza-claro);
+    font-size: 11px;
 }
 
 /* Tablets */
 @media (max-width: 1024px) {
     .capital {
         padding: 14px;
+    }
+
+    .capital h2 {
+        font-size: 27px;
+    }
+
+    .reserva strong {
+        font-size: 30px;
     }
 }
 
@@ -67,18 +83,32 @@
     }
 
     .capital h2 {
+        font-size: 23px;
         margin-bottom: 14px;
+    }
+
+    .aviso {
+        font-size: 13px;
     }
 
     .linha {
         margin: 15px 0;
     }
 
+    .linha strong {
+        font-size: 18px;
+    }
+
     .reserva {
         margin-top: 15px;
     }
 
+    .reserva strong {
+        font-size: 28px;
+    }
+
     .rodape {
+        font-size: 10px;
         line-height: 1.5;
     }
 }

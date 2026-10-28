@@ -1,3 +1,4 @@
+
 .grafico {
     min-width: 0;
     padding: 12px;
@@ -8,6 +9,8 @@
     margin: 0 0 55px;
     text-align: center;
     color: var(--verde);
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .dias {
@@ -28,6 +31,8 @@
 .nomeDia {
     padding-top: 8px;
     color: var(--cinza);
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .areaBarra {
@@ -52,13 +57,16 @@
 
 .dia strong {
     color: var(--verde);
+    font-size: 13px;
     text-align: center;
     overflow-wrap: anywhere;
 }
 
+/* Tablets */
 @media (max-width: 1024px) {
     .grafico h2 {
         margin-bottom: 35px;
+        font-size: 22px;
     }
 
     .dias {
@@ -70,11 +78,11 @@
     }
 
     .nomeDia {
-        font-size: inherit;
+        font-size: 12px;
     }
 
     .dia strong {
-        font-size: inherit;
+        font-size: 11px;
     }
 
     .barra {
@@ -82,6 +90,7 @@
     }
 }
 
+/* Celulares */
 @media (max-width: 600px) {
     .grafico {
         padding: 8px 4px;
@@ -89,6 +98,7 @@
 
     .grafico h2 {
         margin-bottom: 25px;
+        font-size: 19px;
     }
 
     .dias {
@@ -101,6 +111,7 @@
 
     .nomeDia {
         padding-top: 6px;
+        font-size: 10px;
     }
 
     .areaBarra {
@@ -114,6 +125,6 @@
     }
 
     .dia strong {
-        font-size: inherit;
+        font-size: 9px;
     }
 }
