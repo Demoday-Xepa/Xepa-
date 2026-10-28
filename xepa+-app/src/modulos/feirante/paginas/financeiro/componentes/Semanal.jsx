@@ -21,6 +21,10 @@ function Semanal({ lancamentos, inicio, moeda }) {
 
     return (
         <section className={Styles.grafico}>
+            <div className="cabecalho-cartao">
+                <div><span className="sobretitulo">DESEMPENHO</span><h2>Movimento da semana</h2></div>
+                <span>Atualizado agora</span>
+            </div>
             <div className={Styles.dias}>
                 {dias.map((dia, indice) => (
                     <div className={Styles.dia} key={dia}>
