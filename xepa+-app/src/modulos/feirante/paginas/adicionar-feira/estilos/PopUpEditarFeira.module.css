@@ -1,0 +1,175 @@
+.fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.modal, .modal * { 
+  box-sizing: border-box; 
+}
+
+.modal {
+  width: min(100%, 560px);
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  color: #18552f;
+  font-family: 'Outfit', Arial, sans-serif;
+}
+
+.topo {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 6px 28px;
+  background: #18552f;
+  color: #fff;
+}
+
+.topo h2 { 
+  margin: 0; 
+  font-size: 22px; 
+  font-weight: 600; 
+}
+
+.form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  padding: 12px 24px 16px; 
+}
+
+.campo { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 5px; 
+  min-width: 0; 
+}
+
+.campo label, .selecaoDias legend { 
+  font-size: 14px; 
+  font-weight: 600; 
+}
+
+.campo input {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #18552f;
+  border-radius: 7px;
+  color: #222;
+  font: inherit;
+  font-size: 14px;
+}
+
+.campo input::placeholder { 
+  color: #9c9290; 
+  opacity: 1; 
+}
+
+.campo input:focus { 
+  outline: 2px solid #a4c400; 
+  outline-offset: 1px; 
+}
+
+.selecaoDias { 
+  min-width: 0; 
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+}
+
+.selecaoDias legend { 
+  margin-bottom: 6px; 
+  padding: 0; 
+}
+
+.dias { 
+  display: flex; 
+  justify-content: space-between; 
+  gap: 6px; 
+}
+
+.dia, .diaSelecionado {
+  width: 42px;
+  height: 42px;
+  flex: 0 1 42px;
+  padding: 0;
+  border: 2px solid #18552f;
+  border-radius: 50%;
+  background: #c8d979;
+  color: #18552f;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dia[aria-pressed="false"] { 
+  background: #fff; 
+}
+
+.dia:focus-visible, .diaSelecionado:focus-visible { 
+  outline: 2px solid #a4c400; 
+  outline-offset: 2px; 
+}
+
+.campoComIcone { 
+  position: relative; 
+}
+
+.campoComIcone input { 
+  padding-right: 38px; 
+}
+
+.campoComIcone img { 
+  position: absolute; 
+  top: 7px; 
+  right: 10px; 
+  width: 21px; 
+  height: 21px; 
+  object-fit: contain; 
+}
+
+.secundario, .principal {
+  min-height: 34px;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secundario { 
+  margin-top: 8px; 
+  border: 1px solid #18552f; 
+  background: #cfdf84; 
+  color: #18552f; 
+}
+
+.secundario:hover { 
+  background: #c2d56c; 
+}
+
+.principal { 
+  border: 0; 
+  background: #18552f; 
+  color: #fff; 
+}
+
+.principal:hover { 
+  background: #287447; 
+}
+
+@media (max-width: 480px) {
+  .modal { max-width: 390px; }
+  .topo { padding-inline: 16px; }
+  .form { padding-inline: 16px; }
+  .dia, .diaSelecionado { width: 38px; height: 38px; flex-basis: 38px; font-size: 12px; }
+}
