@@ -1,7 +1,7 @@
 :root {
-  --cor-primaria: #1a3d2e;
-  --cor-texto: #1a202c;
-  --cor-borda: #d9dee5;
+  --cor-primaria: #18522C;
+  --cor-texto: #18522C;
+  --cor-borda: #18522C;
   --cor-cinza-claro: #f3f4f6;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .main_content h1 {
-  font-size: 2.2rem;
+  font-size: 4rem;
   color: var(--cor-primaria);
   margin: 0 0 2rem 0;
 }
@@ -52,7 +52,7 @@
 
 /* Tabela de Produtos */
 .tabela_produtos {
-  border: 1.5px solid var(--cor-borda);
+  border: 3px solid var(--cor-borda);
   border-radius: 12px;
   overflow: hidden;
   background-color: #fff;
@@ -71,17 +71,17 @@
 }
 
 .tabela_header {
-  border-bottom: 1.5px solid var(--cor-borda);
+  border-bottom: 2px solid #848181;
 }
 
 .tabela_header h4 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--cor-texto);
 }
 
 .tabela_linha {
-  border-bottom: 1px solid var(--cor-borda);
+  border-bottom: 2px solid #848181;
 }
 
 .tabela_linha:last-child {
@@ -111,14 +111,14 @@
 .coluna_retirada h4,
 .coluna_total h4 {
   margin: 0 0 0.3rem 0;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
 }
 
 .coluna_produto p,
 .coluna_retirada p {
   margin: 0;
-  font-size: 0.85rem;
-  color: #718096;
+  font-size: 1.2rem;
+  color: #848181;
 }
 
 .coluna_produto p {
@@ -141,13 +141,18 @@
   transition: transform 0.2s;
 }
 
+.coluna_acao img {
+  width:50px;
+  height: 50px;
+}
+
 .coluna_acao button:hover {
   transform: scale(1.1);
 }
 
 /* Card Resumo do Pedido */
 .resumo_card {
-  border: 1.5px solid var(--cor-borda);
+  border: 3px solid var(--cor-borda);
   border-radius: 12px;
   padding: 1.8rem;
   background-color: #fff;
@@ -158,8 +163,14 @@
 
 .resumo_card > h4 {
   margin: 0 0 1.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: var(--cor-texto);
+}
+
+.resumo_card hr {
+  border: none;
+  border-top: 2px solid #848181;
+  margin: 1.2rem 0;
 }
 
 .resumo_itens {
@@ -176,16 +187,22 @@
   gap: 1rem;
 }
 
-.resumo_linha h4,
-.resumo_linha p {
+.resumo_linha h4{
   margin: 0;
-  font-size: 0.95rem;
-  color: #4a5568;
+  font-size: 1.3rem;
+  color: #18522C;
+}
+
+.resumo_linha p{
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #848181;
 }
 
 .resumo_card hr {
   border: none;
-  border-top: 1px solid var(--cor-borda);
+  border-top: 2px solid #848181;
   margin: 1.2rem 0;
 }
 
@@ -198,14 +215,13 @@
 
 .resumo_total h4 {
   margin: 0;
-  font-size: 1.15rem;
-  color: var(--cor-primaria);
+  font-size: 1.3rem;
+  color: #18522C;
 }
 
 .alerta_endereco {
   display: flex;
   gap: 0.8rem;
-  background-color: var(--cor-cinza-claro);
   padding: 0.9rem;
   border-radius: 8px;
   align-items: flex-start;
@@ -213,13 +229,13 @@
 }
 
 .alerta_endereco img {
-  width: 20px;
-  flex-shrink: 0;
+  width: 50px;
+  height: 30px;
 }
 
 .alerta_endereco p {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #4a5568;
   line-height: 1.4;
 }
@@ -238,12 +254,12 @@
 
 .btn_pagar h3 {
   margin: 0.8rem 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .btn_pagar:hover {
-  background-color: #132e22;
+  background-color: #18522C;
 }
 
 /* Responsividade */

@@ -1,3 +1,6 @@
+
+import Cadeado from "@/assets/imagens/gerais/cadeado.png";
+import Pix from "@/assets/imagens/gerais/pix.png";
 import { useState } from "react";
 import Styles from "../estilos/pagamento.module.css";
 import Logo from "@/assets/imagens/gerais/logo.png";
@@ -35,11 +38,11 @@ export default function Pagamento() {
           <section className={Styles.card}>
             <h2 className={Styles.sectionTitle}>FORMA DE PAGAMENTO</h2>
 
+            <div className={Styles.summaryDivider}></div>
+
             <div className={Styles.paymentOption}>
               <div className={Styles.pixBrand}>
-                <svg className={Styles.pixIcon} viewBox="0 0 512 512" fill="currentColor">
-                  <path d="M110.5 129l103.8 103.8c23.2 23.2 60.8 23.2 84 0L402.1 129c22.5-22.5 59-22.5 81.5 0l15.6 15.6c22.5 22.5 22.5 59 0 81.5L395.4 329.9c-23.2 23.2-60.8 23.2-84 0L207.6 226.1c-23.2-23.2-60.8-23.2-84 0L20.2 329.9c-22.5 22.5-59 22.5-81.5 0l-15.6-15.6c-22.5-22.5-22.5-59 0-81.5L26.9 129c22.5-22.5 59-22.5 83.6 0z" />
-                </svg>
+                <img className={Styles.pixIcon} src={Pix} alt="Pix" />
                 <span>PIX</span>
               </div>
               <div className={Styles.radioIndicator}>
@@ -64,6 +67,8 @@ export default function Pagamento() {
           {/* Seção do Resumo do Pedido (Direita) */}
           <aside className={Styles.card}>
             <h2 className={Styles.summaryTitle}>Resumo do pedido</h2>
+
+            <div className={Styles.summaryDivider}></div>
 
             <ul className={Styles.orderItems}>
               <li className={Styles.itemRow}>
@@ -96,7 +101,7 @@ export default function Pagamento() {
             </button>
 
             <div className={Styles.secureBadge}>
-              <i className="fa-solid fa-lock"></i>
+              <img src={Cadeado} alt="Ambiente seguro" />
               <span>Ambiente seguro</span>
             </div>
           </aside>
