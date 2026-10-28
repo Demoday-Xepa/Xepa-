@@ -1,85 +1,121 @@
+
 import { useState } from 'react';
-import '@/modulos/feirante/paginas/financeiro/financeiro.css';
-import useFinanceiro from '@/modulos/feirante/hooks/useFinanceiro';
-import Renda from '@/modulos/feirante/paginas/financeiro/componentes/Renda.jsx';
-import Semanal from '@/modulos/feirante/paginas/financeiro/componentes/Semanal.jsx';
-import Resumo from '@/modulos/feirante/paginas/financeiro/componentes/Resumo.jsx';
-import Compras from '@/modulos/feirante/paginas/financeiro/componentes/Compras.jsx';
-import Capital from '@/modulos/feirante/paginas/financeiro/componentes/Capital.jsx';
-import Lancamento from '@/modulos/feirante/paginas/financeiro/componentes/Lancamento.jsx';
+import './financeiro.css';
+
+import useFinanceiro from './hooks/useFinanceiro';
+
+import NavBarFinanceiro from './componentes/NavBarFinanceiro';
+import InicioFinanceiro from './componentes/InicioFinanceiro';
+import LucrosFinanceiro from './componentes/LucrosFinanceiro';
+import GastosFinanceiro from './componentes/GastosFinanceiro';
+import Lancamento from './componentes/Lancamento';
 
 function Financeiro() {
+  const [pagina, setPagina] = useState('inicio');
   const [modalAberto, setModalAberto] = useState(false);
-  const [tipo, setTipo] = useState('renda');
+  const [tipoLancamento, setTipoLancamento] = useState('compra');
+
+  const [busca, setBusca] = useState('');
+  const [periodo, setPeriodo] = useState('dia');
+  const [filtroAberto, setFiltroAberto] = useState(false);
+
   const {
     lancamentos,
     adicionarLancamento,
-    hoje,
-    inicioSemana,
-    doDia,
-    daSemana,
-    doMes,
-    total,
+    removerLancamento,
     moeda,
+    total,
+    hoje,
+    dataHoje,
+    entradasMes,
+    gastosMes,
+    saldoMes,
+    lancamentosMes,
+    lancamentosHoje,
+    lancamentosSemana,
+    gastosFiltrados,
+    receitasHoje,
+    gastosHoje
   } = useFinanceiro();
 
-  function salvarLancamento(novoLancamento) {
-    adicionarLancamento(novoLancamento);
-    setModalAberto(false);
-  }
-
-  function abrirModal(tipoLancamento) {
-    setTipo(tipoLancamento);
+  function abrirModal(tipo) {
+    setTipoLancamento(tipo);
     setModalAberto(true);
   }
 
+  function fecharModal() {
+    setModalAberto(false);
+  }
+
+  function salvarLancamento(dados) {
+    adicionarLancamento(dados);
+    fecharModal();
+  }
+
+  function abrirGastos() {
+    setPagina('gastos');
+  }
+
+  const dados = {
+    moeda,
+    total,
+    hoje,
+    dataHoje,
+    lancamentos,
+    entradasMes,
+    gastosMes,
+    saldoMes,
+    lancamentosMes,
+    lancamentosHoje,
+    lancamentosSemana,
+    receitasHoje,
+    gastosHoje,
+    aoAbrirModal: abrirModal,
+    aoVerGastos: abrirGastos,
+    removerLancamento
+  };
+
   return (
-    <div className="pagina">
-      <main className="conteudo">
-        <section className="titulo">
-          <div>
-            <h1>Veja seus lucros!</h1>
-            <p>Acompanhe suas rendas, compras e resultados.</p>
-          </div>
-          <div className="botoes">
-            <button onClick={() => abrirModal('renda')}>+ Adicionar renda</button>
-          </div>
-        </section>
-
-        <Renda
-          hoje={total(doDia, 'renda')}
-          semana={total(daSemana, 'renda')}
-          mes={total(doMes, 'renda')}
-          data={hoje}
-          moeda={moeda}
-        />
-
-        <section className="painel">
-          <Semanal lancamentos={daSemana} inicio={inicioSemana} moeda={moeda} />
-          <Resumo
-            receita={total(daSemana, 'renda')}
-            custos={total(daSemana, 'compra')}
-            moeda={moeda}
-          />
-        </section>
-
-        <section className="inferior">
-          <Compras
-            lancamentos={daSemana}
-            moeda={moeda}
-            aoAdicionar={() => abrirModal('compra')}
-          />
-          <Capital receita={total(doMes, 'renda')} moeda={moeda} />
-        </section>
-      </main>
-
-      <Lancamento
-        aberto={modalAberto}
-        tipo={tipo}
-        aoFechar={() => setModalAberto(false)}
-        aoSalvar={salvarLancamento}
+    <main className="pagina-financeiro">
+      <NavBarFinanceiro
+        pagina={pagina}
+        setPagina={setPagina}
       />
-    </div>
+
+      <div className="conteudo-financeiro">
+        {pagina === 'inicio' && (
+          <InicioFinanceiro {...dados} />
+        )}
+
+        {pagina === 'lucros' && (
+          <LucrosFinanceiro {...dados} />
+        )}
+
+        {pagina === 'gastos' && (
+          <GastosFinanceiro
+            {...dados}
+            busca={busca}
+            setBusca={setBusca}
+            periodo={periodo}
+            setPeriodo={setPeriodo}
+            filtroAberto={filtroAberto}
+            setFiltroAberto={setFiltroAberto}
+            itensGastos={gastosFiltrados(busca, periodo)}
+            listaPeriodo={gastosFiltrados('', periodo)}
+          />
+        )}
+      </div>
+
+      {modalAberto && (
+        <Lancamento
+          aberto={modalAberto}
+          tipo={tipoLancamento}
+          aoSalvar={salvarLancamento}
+          aoFechar={fecharModal}
+          dataHoje={dataHoje}
+        />
+      )}
+    </main>
   );
 }
 
