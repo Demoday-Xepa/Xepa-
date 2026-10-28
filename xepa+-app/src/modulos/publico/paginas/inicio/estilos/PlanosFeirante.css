@@ -99,7 +99,7 @@
   margin: 0 0 6.5cqw;
   padding: 0 2cqw;
   color: var(--cor-forte);
-  font-size: clamp(12px, 4.1cqw, 15px);
+  font-size: clamp(15px, 4.1cqw, 18px);
   line-height: 1.55;
   text-align: justify;
 }
@@ -117,7 +117,7 @@
   align-items: flex-start;
   gap: 3cqw;
   color: var(--cor-forte);
-  font-size: clamp(11px, 3.1cqw, 13px);
+  font-size: clamp(14px, 3.1cqw, 17px);
   line-height: 1.5;
 }
 
