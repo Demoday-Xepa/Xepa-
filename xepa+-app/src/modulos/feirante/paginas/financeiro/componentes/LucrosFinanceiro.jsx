@@ -37,7 +37,7 @@ function LucrosFinanceiro({
     <>
       <section className="titulo-financeiro titulo-pagina">
         <div>
-          <h1><strong>Seus lucros</strong></h1>
+          <h1>Seus lucros em um só lugar.</h1>
           <p>
             Entenda quanto a feira gerou depois de todos os gastos cadastrados.
           </p>

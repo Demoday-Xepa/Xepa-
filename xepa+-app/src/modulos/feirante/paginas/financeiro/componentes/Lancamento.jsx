@@ -52,9 +52,6 @@ function Lancamento({ aberto, tipo, aoFechar, aoSalvar }) {
                     ×
                 </button>
 
-                <span className={Styles.sobretitulo}>
-                    CONTROLE FINANCEIRO
-                </span>
 
                 <h2>
                     {tipo === "renda" ? "Adicionar renda" : "Adicionar gasto"}

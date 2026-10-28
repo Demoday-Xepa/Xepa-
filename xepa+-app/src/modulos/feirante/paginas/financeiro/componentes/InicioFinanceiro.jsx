@@ -45,7 +45,7 @@ function InicioFinanceiro({
     <>
       <section className="titulo-financeiro">
         <div>
-          <h1> <strong>Seu financeiro em um só lugar.</strong></h1>
+          <h1>Seu financeiro em um só lugar.</h1>
           <p>
             Acompanhe o desempenho da feira e tome decisões com segurança.
           </p>

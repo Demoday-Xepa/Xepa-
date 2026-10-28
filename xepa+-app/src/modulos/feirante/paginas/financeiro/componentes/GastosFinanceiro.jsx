@@ -23,7 +23,7 @@ function GastosFinanceiro({
     <>
       <section className="titulo-gastos">
         <div>
-          <h1>Seus gastos</h1>
+          <h1>Seus gastos em um só lugar.</h1>
           <p>
             Cadastre e gerencie o histórico de gastos para ter maior controle sobre sua receita.
           </p>

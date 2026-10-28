@@ -1,11 +1,11 @@
-
 .titulo-pagina {
   margin-bottom: 30px;
 }
+
 .titulo-pagina h1 {
   margin-top: 0;
-  font-size: 40px;
 }
+
 .lucro-principal {
   padding: 40px;
   display: flex;
@@ -17,17 +17,20 @@
   border-radius: 16px;
   margin-bottom: 24px;
 }
+
 .lucro-principal span {
-  font-size: 16px;
+  font-size: inherit;
 }
+
 .lucro-principal > div:first-child strong {
   display: block;
-  font-size: 48px;
   margin: 8px 0;
 }
+
 .lucro-principal small {
-  font-size: 12px;
+  font-size: inherit;
 }
+
 .margem-circulo {
   width: 130px;
   height: 130px;
@@ -38,31 +41,37 @@
   justify-content: center;
   align-items: center;
 }
+
 .margem-circulo strong {
-  font-size: 24px;
+  font-size: inherit;
 }
+
 .margem-circulo span {
-  font-size: 12px;
+  font-size: inherit;
 }
+
 .tres-cartoes {
   margin-bottom: 24px;
 }
+
 .tres-cartoes article {
   padding: 24px;
 }
+
 .tres-cartoes article > p {
   margin-bottom: 10px;
-  font-size: 16px;
 }
+
 .tres-cartoes small {
   display: block;
   color: #7a817c;
-  font-size: 12px;
   margin-top: 10px;
 }
+
 .painel-lucros {
   grid-template-columns: 1.5fr 1fr;
 }
+
 .barras-lucro {
   height: 250px;
   display: flex;
@@ -72,6 +81,7 @@
   border-top: 1px solid var(--linha);
   padding-top: 30px;
 }
+
 .barra-semana {
   height: 100%;
   display: flex;
@@ -81,29 +91,33 @@
   align-items: center;
   gap: 10px;
 }
+
 .barra-semana > strong {
-  font-size: 12px;
   text-align: center;
 }
+
 .barra-semana > div {
   height: 72%;
   width: 42px;
   display: flex;
   align-items: flex-end;
 }
+
 .barra-semana > div span {
   width: 100%;
   display: block;
   background: var(--limao);
   border-radius: 5px 5px 0 0;
 }
+
 .barra-semana > div .barra-destaque {
   background: var(--verde);
 }
+
 .barra-semana small {
-  font-size: 11px;
   color: #727873;
 }
+
 .barra-composicao {
   height: 15px;
   background: #e8eedb;
@@ -111,12 +125,14 @@
   overflow: hidden;
   margin: 40px 0 30px;
 }
+
 .barra-composicao span {
   height: 100%;
   display: block;
   background: var(--limao);
   border-radius: 20px;
 }
+
 .composicao p {
   display: flex;
   align-items: center;
@@ -124,12 +140,13 @@
   border-bottom: 1px solid var(--linha);
   padding: 14px 0;
   margin: 0;
-  font-size: 14px;
 }
+
 .composicao p strong {
   margin-left: auto;
   text-align: right;
 }
+
 .ponto-verde,
 .ponto-limao {
   width: 10px;
@@ -137,18 +154,22 @@
   border-radius: 50%;
   background: var(--verde);
 }
+
 .ponto-limao {
   background: var(--limao);
 }
+
 .botao-largo {
   width: 100%;
   padding: 14px;
   border-radius: 6px;
   margin-top: 24px;
 }
+
 .historico-lucros {
   margin-top: 24px;
 }
+
 .linha-historico {
   display: flex;
   justify-content: space-between;
@@ -156,65 +177,73 @@
   padding: 17px 0;
   border-top: 1px solid var(--linha);
 }
+
 .linha-historico > div {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
+
 .linha-historico small {
-  font-size: 12px;
   color: #777;
 }
+
 .valor-positivo {
   color: var(--verde);
 }
+
 .valor-negativo {
   color: #ad4d32;
 }
+
 @media (max-width: 900px) {
   .painel-lucros {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media (max-width: 620px) {
-  .titulo-pagina h1 {
-    font-size: 32px;
-  }
   .lucro-principal {
     padding: 24px 18px;
     align-items: flex-start;
     gap: 12px;
   }
-  .lucro-principal > div:first-child strong {
-    font-size: 28px;
-  }
+
   .margem-circulo {
     width: 80px;
     height: 80px;
     border-width: 5px;
   }
+
   .margem-circulo strong {
-    font-size: 16px;
+    font-size: inherit;
   }
+
   .margem-circulo span {
-    font-size: 10px;
+    font-size: inherit;
   }
+
   .painel-lucros {
     grid-template-columns: 1fr;
   }
+
   .barras-lucro {
     gap: 5px;
   }
+
   .barra-semana > strong {
-    font-size: 10px;
+    font-size: inherit;
   }
+
   .barra-semana small {
-    font-size: 9px;
+    font-size: inherit;
   }
+
   .linha-historico {
     gap: 8px;
   }
+
   .linha-historico > strong {
-    font-size: 12px;
+    font-size: inherit;
   }
 }
