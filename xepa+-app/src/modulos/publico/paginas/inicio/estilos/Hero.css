@@ -1,5 +1,5 @@
 .secao-inicio {
-  /* 1cqw = 1% da largura da seção → tudo escala igual à referência */
+  /* 1cqw = 1% da largura da seção → tudo escala junto */
   container-type: inline-size;
 
   position: relative;
@@ -30,6 +30,8 @@
 
 .fruta-inicio {
   position: absolute;
+  /* --w = largura base de cada fruta; --escala encolhe tudo em telas pequenas */
+  width: calc(var(--w) * var(--escala, 1));
   height: auto;
   will-change: transform;
 
@@ -71,6 +73,7 @@
 /* Fileira 1 (topo) */
 
 .fruta-inicio--mamao {
+  --w: 25%;
   --linha: 0;
   --dx: -12cqw;
   --giro: -10deg;
@@ -79,10 +82,10 @@
 
   top: -11%;
   left: -9%;
-  width: 25%;
 }
 
 .fruta-inicio--kiwi {
+  --w: 23%;
   --linha: 0;
   --extra: 0.06s;
   --dx: 12cqw;
@@ -92,12 +95,12 @@
 
   top: -10%;
   right: -7%;
-  width: 23%;
 }
 
 /* Fileira 2 (meio) */
 
 .fruta-inicio--abacaxi {
+  --w: 26%;
   --linha: 1;
   --dx: -12cqw;
   --giro: -10deg;
@@ -106,10 +109,10 @@
 
   top: 22%;
   left: -10%;
-  width: 26%;
 }
 
 .fruta-inicio--goiaba {
+  --w: 21%;
   --linha: 1;
   --extra: 0.06s;
   --dx: 12cqw;
@@ -119,12 +122,12 @@
 
   top: 29%;
   right: -7%;
-  width: 21%;
 }
 
 /* Fileira 3 (baixo) */
 
 .fruta-inicio--melancia {
+  --w: 27%;
   --linha: 2;
   --dx: -12cqw;
   --giro: -10deg;
@@ -133,10 +136,10 @@
 
   bottom: -21%;
   left: -8%;
-  width: 27%;
 }
 
 .fruta-inicio--uva {
+  --w: 27%;
   --linha: 2;
   --extra: 0.06s;
   --dx: 12cqw;
@@ -146,7 +149,6 @@
 
   bottom: -18%;
   right: -8%;
-  width: 27%;
 }
 
 /* ---------- Texto central ---------- */
@@ -157,17 +159,17 @@
   text-align: center;
 }
 
-.conteudo-inicio h1,
-.conteudo-inicio p {
+.titulo-inicio,
+.lead-inicio {
   animation: texto-sobe 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* entra depois da última fileira: 2 × passo + 0.3s */
-.conteudo-inicio h1 {
+/* entram depois da última fileira de frutas: 2 × passo + 0.3s */
+.titulo-inicio {
   animation-delay: 0.9s;
 }
 
-.conteudo-inicio p {
+.lead-inicio {
   animation-delay: 1.05s;
 }
 
@@ -182,36 +184,36 @@
   }
 }
 
-.conteudo-inicio h1 {
+.titulo-inicio {
   margin: 0;
 
   color: #195132;
   font-family: 'Poppins', sans-serif;
-  font-size: min(4.8cqw, 54px);
+  font-size: 4.0cqw;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   letter-spacing: -0.02em;
-  white-space: nowrap;
+  text-wrap: balance;
 }
 
-.conteudo-inicio p {
-  max-width: 66cqw;
-  margin: 2.2cqw auto 0;
+/* Frase principal: maior e mais fácil de ler que antes (era 14px no máximo) */
+.lead-inicio {
+  max-width: 62cqw;
+  margin: 2cqw auto 0;
 
-  color: #344d3a;
-  font-size: min(1.65cqw, 14px);
-  line-height: 1.45;
+  color: #2b4a33;
+  font-family: 'Poppins', sans-serif;
+  font-size: max(7px, 1.cqw);
+  font-weight: 500;
+  line-height: 1.55;
+  text-wrap: balance;
 }
 
-/* ---------- Faixa XEPA+ ---------- */
+/* ---------- Faixa em carrossel ---------- */
 
 .faixa-xepa {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
   width: 100%;
-  height: clamp(20px, 4.5vw, 34px);
+  padding: max(6px, 1.4vw) 0;
   overflow: hidden;
 
   background: #c5df16;
@@ -219,19 +221,68 @@
   white-space: nowrap;
 }
 
-.faixa-xepa span {
+/* a trilha tem 2 grupos iguais; andar -50% = andar 1 grupo = loop sem emenda */
+.faixa-xepa__trilha {
+  display: flex;
+  width: max-content;
+  animation: faixa-corre 45s linear infinite;
+}
+
+.faixa-xepa:hover .faixa-xepa__trilha {
+  animation-play-state: paused;
+}
+
+.faixa-xepa__grupo {
+  display: flex;
   flex-shrink: 0;
-  font-size: clamp(7px, 1.6vw, 11px);
+  align-items: center;
+  justify-content: space-around;
+
+  /* garante que um grupo sozinho sempre cobre a tela inteira */
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.faixa-xepa__item {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding-left: 3vw;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: max(11px, 1.5vw);
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+}
+
+/* bolinha separando as palavras */
+.faixa-xepa__item::after {
+  content: '';
+  width: 0.45em;
+  height: 0.45em;
+  border-radius: 50%;
+  background: #195132;
+}
+
+@keyframes faixa-corre {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* ---------- Acessibilidade ---------- */
 
 @media (prefers-reduced-motion: reduce) {
   .fruta-inicio,
-  .conteudo-inicio h1,
-  .conteudo-inicio p {
+  .titulo-inicio,
+  .lead-inicio,
+  .faixa-xepa__trilha {
     animation: none;
   }
 }

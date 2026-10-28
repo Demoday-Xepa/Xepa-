@@ -1,6 +1,5 @@
-
 import '@/modulos/publico/paginas/inicio/estilos/About.css';
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 import imagemFeira from '@/assets/imagens/pagina-inicial/group-14.png';
 import imagemAlimentos from '@/assets/imagens/pagina-inicial/group-15.png';
 
@@ -23,9 +22,13 @@ export default function About() {
           qui dolorem ipsum quia dolor sit amet.
         </p>
 
-        <a href="#historia" className="botao-sobre" onClick={() => navigate('/Sobrenos')}>
+        <button
+          type="button"
+          className="botao-sobre"
+          onClick={() => navigate('/Sobrenos')}
+        >
           Saiba mais
-        </a>
+        </button>
       </div>
 
       <div className="colagem-sobre">
