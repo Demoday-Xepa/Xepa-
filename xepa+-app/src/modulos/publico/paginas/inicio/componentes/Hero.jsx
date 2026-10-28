@@ -1,4 +1,3 @@
-
 import '@/modulos/publico/paginas/inicio/estilos/Hero.css';
 import mamao from '@/assets/imagens/pagina-inicial/mamao-home.png';
 import abacaxi from '@/assets/imagens/pagina-inicial/abacaxi-home.png';
@@ -16,6 +15,20 @@ const frutas = [
   { classe: 'fruta-inicio--uva', imagem: uva },
 ];
 
+// Palavras que passam na faixa. Adicione ou remova quantas quiser.
+const palavras = [
+  'Venha ver',
+  'Xepa+',
+  'Menos desperdício',
+  'Feira fresquinha',
+  'Preço justo',
+  'Mais alimento',
+  'Mais futuro',
+];
+
+// Cada grupo repete a lista para a faixa nunca ficar com buraco em telas largas.
+const palavrasDoGrupo = [...palavras, ...palavras];
+
 export default function Hero() {
   return (
     <>
@@ -32,24 +45,38 @@ export default function Hero() {
         </div>
 
         <div className="conteudo-inicio">
-          <h1>
+          <h1 className="titulo-inicio">
             Menos desperdício,
             <br />
             mais alimento, mais futuro
           </h1>
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+          <p className="lead-inicio">
+            O Xepa+ conecta feirantes e consumidores para que o alimento
+            fresquinho chegue à mesa das pessoas, e não ao lixo.
           </p>
         </div>
       </section>
 
-      <div className="faixa-xepa" aria-label="Xepa+">
-        {Array.from({ length: 16 }, (_, indice) => (
-          <span key={indice}>XEPA+</span>
-        ))}
+      {/* Faixa em carrossel: o 2º grupo é uma cópia só para o loop ficar contínuo */}
+      <div className="faixa-xepa">
+        <div className="faixa-xepa__trilha">
+          <ul className="faixa-xepa__grupo">
+            {palavrasDoGrupo.map((palavra, indice) => (
+              <li key={indice} className="faixa-xepa__item">
+                {palavra}
+              </li>
+            ))}
+          </ul>
+
+          <ul className="faixa-xepa__grupo" aria-hidden="true">
+            {palavrasDoGrupo.map((palavra, indice) => (
+              <li key={indice} className="faixa-xepa__item">
+                {palavra}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

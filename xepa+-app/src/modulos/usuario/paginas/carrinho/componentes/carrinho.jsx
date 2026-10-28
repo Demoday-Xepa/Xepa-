@@ -1,3 +1,8 @@
+import iconlixeira from '../../../../../assets/imagens/gerais/iconlixeira.png';
+
+import vector from '../../../../../assets/imagens/gerais/vector.png';
+
+
 import { useNavigate } from 'react-router-dom';
 import Styles from '../estilos/carrinho.module.css';
 
@@ -42,7 +47,9 @@ export function Carrinho() {
 
               <div className={Styles.coluna_acao}>
                 <button type="button" aria-label="Remover Xepa Completa">
-                  <span className={Styles.icon}>🗑️</span>
+                  <div className='lixeira'>
+                    <img src={iconlixeira} alt="icone da lixeira" />
+                  </div>
                 </button>
               </div>
             </div>
@@ -67,7 +74,7 @@ export function Carrinho() {
 
               <div className={Styles.coluna_acao}>
                 <button type="button" aria-label="Remover Xepa de Legumes">
-                  <span className={Styles.icon}>🗑️</span>
+                  <img src={iconlixeira} alt="iconlixeira" />
                 </button>
               </div>
             </div>
@@ -92,7 +99,7 @@ export function Carrinho() {
 
               <div className={Styles.coluna_acao}>
                 <button type="button" aria-label="Remover Xepa de Frutas">
-                  <span className={Styles.icon}>🗑️</span>
+                   <img src={iconlixeira} alt="" />
                 </button>
               </div>
             </div>
@@ -100,6 +107,8 @@ export function Carrinho() {
 
           <aside className={Styles.resumo_card}>
             <h4>Resumo do pedido</h4>
+
+            <hr />
 
             <div className={Styles.resumo_itens}>
               <div className={Styles.resumo_linha}>
@@ -131,7 +140,9 @@ export function Carrinho() {
             </div>
 
             <div className={Styles.alerta_endereco}>
-              <span className={Styles.icon}>⚠️</span>
+              <div className='vector'>
+                    <img src={vector} alt="vector" />
+                    </div>
               <p>
                 Reveja o endereço das barracas e lembre-se de mostrar o QRCode
                 para retirada do produto.
