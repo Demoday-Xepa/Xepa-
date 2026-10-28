@@ -8,7 +8,7 @@ const PLANOS = [
     descricao:
       "Ideal para quem está começando agora e quer dar os primeiros passos sem nenhum investimento inicial.",
     beneficios: [
-      "Taxa por venda: 10%",
+      "Taxa por venda: 15%",
       "Cadastro da barraca e do feirante",
       "Perfil básico na plataforma",
       "Acesso às funcionalidades essenciais",
@@ -22,9 +22,9 @@ const PLANOS = [
       "Perfeito para negócios em expansão que precisam de mais flexibilidade e recursos avançados.",
     beneficios: [
       "Taxa por venda: 8%",
-      "Criação de promoções e ofertas",
-      "Histórico de pedidos e vendas",
-      "Resumo simples do desempenho das vendas",
+      "Acesso básico ao financeiro",
+      "Acesso à Xep.AI",
+      "Suporte pelo chat",
     ],
   },
   {
@@ -35,9 +35,9 @@ const PLANOS = [
       "A solução completa para feirante que busca alta performance, controle total e máxima produtividade.",
     beneficios: [
       "Taxa por venda: 5%",
-      "Painel de vendas e gestão",
-      "Gráficos de faturamento por período",
-      "Suporte prioritário",
+      "Acesso completo ao financeiro",
+      "Acesso à Xep.AI",
+      "Suporte pelo chat prioritário",
     ],
   },
 ];

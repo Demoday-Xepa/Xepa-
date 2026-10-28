@@ -8,7 +8,8 @@ const links = [
   { texto: 'Home', destino: '/homeF' },
   { texto: 'Produtos', destino: '/adicionar-produto' },
   { texto: 'Feiras', destino: '/adicionar-feira' },
-  { texto: 'Financeiro', destino: '/financeiro' },
+  { texto: 'Lucros', destino: '/financeiro' },
+  { texto: 'Gastos', destino: '/adicionar-gasto' },
   { texto: 'Chat', destino: '/HistoricoChat' },
   { texto: 'Xep.AI', destino: '/chat-ia-feirante' },
 ];

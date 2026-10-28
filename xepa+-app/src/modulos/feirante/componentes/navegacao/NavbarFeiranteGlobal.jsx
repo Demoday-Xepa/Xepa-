@@ -10,6 +10,7 @@ function NavbarFeiranteGlobal() {
     '/adicionar-produto',
     '/adicionar-feira',
     '/financeiro',
+    '/adicionar-gasto',
     '/HistoricoChat',
     '/chat-ia-feirante',
   ];

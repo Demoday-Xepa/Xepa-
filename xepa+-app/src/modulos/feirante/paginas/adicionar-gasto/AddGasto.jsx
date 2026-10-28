@@ -49,8 +49,10 @@ function AddGasto() {
   }
 
   return (
+
  
     <div>
+
 
       <ListaGasto
         total={totalDoDia.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
