@@ -1,5 +1,4 @@
-import Styles from "@/compartilhado/paginas/historico-chat/estilos/ChatHist.module.css";
-// Se for usar imagens reais, importe-as ou use URLs. Aqui usarei placeholders.
+import Styles from '@/modulos/feirante/paginas/historico-chat/estilos/ChatHist.module.css';// Se for usar imagens reais, importe-as ou use URLs. Aqui usarei placeholders.
 
 function ChatHist() {
   // 1. Simulação do que virá do Back-end (Lista de conversas)

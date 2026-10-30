@@ -14,6 +14,7 @@ function NavbarUsuarioGlobal() {
     '/perfil',
     '/chat-consumidor',
     '/Verduras',
+    '/HistoricoChatUsuario',
     '/pagamento',
   ];
 

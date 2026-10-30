@@ -10,7 +10,7 @@ const links = [
   { texto: 'Mapa', destino: '/mapa' },
   { texto: 'Seu Impacto', destino: '/impacto' },
   { texto: 'Receita', destino: '/cozinha' },
-  { texto: 'Chat', destino: '/HistoricoChat' },
+  { texto: 'Chat', destino: '/HistoricoChatUsuario' },
 ];
 
 function NavbarC() {
