@@ -11,7 +11,6 @@ const links = [
   { texto: 'Seu Impacto', destino: '/impacto' },
   { texto: 'Receita', destino: '/cozinha' },
   { texto: 'Chat', destino: '/HistoricoChat' },
-  { texto: 'Xep.IA', destino: '/chat-ia' },
 ];
 
 function NavbarC() {

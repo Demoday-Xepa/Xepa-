@@ -1,5 +1,5 @@
 
-import Chat2 from '@/modulos/usuario/paginas/chat-ia/componentes/Chat2.jsx';
+import Chat2 from '@/modulos/feirante/paginas/chat-ia/componentes/Chat2.jsx';
 
 function ChatIA() {
   return (

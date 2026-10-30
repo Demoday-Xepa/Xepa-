@@ -7,6 +7,7 @@ import AdicionarGasto from '@/modulos/feirante/paginas/adicionar-gasto/AddGasto'
 import AdicionarProduto from '@/modulos/feirante/paginas/adicionar-produto/AddProduto';
 import AdicionarFeira from '@/modulos/feirante/paginas/adicionar-feira/AddFeira';
 import AddGasto from '@/modulos/feirante/paginas/adicionar-gasto/AddGasto';
+import ChatIA from '@/modulos/feirante/paginas/chat-ia/ChatIA';
 
 export const rotasFeirante = [
   <Route key="demo-feirante" path="/demo/feirante" element={<HomeFeirante />} />,
@@ -16,4 +17,6 @@ export const rotasFeirante = [
   <Route key="adicionar-produto" path="/adicionar-produto" element={<AdicionarProduto />} />,
   <Route key="adicionar-feira" path="/adicionar-feira" element={<AdicionarFeira />} />,
   <Route key="adicionar-gasto" path="/adicionar-gasto" element={<AddGasto />} />,
+  <Route key="chat-ia" path="/chat-ia" element={<ChatIA />} />,
+
 ];
