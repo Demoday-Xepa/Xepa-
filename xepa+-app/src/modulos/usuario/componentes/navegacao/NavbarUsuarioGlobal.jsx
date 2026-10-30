@@ -13,8 +13,8 @@ function NavbarUsuarioGlobal() {
     '/carrinho',
     '/perfil',
     '/chat-consumidor',
-    '/chat-ia',
     '/Verduras',
+    '/HistoricoChatUsuario',
     '/pagamento',
   ];
 

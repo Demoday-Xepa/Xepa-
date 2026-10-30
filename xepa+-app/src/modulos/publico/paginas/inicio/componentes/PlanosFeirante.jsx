@@ -36,8 +36,8 @@ const PLANOS = [
     beneficios: [
       "Taxa por venda: 5%",
       "Acesso completo ao financeiro",
-      "Acesso à Xep.AI",
-      "Suporte pelo chat prioritário",
+      "Xepas em destaque",
+      "Suporte prioritário",
     ],
   },
 ];

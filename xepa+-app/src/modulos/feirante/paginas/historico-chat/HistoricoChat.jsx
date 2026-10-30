@@ -1,4 +1,4 @@
-import ChatHist from '@/compartilhado/paginas/historico-chat/componentes/ChatHist.jsx';
+import ChatHist from '@/modulos/feirante/paginas/historico-chat/componentes/ChatHist';
 
 function ChatFeirante() {
   return (

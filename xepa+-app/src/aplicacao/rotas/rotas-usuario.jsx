@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import HomeUsuario from '@/modulos/usuario/paginas/inicio/Home';
 import Mapa from '@/modulos/usuario/paginas/mapa/componentes/MapaMain';
 import DetalheProduto from '@/modulos/usuario/paginas/detalhe-produto/DetalheProduto';
-import ChatIA from '@/modulos/usuario/paginas/chat-ia/ChatIA';
+
 import ChatFeirante from '@/modulos/usuario/paginas/chat-feirante/ChatFeirante';
 import { Impacto } from '@/modulos/usuario/paginas/impacto/ImpactoU';
 import Cozinha from '@/modulos/usuario/paginas/cozinha/componentes/Cozy';
@@ -24,9 +24,6 @@ export const rotasUsuario = [
 
   <Route key="chat-consumidor" path="/chat-consumidor" element={<ChatFeirante />} />,
   <Route key="chat-feirante" path="/chat-feirante" element={<ChatFeirante />} />,
-
-  <Route key="chat-ia-usuario" path="/chat-ia" element={<ChatIA />} />,
-  <Route key="chat-ia-feirante" path="/chat-ia-feirante" element={<ChatIA />} />,
 
   <Route key="impacto" path="/impacto" element={<Impacto />} />,
   <Route key="pagamento" path="/pagamento" element={<Pagamento />} />,

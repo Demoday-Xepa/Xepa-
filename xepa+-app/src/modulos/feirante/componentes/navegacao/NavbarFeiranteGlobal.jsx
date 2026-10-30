@@ -12,7 +12,7 @@ function NavbarFeiranteGlobal() {
     '/financeiro',
     '/adicionar-gasto',
     '/HistoricoChat',
-    '/chat-ia-feirante',
+    '/chat-ia',
   ];
 
   if (!caminhosFeirante.includes(pathname)) {

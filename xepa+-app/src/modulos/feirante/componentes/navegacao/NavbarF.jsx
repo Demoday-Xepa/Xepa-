@@ -11,7 +11,7 @@ const links = [
   { texto: 'Lucros', destino: '/financeiro' },
   { texto: 'Gastos', destino: '/adicionar-gasto' },
   { texto: 'Chat', destino: '/HistoricoChat' },
-  { texto: 'Xep.AI', destino: '/chat-ia-feirante' },
+  { texto: 'Xep.AI', destino: '/chat-ia' },
 ];
 
 export function NavbarF() {
